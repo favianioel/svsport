@@ -33,4 +33,5 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+Route::get('/dashboard', 'DashboardController@index')->name('dashboard')
+->middleware('check_user_role:' . \App\Role\UserRole::ROLE_SUPERADMIN);
