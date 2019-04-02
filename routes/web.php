@@ -33,5 +33,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::get('/profile', 'ProfileController@index')->name('profile');
+
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard')
 ->middleware('check_user_role:' . \App\Role\UserRole::ROLE_SUPERADMIN);
