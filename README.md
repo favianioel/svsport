@@ -3,9 +3,9 @@
 SvSport is a platform  to manage sport activities
 
 ## Dependencies
-PHP 7.2
-MYSQL 14.14
-Composer 1.8.4
+###### PHP 7.2
+###### MYSQL 14.14
+###### Composer 1.8.4
 
 
 ## Installation

@@ -11,6 +11,29 @@
 |
 */
 
+/*
+|----------------------------------------------
+|    RESTFUL ROUTING CONVENTION
+|----------------------------------------------
+|    METHOD      PATH                ACTION
+|
+|    GET         /users              index
+|    GET         /users/create       create
+|    GET         /users/1            show
+|    POST        /users              store
+|    GET         /users/1/edit       edit
+|    PATCH       /users/1            update
+|    DELETE      /users/1            destroy
+|
+*/
+
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('index');
+
+Auth::routes();
+
+Route::get('/profile', 'ProfileController@index')->name('profile');
+
+Route::get('/dashboard', 'DashboardController@index')->name('dashboard')
+->middleware('check_user_role:' . \App\Role\UserRole::ROLE_SUPERADMIN);
