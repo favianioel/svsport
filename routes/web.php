@@ -27,13 +27,23 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('index');
-
 Auth::routes();
 
-Route::get('/profile', 'ProfileController@index')->name('profile');
+Route::get('/', function () {
+    return view('welcome');
+});
 
-Route::get('/dashboard', 'DashboardController@index')->name('dashboard')
-->middleware('check_user_role:' . \App\Role\UserRole::ROLE_SUPERADMIN);
+Route::get('/profile', 'ProfileController@index');
+
+Route::get('/dashboard', 'DashboardController@index')
+    ->middleware('check_user_role:' . \App\Role\UserRole::ROLE_SUPERADMIN);
+
+Route::get('/teams', 'TeamController@index');
+Route::get('/teams/create', 'TeamController@create')->middleware('check_user_role:' . \App\Role\UserRole::ROLE_ADMIN);
+Route::get('/teams/{id}', 'TeamController@show');
+Route::post('/teams', 'TeamController@store')->middleware('check_user_role:' . \App\Role\UserRole::ROLE_ADMIN);
+Route::get('/teams/{id}/edit', 'TeamController@edit')->middleware('check_user_role:' . \App\Role\UserRole::ROLE_ADMIN);
+Route::patch('/teams/{id}', 'TeamController@update')->middleware('check_user_role:' . \App\Role\UserRole::ROLE_ADMIN);
+Route::delete('/teams/{id}', 'TeamController@destroy')->middleware('check_user_role:' . \App\Role\UserRole::ROLE_ADMIN);
+
+Route::resource('competitions', 'CompetitionController');

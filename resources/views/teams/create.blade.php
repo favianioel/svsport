@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Profile</div>
+                <div class="card-header">Create a new Team</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -13,8 +13,12 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <p>Name:  {{$name}}</p>
-                    <p>Email: {{$email}}</p>
+                    <form method="POST" action="/teams">
+                        @csrf
+                        <div><input name="name" placeholder="Name of team" type="text"></div>
+                        <br>
+                        <button type="submit">create</button>
+                    </form>
                 </div>
             </div>
         </div>

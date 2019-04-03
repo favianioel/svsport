@@ -14,7 +14,9 @@ class TeamController extends Controller
      */
     public function index()
     {
-        //
+        $teams = Team::all();
+
+        return view('teams.index', compact('teams'));
     }
 
     /**
@@ -24,7 +26,7 @@ class TeamController extends Controller
      */
     public function create()
     {
-        //
+        return view('teams.create');
     }
 
     /**
@@ -35,7 +37,12 @@ class TeamController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $teamName = request('name');
+        $team = new Team;
+        $team->name = $teamName;
+        $team->save();
+
+        return redirect('/teams');
     }
 
     /**
@@ -44,9 +51,11 @@ class TeamController extends Controller
      * @param  \App\Team  $team
      * @return \Illuminate\Http\Response
      */
-    public function show(Team $team)
+    public function show($team)
     {
-        //
+        $team = Team::find($team);
+
+        return view('teams.show', compact('team'));
     }
 
     /**
@@ -55,9 +64,11 @@ class TeamController extends Controller
      * @param  \App\Team  $team
      * @return \Illuminate\Http\Response
      */
-    public function edit(Team $team)
+    public function edit($team)
     {
-        //
+        $team = Team::find($team);
+
+        return view('teams.edit', compact('team'));
     }
 
     /**
@@ -67,9 +78,14 @@ class TeamController extends Controller
      * @param  \App\Team  $team
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Team $team)
+    public function update(Request $request, $team)
     {
-        //
+        $name = request('name');
+        $entity = Team::find($team);
+        $entity->name = $name;
+        $entity->save();
+
+        return redirect('/teams/'.$team);
     }
 
     /**
@@ -78,8 +94,11 @@ class TeamController extends Controller
      * @param  \App\Team  $team
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Team $team)
+    public function destroy($team)
     {
-        //
+        $entity = Team::find($team);
+        $entity->delete();
+
+        return redirect('/teams');
     }
 }

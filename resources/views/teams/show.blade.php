@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Profile</div>
+                <div class="card-header">{{ $team->name }}</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -13,8 +13,9 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <p>Name:  {{$name}}</p>
-                    <p>Email: {{$email}}</p>
+                    <a href="/teams/{{ $team->id }}/edit">
+                        <button>edit</button>
+                    </a>
                 </div>
             </div>
         </div>

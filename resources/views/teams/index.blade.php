@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Profile</div>
+                <div class="card-header">Teams</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -13,8 +13,17 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <p>Name:  {{$name}}</p>
-                    <p>Email: {{$email}}</p>
+                    <ul>
+                        @foreach ($teams as $team)
+                            <a href="/teams/{{$team->id}}">
+                                <li>{{$team->name}}</li>
+                            </a>
+                        @endforeach
+                        <br>
+                        <a href="/teams/create">
+                            <button>create team</button>
+                        </a>
+                    </ul>
                 </div>
             </div>
         </div>
