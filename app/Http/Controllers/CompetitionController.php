@@ -14,7 +14,9 @@ class CompetitionController extends Controller
      */
     public function index()
     {
-        //
+        $competitions = Competition::all();
+
+        return view('competitions.index', compact('competitions'));
     }
 
     /**
@@ -24,7 +26,7 @@ class CompetitionController extends Controller
      */
     public function create()
     {
-        //
+        return view('competitions.create');
     }
 
     /**
@@ -35,7 +37,12 @@ class CompetitionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $name = request('name');
+        $competition = new Competition;
+        $competition->name = $name;
+        $competition->save();
+
+        return redirect('/competitions');
     }
 
     /**
@@ -44,9 +51,11 @@ class CompetitionController extends Controller
      * @param  \App\Competition  $competition
      * @return \Illuminate\Http\Response
      */
-    public function show(Competition $competition)
+    public function show($competition)
     {
-        //
+        $competition = Competition::find($competition);
+
+        return view('competitions.show', compact('competition'));
     }
 
     /**
@@ -55,9 +64,11 @@ class CompetitionController extends Controller
      * @param  \App\Competition  $competition
      * @return \Illuminate\Http\Response
      */
-    public function edit(Competition $competition)
+    public function edit($competition)
     {
-        //
+        $competition = Competition::find($competition);
+
+        return view('competitions.edit',compact('competition'));
     }
 
     /**
@@ -69,7 +80,12 @@ class CompetitionController extends Controller
      */
     public function update(Request $request, Competition $competition)
     {
-        //
+        $name = request('name');
+        $entity = Competitition::find($competition);
+        $entity->name = $name;
+        $entity->save();
+
+        return redirect('/competition/'.$competition);
     }
 
     /**
@@ -78,8 +94,11 @@ class CompetitionController extends Controller
      * @param  \App\Competition  $competition
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Competition $competition)
+    public function destroy($competition)
     {
-        //
+        $entity = Competition::find($competition);
+        $entity->delete();
+
+        return redirect('/competitions');
     }
 }

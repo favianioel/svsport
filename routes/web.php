@@ -46,4 +46,11 @@ Route::get('/teams/{id}/edit', 'TeamController@edit')->middleware('check_user_ro
 Route::patch('/teams/{id}', 'TeamController@update')->middleware('check_user_role:' . \App\Role\UserRole::ROLE_ADMIN);
 Route::delete('/teams/{id}', 'TeamController@destroy')->middleware('check_user_role:' . \App\Role\UserRole::ROLE_ADMIN);
 
-Route::resource('competitions', 'CompetitionController');
+Route::get('/competitions', 'CompetitionController@index');
+Route::get('/competitions/create', 'CompetitionController@create')->middleware('check_user_role:' . \App\Role\UserRole::ROLE_ADMIN);
+Route::get('/competitions/{id}', 'CompetitionController@show');
+Route::post('/competitions', 'CompetitionController@store')->middleware('check_user_role:' . \App\Role\UserRole::ROLE_ADMIN);
+Route::get('/competitions/{id}/edit', 'CompetitionController@edit')->middleware('check_user_role:' . \App\Role\UserRole::ROLE_ADMIN);
+Route::patch('/competitions/{id}', 'CompetitionController@update')->middleware('check_user_role:' . \App\Role\UserRole::ROLE_ADMIN);
+Route::delete('/competitions/{id}', 'CompetitionController@destroy')->middleware('check_user_role:' . \App\Role\UserRole::ROLE_ADMIN);
+
