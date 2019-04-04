@@ -3,6 +3,7 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
+use App\User;
 
 class CreateSuperadmin extends Command
 {
@@ -44,6 +45,22 @@ class CreateSuperadmin extends Command
      */
     public function handle()
     {
-        //
+        $superAdmin = new User;
+        $user = [
+            'name'  => 'Super Admin',
+            'email' => 'superadmin@admin.dev',
+            'password' => \Illuminate\Support\Facades\Hash::make('superadmin'),
+            'roles'    => ['ROLES_SUPERADMIN']
+        ];
+        $superAdmin::create($user);
+
+        $admin = new User;
+        $user = [
+            'name'  => 'Admin',
+            'email' => 'admin@admin.dev',
+            'password' => \Illuminate\Support\Facades\Hash::make('admin'),
+            'roles'    => ['ROLE_ADMIN']
+        ];
+        $admin::create($user);
     }
 }
