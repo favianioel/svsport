@@ -54,3 +54,4 @@ Route::get('/competitions/{id}/edit', 'CompetitionController@edit')->middleware(
 Route::patch('/competitions/{id}', 'CompetitionController@update')->middleware('check_user_role:' . \App\Role\UserRole::ROLE_ADMIN);
 Route::delete('/competitions/{id}', 'CompetitionController@destroy')->middleware('check_user_role:' . \App\Role\UserRole::ROLE_ADMIN);
 
+Route::resource('users', 'UserController');

@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Competition;
+use App\User;
 use Illuminate\Http\Request;
 
-class CompetitionController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +14,9 @@ class CompetitionController extends Controller
      */
     public function index()
     {
-        $competitions = Competition::all();
-
-        return view('competitions.index', compact('competitions'));
+        $users = User::all();
+        $this->authorize('view');
+        return view('users.index', compact('users'));
     }
 
     /**
@@ -26,7 +26,7 @@ class CompetitionController extends Controller
      */
     public function create()
     {
-        return view('competitions.create');
+        return view('users.create');
     }
 
     /**
@@ -38,67 +38,71 @@ class CompetitionController extends Controller
     public function store(Request $request)
     {
         $name = request('name');
-        $competition = new Competition;
-        $competition->name = $name;
-        $competition->save();
+        $role = request('role');
+        $user = new Competition;
+        $user->name = $name;
+        $user->addRole($role);
+        $user->save();
 
-        return redirect('/competitions');
+        return redirect('/users');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Competition  $competition
+     * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function show($competition)
+    public function show($user)
     {
-        $competition = Competition::find($competition);
+        $user = User::find($user);
 
-        return view('competitions.show', compact('competition'));
+        return view('users.show', compact('user'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Competition  $competition
+     * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function edit($competition)
+    public function edit($user)
     {
-        $competition = Competition::find($competition);
+        $user = User::find($user);
 
-        return view('competitions.edit', compact('competition'));
+        return view('users.edit', compact('user'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Competition  $competition
+     * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Competition $competition)
+    public function update(Request $request, $user)
     {
         $name = request('name');
-        $entity = Competition::find($competition);
+        $role = request('role');
+        $entity = User::find($user);
         $entity->name = $name;
+        $entity->addRoles($role);
         $entity->save();
 
-        return redirect('/competitions/'.$competition);
+        return redirect('/users/'.$user);
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Competition  $competition
+     * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function destroy($competition)
+    public function destroy($user)
     {
-        $entity = Competition::find($competition);
+        $entity = User::find($user);
         $entity->delete();
 
-        return redirect('/competitions');
+        return redirect('/users');
     }
 }
