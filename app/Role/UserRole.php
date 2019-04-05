@@ -8,6 +8,7 @@ namespace App\Role;
  */
 class UserRole
 {
+    //ROLE_USER is not needed in our example but I'll keep it for example;
     const ROLE_SUPERADMIN = 'ROLE_SUPERADMIN';
     const ROLE_ADMIN = 'ROLE_ADMIN';
     const ROLE_USER = 'ROLE_USER';

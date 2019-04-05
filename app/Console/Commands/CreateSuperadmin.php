@@ -50,7 +50,7 @@ class CreateSuperadmin extends Command
             'name'  => 'Super Admin',
             'email' => 'superadmin@admin.dev',
             'password' => \Illuminate\Support\Facades\Hash::make('superadmin'),
-            'roles'    => ['ROLES_SUPERADMIN']
+            'roles'    => ['ROLE_SUPERADMIN']
         ];
         $superAdmin::create($user);
 
