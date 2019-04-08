@@ -1,5 +1,7 @@
 <?php
 
+use \App\Role\UserRole;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -32,26 +34,17 @@ Auth::routes();
 Route::get('/', function () {
     return view('welcome');
 });
-
+Route::get('/landing_page', 'LandingController@index');
 Route::get('/profile', 'ProfileController@index');
-
 Route::get('/dashboard', 'DashboardController@index')
-    ->middleware('check_user_role:' . \App\Role\UserRole::ROLE_SUPERADMIN);
 
-Route::get('/teams', 'TeamController@index');
-Route::get('/teams/create', 'TeamController@create')->middleware('check_user_role:' . \App\Role\UserRole::ROLE_ADMIN);
-Route::get('/teams/{id}', 'TeamController@show');
-Route::post('/teams', 'TeamController@store')->middleware('check_user_role:' . \App\Role\UserRole::ROLE_ADMIN);
-Route::get('/teams/{id}/edit', 'TeamController@edit')->middleware('check_user_role:' . \App\Role\UserRole::ROLE_ADMIN);
-Route::patch('/teams/{id}', 'TeamController@update')->middleware('check_user_role:' . \App\Role\UserRole::ROLE_ADMIN);
-Route::delete('/teams/{id}', 'TeamController@destroy')->middleware('check_user_role:' . \App\Role\UserRole::ROLE_ADMIN);
+->middleware('check_user_role:' . UserRole::ROLE_SUPERADMIN);
 
-Route::get('/competitions', 'CompetitionController@index');
-Route::get('/competitions/create', 'CompetitionController@create')->middleware('check_user_role:' . \App\Role\UserRole::ROLE_ADMIN);
-Route::get('/competitions/{id}', 'CompetitionController@show');
-Route::post('/competitions', 'CompetitionController@store')->middleware('check_user_role:' . \App\Role\UserRole::ROLE_ADMIN);
-Route::get('/competitions/{id}/edit', 'CompetitionController@edit')->middleware('check_user_role:' . \App\Role\UserRole::ROLE_ADMIN);
-Route::patch('/competitions/{id}', 'CompetitionController@update')->middleware('check_user_role:' . \App\Role\UserRole::ROLE_ADMIN);
-Route::delete('/competitions/{id}', 'CompetitionController@destroy')->middleware('check_user_role:' . \App\Role\UserRole::ROLE_ADMIN);
+Route::resource('teams', 'TeamController')
+->middleware('check_user_role:'. UserRole::ROLE_ADMIN);
 
-Route::resource('users', 'UserController');
+Route::resource('competitions', 'CompetitionController')
+->middleware('check_user_role:' . UserRole::ROLE_ADMIN);
+
+Route::resource('users', 'UserController')
+->middleware('check_user_role:'. UserRole::ROLE_SUPERADMIN);

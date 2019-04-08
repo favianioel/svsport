@@ -15,7 +15,6 @@ class UserController extends Controller
     public function index()
     {
         $users = User::all();
-        $this->authorize('view');
         return view('users.index', compact('users'));
     }
 
@@ -85,8 +84,12 @@ class UserController extends Controller
         $name = request('name');
         $role = request('role');
         $entity = User::find($user);
-        $entity->name = $name;
-        $entity->addRoles($role);
+        if (isset($name)) {
+            $entity->name = $name;
+        }
+        if (isset($role)) {
+            $entity->addRole($role);
+        }
         $entity->save();
 
         return redirect('/users/'.$user);
