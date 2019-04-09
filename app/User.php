@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use App\Team;
 
 class User extends Authenticatable
 {
@@ -99,5 +100,10 @@ class User extends Authenticatable
         }
 
         return $roles;
+    }
+
+    public function teams()
+    {
+        return $this->belongsToMany(Team::class);
     }
 }

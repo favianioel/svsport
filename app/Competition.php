@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Team;
 
 class Competition extends Model
 {
@@ -15,5 +16,9 @@ class Competition extends Model
     protected $fillable = [
         'name',
     ];
-}
 
+    public function teams()
+    {
+        return $this->belongsToMany(Team::class);
+    }
+}

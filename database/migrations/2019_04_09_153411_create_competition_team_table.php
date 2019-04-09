@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddRolesToUsersTable extends Migration
+class CreateCompetitionTeamTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,10 @@ class AddRolesToUsersTable extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->text('roles')->nullable();
+        Schema::create('competition_team', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->integer('competition_id');
+            $table->integer('team_id');
         });
     }
 
@@ -25,8 +27,6 @@ class AddRolesToUsersTable extends Migration
      */
     public function down()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('roles');
-        });
+        Schema::dropIfExists('competition_team');
     }
 }
