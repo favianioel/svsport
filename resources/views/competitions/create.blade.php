@@ -15,7 +15,12 @@
                     @endif
                     <form method="POST" action="/competitions">
                         @csrf
-                        <div><input name="name" placeholder="Name of competition" type="text"></div>
+                        <div>
+                            <input name="name" placeholder="Name of competition" type="text">
+                        </div>
+                        <div>
+                            
+                        </div>
                         <br>
                         <button type="submit">create</button>
                     </form>

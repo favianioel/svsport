@@ -8,10 +8,12 @@
                 <div class="card-header">{{ $competition->name }}</div>
 
                 <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
+                    @if ($competition->teams->count())
+                        <ul>
+                            @foreach ($competition->teams as $team)
+                                <li>{{$team->name}}</li>
+                            @endforeach
+                        </ul>
                     @endif
                     <a href="/competitions/{{ $competition->id }}/edit">
                         <button>edit</button>
