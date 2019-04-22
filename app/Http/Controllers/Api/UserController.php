@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
 use App\User;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class UserController extends Controller
 {
@@ -15,17 +16,7 @@ class UserController extends Controller
     public function index()
     {
         $users = User::all();
-        return view('users.index', compact('users'));
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        return view('users.create');
+        return $users->toJson();
     }
 
     /**
@@ -43,7 +34,7 @@ class UserController extends Controller
         $user->addRole($role);
         $user->save();
 
-        return redirect('/users');
+        return response()->json('User created!');
     }
 
     /**
@@ -56,20 +47,7 @@ class UserController extends Controller
     {
         $user = User::find($user);
 
-        return view('users.show', compact('user'));
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\User  $user
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($user)
-    {
-        $user = User::find($user);
-
-        return view('users.edit', compact('user'));
+        return $user->toJson();
     }
 
     /**
@@ -92,7 +70,7 @@ class UserController extends Controller
         }
         $entity->save();
 
-        return redirect('/users/'.$user);
+        return response()->toJson('User updated');
     }
 
     /**
@@ -106,6 +84,6 @@ class UserController extends Controller
         $entity = User::find($user);
         $entity->delete();
 
-        return redirect('/users');
+        return response()->toJson('User deleted');
     }
 }

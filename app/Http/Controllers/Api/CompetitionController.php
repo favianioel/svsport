@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
 use App\Competition;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class CompetitionController extends Controller
 {
@@ -15,18 +16,7 @@ class CompetitionController extends Controller
     public function index()
     {
         $competitions = Competition::all();
-
-        return view('competitions.index', compact('competitions'));
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        return view('competitions.create');
+        return $competitions->toJson();
     }
 
     /**
@@ -42,7 +32,7 @@ class CompetitionController extends Controller
         $competition->name = $name;
         $competition->save();
 
-        return redirect('/competitions');
+        return response()->toJson('Competition created');
     }
 
     /**
@@ -51,24 +41,10 @@ class CompetitionController extends Controller
      * @param  \App\Competition  $competition
      * @return \Illuminate\Http\Response
      */
-    public function show($competition)
+    public function show(Competition $competition)
     {
         $competition = Competition::find($competition);
-
-        return view('competitions.show', compact('competition'));
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Competition  $competition
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($competition)
-    {
-        $competition = Competition::find($competition);
-
-        return view('competitions.edit', compact('competition'));
+        return $competition->toJson();
     }
 
     /**
@@ -80,12 +56,12 @@ class CompetitionController extends Controller
      */
     public function update(Request $request, Competition $competition)
     {
-        $name = request('name');
+        $name = $request('name');
         $entity = Competition::find($competition);
         $entity->name = $name;
         $entity->save();
 
-        return redirect('/competitions/'.$competition);
+        return response()->toJson('Competition updated');
     }
 
     /**
@@ -94,11 +70,11 @@ class CompetitionController extends Controller
      * @param  \App\Competition  $competition
      * @return \Illuminate\Http\Response
      */
-    public function destroy($competition)
+    public function destroy(Competition $competition)
     {
         $entity = Competition::find($competition);
         $entity->delete();
-
-        return redirect('/competitions');
+       
+        return response()->toJson('Competition deleted');
     }
 }

@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
 use App\Team;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class TeamController extends Controller
 {
@@ -15,18 +16,7 @@ class TeamController extends Controller
     public function index()
     {
         $teams = Team::all();
-
-        return view('teams.index', compact('teams'));
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        return view('teams.create');
+        return $teams->toJson();
     }
 
     /**
@@ -41,8 +31,7 @@ class TeamController extends Controller
         $team = new Team;
         $team->name = $teamName;
         $team->save();
-
-        return redirect('/teams');
+        return response()->toJson('Team created');
     }
 
     /**
@@ -54,21 +43,7 @@ class TeamController extends Controller
     public function show($team)
     {
         $team = Team::find($team);
-
-        return view('teams.show', compact('team'));
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Team  $team
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($team)
-    {
-        $team = Team::find($team);
-
-        return view('teams.edit', compact('team'));
+        return $team->toJson();
     }
 
     /**
@@ -84,8 +59,7 @@ class TeamController extends Controller
         $entity = Team::find($team);
         $entity->name = $name;
         $entity->save();
-
-        return redirect('/teams/'.$team);
+        return response()->toJson('Team updated');
     }
 
     /**
@@ -98,7 +72,6 @@ class TeamController extends Controller
     {
         $entity = Team::find($team);
         $entity->delete();
-
-        return redirect('/teams');
+        return response()->toJson('Team deleted');
     }
 }
