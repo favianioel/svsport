@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
 use App\Competition;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class CompetitionController extends Controller
 {
@@ -14,17 +15,8 @@ class CompetitionController extends Controller
      */
     public function index()
     {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+        $competitions = Competition::all();
+        return $competitions->toJson();
     }
 
     /**
@@ -35,7 +27,12 @@ class CompetitionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $name = request('name');
+        $competition = new Competition;
+        $competition->name = $name;
+        $competition->save();
+
+        return response()->toJson('Competition created');
     }
 
     /**
@@ -46,18 +43,8 @@ class CompetitionController extends Controller
      */
     public function show(Competition $competition)
     {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Competition  $competition
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Competition $competition)
-    {
-        //
+        $competition = Competition::find($competition);
+        return $competition->toJson();
     }
 
     /**
@@ -69,7 +56,12 @@ class CompetitionController extends Controller
      */
     public function update(Request $request, Competition $competition)
     {
-        //
+        $name = $request('name');
+        $entity = Competition::find($competition);
+        $entity->name = $name;
+        $entity->save();
+
+        return response()->toJson('Competition updated');
     }
 
     /**
@@ -80,6 +72,9 @@ class CompetitionController extends Controller
      */
     public function destroy(Competition $competition)
     {
-        //
+        $entity = Competition::find($competition);
+        $entity->delete();
+       
+        return response()->toJson('Competition deleted');
     }
 }

@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
 use App\Team;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class TeamController extends Controller
 {
@@ -14,17 +15,8 @@ class TeamController extends Controller
      */
     public function index()
     {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+        $teams = Team::all();
+        return $teams->toJson();
     }
 
     /**
@@ -35,7 +27,11 @@ class TeamController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $teamName = request('name');
+        $team = new Team;
+        $team->name = $teamName;
+        $team->save();
+        return response()->toJson('Team created');
     }
 
     /**
@@ -44,20 +40,10 @@ class TeamController extends Controller
      * @param  \App\Team  $team
      * @return \Illuminate\Http\Response
      */
-    public function show(Team $team)
+    public function show($team)
     {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Team  $team
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Team $team)
-    {
-        //
+        $team = Team::find($team);
+        return $team->toJson();
     }
 
     /**
@@ -67,9 +53,13 @@ class TeamController extends Controller
      * @param  \App\Team  $team
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Team $team)
+    public function update(Request $request, $team)
     {
-        //
+        $name = request('name');
+        $entity = Team::find($team);
+        $entity->name = $name;
+        $entity->save();
+        return response()->toJson('Team updated');
     }
 
     /**
@@ -78,8 +68,10 @@ class TeamController extends Controller
      * @param  \App\Team  $team
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Team $team)
+    public function destroy($team)
     {
-        //
+        $entity = Team::find($team);
+        $entity->delete();
+        return response()->toJson('Team deleted');
     }
 }

@@ -1,5 +1,7 @@
 <?php
 
+use \App\Role\UserRole;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,13 +29,23 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('index');
+Route::view('/{path?}', 'app');
+// Auth::routes();
 
-Auth::routes();
+// Route::get('/', function () {
+    // return view('welcome');
+// });
+// Route::get('/landing_page', 'LandingController@index');
+// Route::get('/profile', 'ProfileController@index');
+// Route::get('/dashboard', 'DashboardController@index')
 
-Route::get('/profile', 'ProfileController@index')->name('profile');
+// ->middleware('check_user_role:' . UserRole::ROLE_SUPERADMIN);
 
-Route::get('/dashboard', 'DashboardController@index')->name('dashboard')
-->middleware('check_user_role:' . \App\Role\UserRole::ROLE_SUPERADMIN);
+// Route::resource('teams', 'TeamController')
+// ->middleware('check_user_role:'. UserRole::ROLE_ADMIN);
+
+// Route::resource('competitions', 'CompetitionController')
+// ->middleware('check_user_role:' . UserRole::ROLE_ADMIN);
+
+// Route::resource('users', 'UserController')
+// ->middleware('check_user_role:'. UserRole::ROLE_SUPERADMIN);
