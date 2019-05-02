@@ -1,22 +1,30 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import Header from './Header'
-import UsersList from './UsersList';
+import React from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
-class App extends Component {
-    render () {
-      return (
-        <BrowserRouter>
-          <div>
-            <Header />
-            <Switch>
-              <Route exact path='/' component={UsersList} />
-            </Switch>
-          </div>
-        </BrowserRouter>
-      )
-    }
-  }
+import routes from "./../routes";
+import withTracker from "./../withTracker";
 
-  ReactDOM.render(<App />, document.getElementById('app'))
+import "./../shards-dashboard/styles/shards-dashboards.1.1.0.min.css";
+
+export default () => (
+  <Router basename={process.env.REACT_APP_BASENAME || ""}>
+    <div>
+      {routes.map((route, index) => {
+        return (
+          <Route
+            key={index}
+            path={route.path}
+            exact={route.exact}
+            component={withTracker(props => {
+              return (
+                <route.layout {...props}>
+                  <route.component {...props} />
+                </route.layout>
+              );
+            })}
+          />
+        );
+      })}
+    </div>
+  </Router>
+);
