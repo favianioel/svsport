@@ -14,6 +14,8 @@ import AddNewPost from "./views/AddNewPost";
 import Errors from "./views/Errors";
 import Tables from "./views/Tables";
 import BlogPosts from "./views/BlogPosts";
+import LoginPage from "./views/Auth/LoginPage";
+import RegisterPage from "./views/Auth/RegisterPage";
 
 export default [
   {
@@ -21,6 +23,16 @@ export default [
     exact: true,
     layout: DefaultLayout,
     component: () => <Redirect to="/blog-overview" />
+  },
+  {
+    path: "/register",
+    layout: DefaultLayout,
+    component: RegisterPage
+  },
+  {
+    path: "/login",
+    layout: DefaultLayout,
+    component: LoginPage
   },
   {
     path: "/blog-overview",
