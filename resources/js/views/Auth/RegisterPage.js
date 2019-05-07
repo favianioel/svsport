@@ -7,23 +7,25 @@ import { connect } from 'react-redux';
 import { registerUserAction } from '../../actions/authenticationActions';
 
 class RegisterPage extends Component {
-    onHandleRegistration(event){
+    onHandleRegistration = (event) => {
         event.preventDefault();
 
         let name = event.target.name.value;
         let email = event.target.email.value;
         let password = event.target.password.value;
+        let password_confirmation = event.target.password_confirmation.value;
 
         const data = {
-            name, email, password
+            name, email, password, password_confirmation
         };
+        
         this.props.dispatch(registerUserAction(data));
     }
     render() {
-        let message, isSucces;
+        let message, isSuccess;
 
         if (this.props.response.register.hasOwnProperty('response')) {
-            isSucces = this.props.response.register.response.success;
+            isSuccess = this.props.response.register.response.success;
             message = this.props.response.register.response.message;
         }
 
@@ -36,21 +38,25 @@ class RegisterPage extends Component {
                 <Col lg="9" md="12">
                     {!isSuccess ? <div>{message}</div> : browserHistory.push('login')}
             <form onSubmit={this.onHandleRegistration}>
-            <div>
-                <label>Name</label>
-                <input type="text" name="name" />
-            </div>
-            <div>
-              <label>Email</label>
-              <input type="email" name="email" />
-            </div>
-            <div>
-              <label>Password</label>
-              <input type="password" name="password" />
-            </div>
-            <div>
-              <button>Register</button>
-            </div>
+                <div className="form-group">
+                    <label>Name</label>
+                    <input className="form-control" type="text" name="name" />
+                </div>
+                <div className="form-group">
+                    <label>Email</label>
+                    <input className="form-control" type="email" name="email" />
+                </div>
+                <div className="form-group">
+                    <label>Password</label>
+                    <input className="form-control" type="password" name="password" />
+                </div>
+                <div className="form-group">
+                    <label>Confirm Password</label>
+                    <input className="form-control" type="password" name="password_confirmation" />
+                </div>
+                    <div className="form-group">
+                    <button className="mb-2 btn-outline-primary mr-2">Register</button>
+                </div>
             </form>
             Already have account? <Link to='login'>Login here</Link>
             </Col>

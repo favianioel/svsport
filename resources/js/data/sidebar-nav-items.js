@@ -22,7 +22,12 @@ export default function() {
       title: "Competitions",
       to: "/competitions",
       htmlBefore: '<i class="material-icons">star</i>'
-    }
+    },
+    {
+      title: "Register",
+      to: "/register",
+      htmlBefore: '<i class="material-icons">people</i>'
+    },
     // {
     //   title: "Blog Posts",
     //   htmlBefore: '<i class="material-icons">vertical_split</i>',
