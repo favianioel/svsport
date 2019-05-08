@@ -37,29 +37,29 @@ class RegisterPage extends Component {
             <Row>
                 <Col lg="9" md="12">
                     {!isSuccess ? <div>{message}</div> : browserHistory.push('login')}
-            <form onSubmit={this.onHandleRegistration}>
-                <div className="form-group">
-                    <label>Name</label>
-                    <input className="form-control" type="text" name="name" />
-                </div>
-                <div className="form-group">
-                    <label>Email</label>
-                    <input className="form-control" type="email" name="email" />
-                </div>
-                <div className="form-group">
-                    <label>Password</label>
-                    <input className="form-control" type="password" name="password" />
-                </div>
-                <div className="form-group">
-                    <label>Confirm Password</label>
-                    <input className="form-control" type="password" name="password_confirmation" />
-                </div>
-                    <div className="form-group">
-                    <button className="mb-2 btn-outline-primary mr-2">Register</button>
-                </div>
-            </form>
-            Already have account? <Link to='login'>Login here</Link>
-            </Col>
+                    <form onSubmit={this.onHandleRegistration}>
+                        <div className="form-group">
+                            <label>Name</label>
+                            <input className="form-control" type="text" name="name" />
+                        </div>
+                        <div className="form-group">
+                            <label>Email</label>
+                            <input className="form-control" type="email" name="email" />
+                        </div>
+                        <div className="form-group">
+                            <label>Password</label>
+                            <input className="form-control" type="password" name="password" />
+                        </div>
+                        <div className="form-group">
+                            <label>Confirm Password</label>
+                            <input className="form-control" type="password" name="password_confirmation" />
+                        </div>
+                            <div className="form-group">
+                            <button className="mb-2 btn-outline-primary mr-2">Register</button>
+                        </div>
+                    </form>
+                    Already have account? <Link to='login'>Login here</Link>
+                </Col>
             </Row>
         </Container>
         )
