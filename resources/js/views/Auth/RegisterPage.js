@@ -23,7 +23,6 @@ class RegisterPage extends Component {
     }
     render() {
         let message, isSuccess;
-
         if (this.props.response.register.hasOwnProperty('response')) {
             isSuccess = this.props.response.register.response.success;
             message = this.props.response.register.response.message;
@@ -55,7 +54,7 @@ class RegisterPage extends Component {
                             <input className="form-control" type="password" name="password_confirmation" />
                         </div>
                             <div className="form-group">
-                            <button className="mb-2 btn-outline-primary mr-2">Register</button>
+                            <button type="submit" className="mb-2 btn-outline-primary mr-2">Register</button>
                         </div>
                     </form>
                     Already have account? <Link to='login'>Login here</Link>
