@@ -19,14 +19,20 @@ class AuthController extends Controller
         ]);
 
         if ($validator->fails()) {
-            return response(['errors' => $validator->errors()->all()], 422);
+            return response([
+                'success' => false,
+                'message' => join(" ", $validator->errors()->all())
+            ], 422);
         }
 
         $request['password'] = Hash::make($request['password']);
         $user = User::create($request->toArray());
 
         $token = $user->createToken('Laravel Password Grant Client')->accessToken;
-        $response = ['token' => $token];
+        $response = [
+            'success' => true,
+            'token' => $token
+        ];
 
         return response($response, 200);
     }

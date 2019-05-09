@@ -4,6 +4,7 @@ import { registerUserService, loginUserService } from '../services/authenticatio
 import * as types from '../actions'
 
 export function* registerSaga(payload) {
+  console.log('hello sagas');
   try {
     const response = yield call(registerUserService, payload);
     yield [

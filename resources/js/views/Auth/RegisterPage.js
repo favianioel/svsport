@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from "shards-react";
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import PageTitle from "../../components/common/PageTitle";
 import { connect } from 'react-redux';
 
@@ -23,6 +23,7 @@ class RegisterPage extends Component {
     }
     render() {
         let message, isSuccess;
+
         if (this.props.response.register.hasOwnProperty('response')) {
             isSuccess = this.props.response.register.response.success;
             message = this.props.response.register.response.message;
@@ -35,7 +36,7 @@ class RegisterPage extends Component {
             </Row>
             <Row>
                 <Col lg="9" md="12">
-                    {!isSuccess ? <div>{message}</div> : browserHistory.push('login')}
+                    {!isSuccess ? <div>{message}</div> : <Redirect to='login' />}
                     <form onSubmit={this.onHandleRegistration}>
                         <div className="form-group">
                             <label>Name</label>
