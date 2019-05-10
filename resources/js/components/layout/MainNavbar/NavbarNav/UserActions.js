@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { getCookie, checkCookie, deleteCookie } from "./../../../../utils/cookies";
 import {
   Dropdown,
   DropdownToggle,
@@ -27,6 +28,11 @@ export default class UserActions extends React.Component {
     });
   }
 
+  onHandleLogout() {
+    deleteCookie('token');
+    console.log('delete');
+  }
+
   render() {
     return (
       <NavItem tag={Dropdown} caret toggle={this.toggleUserActions}>
@@ -52,7 +58,7 @@ export default class UserActions extends React.Component {
             <i className="material-icons">&#xE896;</i> Transactions
           </DropdownItem>
           <DropdownItem divider />
-          <DropdownItem tag={Link} to="/" className="text-danger">
+          <DropdownItem onClick={this.onHandleLogout} className="text-danger">
             <i className="material-icons text-danger">&#xE879;</i> Logout
           </DropdownItem>
         </Collapse>

@@ -9,10 +9,10 @@ import BlogPosts from "./views/BlogPosts";
 
 export default [
 
-  // {
-  //   path: "/blog-posts",
-  //   layout: DefaultLayout,
-  //   component: BlogPosts
-  // },
+  {
+    path: "/blog-posts",
+    layout: DefaultLayout,
+    component: BlogPosts
+  },
 
 ];

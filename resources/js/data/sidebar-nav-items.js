@@ -28,6 +28,11 @@ export default function() {
       to: "/register",
       htmlBefore: '<i class="material-icons">people</i>'
     },
+    {
+      title: "Login",
+      to: "/login",
+      htmlBefore: '<i class="material-icons">people</i>'
+    },
     // {
     //   title: "Blog Posts",
     //   htmlBefore: '<i class="material-icons">vertical_split</i>',
