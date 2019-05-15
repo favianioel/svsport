@@ -15,7 +15,7 @@ class LoginPage extends Component {
         let email = event.target.email.value;
         let password = event.target.password.value;
     
-        const data = {
+        const data = { 
           email, password
         };
     

@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { getCookie, checkCookie, deleteCookie } from "./../../../../utils/cookies";
+import { logoutUserAction } from './../../../../actions/authenticationActions';
+import { connect } from 'react-redux';
 import {
   Dropdown,
   DropdownToggle,
@@ -11,7 +13,7 @@ import {
   NavLink
 } from "shards-react";
 
-export default class UserActions extends React.Component {
+class UserActions extends React.Component {
   constructor(props) {
     super(props);
 
@@ -28,12 +30,29 @@ export default class UserActions extends React.Component {
     });
   }
 
-  onHandleLogout() {
-    deleteCookie('token');
-    console.log('delete');
+  onHandleLogout = (event) => {
+    event.preventDefault();
+
+    let token = getCookie('token');
+    console.log(token);
+    const data = { 
+      token
+    };
+
+    this.props.dispatch(logoutUserAction(data));
   }
 
   render() {
+    console.log(document.cookie);
+    let isSuccess, message;
+    if (this.props.response.login.hasOwnProperty('response')) {
+        isSuccess = this.props.response.login.response.success;
+        message = this.props.response.login.response.message;
+
+        if (isSuccess) {
+            deleteCookie('token');
+        }
+    }
     return (
       <NavItem tag={Dropdown} caret toggle={this.toggleUserActions}>
         <DropdownToggle caret tag={NavLink} className="text-nowrap px-3">
@@ -66,3 +85,9 @@ export default class UserActions extends React.Component {
     );
   }
 }
+
+const mapStateToProps = (response) => ({
+  response
+})
+
+export default connect(mapStateToProps)(UserActions);

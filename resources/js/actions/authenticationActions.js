@@ -13,3 +13,10 @@ export const loginUserAction = (user) => {
         user
     }
 };
+
+export const logoutUserAction = (user) => {
+    return {
+        type: types.LOGOUT_USER,
+        user
+    }
+}

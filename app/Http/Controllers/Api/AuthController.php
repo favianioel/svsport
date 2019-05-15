@@ -45,14 +45,23 @@ class AuthController extends Controller
         if ($user) {
             if (Hash::check($request->password, $user->password)) {
                 $token = $user->createToken('Laravel Password Grant Client')->accessToken;
-                $response = ['token' => $token];
+                $response = [
+                    'success' => true,
+                    'token' => $token
+                ];
                 return response($response, 200);
             } else {
-                $response = "Password miss-match";
+                $response = [
+                    'success' => false,
+                    'message' => "Passwords did not match."
+                ];
                 return response($response, 422);
             }
         } else {
-            $response = 'User does not exist';
+            $response = [
+                'success' => false,
+                'message' => 'User not found.'
+            ];
             return response($response, 422);
         }
     }
@@ -61,8 +70,11 @@ class AuthController extends Controller
     {
         $token = $request->user()->token();
         $token->revoke();
-
-        $response = 'You have been successfully logged out!';
+        $response = [
+            'success' => true,
+            'message' => 'User has been logged out.'
+        ];
+        
         return response($response, 200);
     }
 }

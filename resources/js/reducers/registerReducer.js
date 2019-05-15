@@ -2,8 +2,7 @@ import * as types from '../actions';
 
 export default function(state = [], action) {
   let response = action.response;
-  
-  console.log(action);
+
   switch(action.type) {
     case types.REGISTER_USER_SUCCESS:
       return { ...state, response };
