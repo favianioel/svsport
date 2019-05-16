@@ -39,6 +39,7 @@ export default class App extends Component {
                 {privateRoutes.map((route, index) => {
                     return (
                         <PrivateRoute
+                        key={index}
                         path={route.path}
                         component={withTracker(props => {
                             return (

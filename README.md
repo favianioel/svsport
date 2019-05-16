@@ -12,11 +12,13 @@ SvSport is a platform  to manage sport activities
 
 ```bash
 composer install
+php artisan migrate
+php artisan passport:install
 ```
 
 ## Usage
 
-```python
+```bash
 php artisan serve
 ```
 

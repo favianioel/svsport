@@ -40,18 +40,16 @@ export const loginUserService = (request) => {
 
 export const logoutUserService = (request) => {
   const LOGOUT_API_ENDPOINT = 'http://localhost:8000/api/logout';
-  console.log(request.user);
   const parameters = {
     method: 'GET',
     headers: {
-      'Authorization': 'Bearer'
-    },
-    body: JSON.stringify(request.user)
+      'Authorization': 'Bearer '+request.user.token
+    }
   };
 
   return fetch(LOGOUT_API_ENDPOINT, parameters)
     .then(response => {
-      return response.json;
+      return response.json();
     })
     .then(json => {
       return json;

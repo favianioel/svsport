@@ -41,13 +41,11 @@ class UserActions extends React.Component {
   }
 
   render() {
-    let isSuccess, message;
-    if (this.props.response.login.hasOwnProperty('response')) {
-        isSuccess = this.props.response.login.response.success;
-        message = this.props.response.login.response.message;
-
+    let isSuccess;
+    if (this.props.response.logout.hasOwnProperty('response')) {
+        isSuccess = this.props.response.logout.response.success;
         if (isSuccess) {
-            deleteCookie('token');
+          deleteCookie('token');
         }
     }
     return (
