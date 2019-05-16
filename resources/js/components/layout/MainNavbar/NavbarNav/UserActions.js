@@ -32,9 +32,7 @@ class UserActions extends React.Component {
 
   onHandleLogout = (event) => {
     event.preventDefault();
-
     let token = getCookie('token');
-    console.log(token);
     const data = { 
       token
     };
@@ -43,7 +41,6 @@ class UserActions extends React.Component {
   }
 
   render() {
-    console.log(document.cookie);
     let isSuccess, message;
     if (this.props.response.login.hasOwnProperty('response')) {
         isSuccess = this.props.response.login.response.success;
