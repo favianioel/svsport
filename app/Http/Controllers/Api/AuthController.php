@@ -10,6 +10,12 @@ use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
+    /**
+     * Signs in a new User
+     *
+     * @param Request $request
+     * @return Json
+     */
     public function register(Request $request)
     {
         $validator = Validator::make($request->all(), [
@@ -37,6 +43,12 @@ class AuthController extends Controller
         return response($response, 200);
     }
 
+    /**
+     * Signs in the user found in db
+     *
+     * @param Request $request
+     * @return Json
+     */
     public function login(Request $request)
     {
 
@@ -66,6 +78,12 @@ class AuthController extends Controller
         }
     }
 
+    /**
+     * Signs out the user with the given token
+     *
+     * @param Request $request
+     * @return Json
+     */
     public function logout(Request $request)
     {
         $token = $request->user()->token();
@@ -76,5 +94,16 @@ class AuthController extends Controller
         ];
         
         return response($response, 200);
+    }
+
+    /**
+     * returns current logged user session
+     *
+     * @param Request $request
+     * @return Json User
+     */
+    public function session(Request $request)
+    {
+        return response($request->user(), 200);
     }
 }

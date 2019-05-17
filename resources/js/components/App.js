@@ -5,14 +5,23 @@ import routes from "./../routes";
 import privateRoutes from "./../privateRoutes";
 import withTracker from "./../withTracker";
 import PrivateRoute from "./../services/PrivateRoute";
+import { checkCookie } from "./../utils/cookies";
+import { getUserAction } from './../actions/authenticationActions';
+import { connect } from 'react-redux';
 
 import "./../shards-dashboard/styles/shards-dashboards.1.1.0.min.css";
 
-export default class App extends Component {
-    constructor(props) {
-        super(props);
-        this.state = { 
-        };
+export class App extends Component {
+
+    componentDidMount() {
+        let token = checkCookie();
+        if(token !== null) {
+            const data = { 
+                token
+            };
+          
+            this.props.dispatch(getUserAction(data));
+        }
     }
     
     render() {
@@ -57,3 +66,10 @@ export default class App extends Component {
         );
     }
 } 
+
+const mapStateToProps = (response) => ({
+    response
+  })
+  
+  export default connect(mapStateToProps)(App);
+  

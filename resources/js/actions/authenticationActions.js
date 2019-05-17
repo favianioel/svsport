@@ -20,3 +20,10 @@ export const logoutUserAction = (user) => {
         user
     }
 }
+
+export const getUserAction = (user) => {
+    return {
+        type: types.GET_USER,
+        user
+    }
+}

@@ -38,6 +38,22 @@ export const loginUserService = (request) => {
     });
 };
 
+export const getUserService = (request) => {
+  const GET_USER_API_ENDPOINT = 'http://localhost:8000/api/user-session';
+  const parameters = {
+    method: 'GET',
+    headers: {
+      'Authorization': 'Bearer '+request.user.token
+    }
+  };
+
+  return fetch(GET_USER_API_ENDPOINT, parameters).then(response => {
+    return response.json();
+  }).then(json => {
+    return json;
+  })
+};
+
 export const logoutUserService = (request) => {
   const LOGOUT_API_ENDPOINT = 'http://localhost:8000/api/logout';
   const parameters = {

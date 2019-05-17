@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { getCookie, checkCookie, deleteCookie } from "./../../../../utils/cookies";
+import { getCookie, deleteCookie } from "./../../../../utils/cookies";
 import { logoutUserAction } from './../../../../actions/authenticationActions';
 import { connect } from 'react-redux';
 import {
@@ -40,8 +40,10 @@ class UserActions extends React.Component {
     this.props.dispatch(logoutUserAction(data));
   }
 
+
   render() {
-    let isSuccess;
+    let isSuccess, user;
+    user = this.props.response.getUser;
     if (this.props.response.logout.hasOwnProperty('response')) {
         isSuccess = this.props.response.logout.response.success;
         if (isSuccess) {
@@ -53,7 +55,7 @@ class UserActions extends React.Component {
         <DropdownToggle caret tag={NavLink} className="text-nowrap px-3">
           <img
             className="user-avatar rounded-circle mr-2"
-            src={require("./../../../../images/avatars/0.jpg")}
+            src={require("./../../../../images/avatars/3.jpg")}
             alt="User Avatar"
           />{" "}
           <span className="d-none d-md-inline-block">Sierra Brooks</span>
@@ -62,15 +64,15 @@ class UserActions extends React.Component {
           <DropdownItem tag={Link} to="user-profile">
             <i className="material-icons">&#xE7FD;</i> Profile
           </DropdownItem>
-          <DropdownItem tag={Link} to="edit-user-profile">
+          {/* <DropdownItem tag={Link} to="edit-user-profile">
             <i className="material-icons">&#xE8B8;</i> Edit Profile
-          </DropdownItem>
-          <DropdownItem tag={Link} to="file-manager-list">
+          </DropdownItem> */}
+          {/* <DropdownItem tag={Link} to="file-manager-list">
             <i className="material-icons">&#xE2C7;</i> Files
-          </DropdownItem>
-          <DropdownItem tag={Link} to="transaction-history">
+          </DropdownItem> */}
+          {/* <DropdownItem tag={Link} to="transaction-history">
             <i className="material-icons">&#xE896;</i> Transactions
-          </DropdownItem>
+          </DropdownItem> */}
           <DropdownItem divider />
           <DropdownItem onClick={this.onHandleLogout} className="text-danger">
             <i className="material-icons text-danger">&#xE879;</i> Logout

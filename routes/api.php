@@ -14,6 +14,7 @@ use Illuminate\Http\Request;
 */
 
 Route::group(['middleware' => ['json.response']], function () {
+
     // public routes
     Route::post('/login', 'Api\AuthController@login')->name('login.api');
     Route::post('/register', 'Api\AuthController@register')->name('register.api');
@@ -24,8 +25,6 @@ Route::group(['middleware' => ['json.response']], function () {
     // private routes
     Route::middleware('auth:api')->group(function () {
         Route::get('/logout', 'Api\AuthController@logout')->name('logout');
-        Route::get('/user', function (Request $request) {
-            return $request->user();
-        });
+        Route::get('/user-session', 'Api\AuthController@session')->name('user-session');
     });
 });
