@@ -10,10 +10,6 @@ import Users from "./views/Users";
 import Competitions from "./views/Competitions";
 import BlogOverview from "./views/BlogOverview";
 import UserProfile from "./views/UserProfile";
-import AddNewPost from "./views/AddNewPost";
-import Errors from "./views/Errors";
-import Tables from "./views/Tables";
-import BlogPosts from "./views/BlogPosts";
 import LoginPage from "./views/Auth/LoginPage";
 import RegisterPage from "./views/Auth/RegisterPage";
 
@@ -58,26 +54,5 @@ export default [
     path: "/user-profile",
     layout: DefaultLayout,
     component: UserProfile
-  },
-  // {
-  //   path: "/add-new-post",
-  //   layout: DefaultLayout,
-  //   component: AddNewPost
-  // },
-  // {
-  //   path: "/errors",
-  //   layout: DefaultLayout,
-  //   component: Errors
-  // },
-  // {
-  //   path: "/tables",
-  //   layout: DefaultLayout,
-  //   component: Tables
-  // },
-  // {
-  //   path: "/blog-posts",
-  //   layout: DefaultLayout,
-  //   component: BlogPosts
-  // },
-
+  }
 ];

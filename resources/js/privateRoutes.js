@@ -5,14 +5,13 @@ import { Redirect } from "react-router-dom";
 import { DefaultLayout } from "./layouts";
 
 // Route Views
-import BlogPosts from "./views/BlogPosts";
+import UserProfile from "./views/UserProfile";
 
 export default [
 
   {
-    path: "/blog-posts",
+    path: "/user-profile",
     layout: DefaultLayout,
-    component: BlogPosts
+    component: UserProfile
   },
-
 ];
