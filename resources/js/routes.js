@@ -9,7 +9,7 @@ import Teams from "./views/Teams";
 import Users from "./views/Users";
 import Competitions from "./views/Competitions";
 import BlogOverview from "./views/BlogOverview";
-import UserProfileLite from "./views/UserProfileLite";
+import UserProfile from "./views/UserProfile";
 import AddNewPost from "./views/AddNewPost";
 import Errors from "./views/Errors";
 import Tables from "./views/Tables";
@@ -53,12 +53,12 @@ export default [
     path: "/competitions",
     layout: DefaultLayout,
     component: Competitions
-  }
-  // {
-  //   path: "/user-profile-lite",
-  //   layout: DefaultLayout,
-  //   component: UserProfileLite
-  // },
+  },
+  {
+    path: "/user-profile",
+    layout: DefaultLayout,
+    component: UserProfile
+  },
   // {
   //   path: "/add-new-post",
   //   layout: DefaultLayout,

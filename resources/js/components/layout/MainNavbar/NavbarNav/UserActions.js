@@ -42,12 +42,12 @@ class UserActions extends React.Component {
 
 
   render() {
-    let isSuccess, user;
-    user = this.props.response.getUser;
+    let isSuccess;
     if (this.props.response.logout.hasOwnProperty('response')) {
         isSuccess = this.props.response.logout.response.success;
         if (isSuccess) {
           deleteCookie('token');
+          window.location.reload();
         }
     }
     return (
@@ -58,7 +58,11 @@ class UserActions extends React.Component {
             src={require("./../../../../images/avatars/3.jpg")}
             alt="User Avatar"
           />{" "}
-          <span className="d-none d-md-inline-block">Sierra Brooks</span>
+          <span className="d-none d-md-inline-block">
+          { _.size(this.props.response.getUser) > 0 &&
+          this.props.response.getUser.response.name
+          }
+          </span>
         </DropdownToggle>
         <Collapse tag={DropdownMenu} right small open={this.state.visible}>
           <DropdownItem tag={Link} to="user-profile">

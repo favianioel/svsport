@@ -4,8 +4,8 @@ import { connect } from 'react-redux';
 
 import { Container, Row, Col } from "shards-react";
 import PageTitle from "../../components/common/PageTitle";
-import { loginUserAction } from '../../actions/authenticationActions';
-import { setCookie } from '../../utils/cookies';
+import { loginUserAction, getUserAction } from '../../actions/authenticationActions';
+import { setCookie, checkCookie } from '../../utils/cookies';
 
 class LoginPage extends Component {
 
@@ -20,6 +20,8 @@ class LoginPage extends Component {
         };
     
         this.props.dispatch(loginUserAction(data));
+
+        
     }
 
     render () {
@@ -30,6 +32,12 @@ class LoginPage extends Component {
 
             if (isSuccess) {
                 setCookie('token', this.props.response.login.response.token, 1);
+                let token = this.props.response.login.response.token;
+                const data = { 
+                    token
+                  };
+                this.props.dispatch(getUserAction(data));
+        
             }
         }
 
@@ -41,7 +49,7 @@ class LoginPage extends Component {
 
             <Row>
             <Col lg="9" md="12">
-            {!isSuccess ? <div>{message}</div> : <Redirect to='dashboard' />}
+            {!isSuccess ? <div>{message}</div> : <Redirect to='user-profile' />}
             <form onSubmit={this.onHandleLogin}>
                 <div className="form-group">
                     <label>email</label>
