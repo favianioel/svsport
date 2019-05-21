@@ -1,15 +1,21 @@
+// react and installed components
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-
-import routes from "./../routes";
-import privateRoutes from "./../privateRoutes";
-import withTracker from "./../withTracker";
-import PrivateRoute from "./../services/PrivateRoute";
-import { checkCookie } from "./../utils/cookies";
-import { getUserAction } from './../actions/authenticationActions';
 import { connect } from 'react-redux';
 
+// shards files
 import "./../shards-dashboard/styles/shards-dashboards.1.1.0.min.css";
+import withTracker from "./../withTracker";
+
+// implemented files
+import routes from "./../routes";
+import privateRoutes from "./../privateRoutes";
+import guestRoutes from "./../guestRoutes";
+import PrivateRoute from "./../services/PrivateRoute";
+import GuestRoute from "./../services/GuestRoute";
+import { checkCookie } from "./../utils/cookies";
+import { getUserAction } from './../actions/authenticationActions';
+
 
 export class App extends Component {
 
@@ -48,6 +54,21 @@ export class App extends Component {
                 {privateRoutes.map((route, index) => {
                     return (
                         <PrivateRoute
+                        key={index}
+                        path={route.path}
+                        component={withTracker(props => {
+                            return (
+                                <route.layout {...props}>
+                                <route.component {...props}/>
+                                </route.layout>
+                            );
+                        })}
+                        />
+                    );
+                })}
+                {guestRoutes.map((route, index) => {
+                    return (
+                        <GuestRoute
                         key={index}
                         path={route.path}
                         component={withTracker(props => {
