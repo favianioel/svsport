@@ -1,21 +1,18 @@
-import React from "react";
-import { Redirect } from "react-router-dom";
-
 // Layout Types
-import { DefaultLayout } from "./layouts";
+import { DefaultLayout } from "./../layouts";
 
 // Route Views
-import Teams from "./views/Teams";
-import Users from "./views/Users";
-import Competitions from "./views/Competitions";
-
+import UserProfile from "./../views/UserProfile";
+import Teams from "./../views/Teams";
+import Users from "./../views/Users";
+import Competitions from "./../views/Competitions";
 
 export default [
+
   {
-    path: "/",
-    exact: true,
+    path: "/user-profile",
     layout: DefaultLayout,
-    component: () => <Redirect to="/register" />
+    component: UserProfile
   },
   {
     path: "/teams",

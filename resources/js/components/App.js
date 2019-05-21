@@ -8,9 +8,9 @@ import "./../shards-dashboard/styles/shards-dashboards.1.1.0.min.css";
 import withTracker from "./../withTracker";
 
 // implemented files
-import routes from "./../routes";
-import privateRoutes from "./../privateRoutes";
-import guestRoutes from "./../guestRoutes";
+import routes from "../routes/routes";
+import privateRoutes from "../routes/privateRoutes";
+import guestRoutes from "../routes/guestRoutes";
 import PrivateRoute from "./../services/PrivateRoute";
 import GuestRoute from "./../services/GuestRoute";
 import { checkCookie } from "./../utils/cookies";

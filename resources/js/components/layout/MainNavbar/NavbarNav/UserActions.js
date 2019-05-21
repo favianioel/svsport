@@ -43,7 +43,6 @@ class UserActions extends React.Component {
 
   render() {
     let isSuccess;
-    console.log(this.props.response);
     if (this.props.response.logout.hasOwnProperty('response')) {
         isSuccess = this.props.response.logout.response.success;
         if (isSuccess) {

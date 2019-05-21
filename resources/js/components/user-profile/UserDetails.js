@@ -1,13 +1,6 @@
 import React from "react";
 import { connect } from 'react-redux'; 
-import {
-  Card,
-  CardHeader,
-  ListGroup,
-  ListGroupItem,
-  Row,
-  Col
-} from "shards-react";
+import { Card } from "shards-react";
 
 class UserDetails extends React.Component {
   render () {

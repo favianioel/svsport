@@ -100135,11 +100135,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _shards_dashboard_styles_shards_dashboards_1_1_0_min_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../shards-dashboard/styles/shards-dashboards.1.1.0.min.css */ "./resources/js/shards-dashboard/styles/shards-dashboards.1.1.0.min.css");
 /* harmony import */ var _shards_dashboard_styles_shards_dashboards_1_1_0_min_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_shards_dashboard_styles_shards_dashboards_1_1_0_min_css__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _withTracker__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../withTracker */ "./resources/js/withTracker.js");
-/* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../routes */ "./resources/js/routes.js");
-/* harmony import */ var _privateRoutes__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./../privateRoutes */ "./resources/js/privateRoutes.js");
-/* harmony import */ var _guestRoutes__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./../guestRoutes */ "./resources/js/guestRoutes.js");
+/* harmony import */ var _routes_routes__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../routes/routes */ "./resources/js/routes/routes.js");
+/* harmony import */ var _routes_privateRoutes__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../routes/privateRoutes */ "./resources/js/routes/privateRoutes.js");
+/* harmony import */ var _routes_guestRoutes__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../routes/guestRoutes */ "./resources/js/routes/guestRoutes.js");
 /* harmony import */ var _services_PrivateRoute__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./../services/PrivateRoute */ "./resources/js/services/PrivateRoute.js");
-/* harmony import */ var _services_GuestRoute__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./../services/GuestRoute */ "./resources/js/services/GuestRoute.js");
+/* harmony import */ var _services_GuestRoute__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./../services/GuestRoute */ "./resources/js/services/GuestRoute.js");
 /* harmony import */ var _utils_cookies__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./../utils/cookies */ "./resources/js/utils/cookies.js");
 /* harmony import */ var _actions_authenticationActions__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./../actions/authenticationActions */ "./resources/js/actions/authenticationActions.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -100203,7 +100203,7 @@ function (_Component) {
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["BrowserRouter"], {
         basename: Object({"MIX_PUSHER_APP_KEY":"","MIX_PUSHER_APP_CLUSTER":"mt1","NODE_ENV":"development"}).REACT_APP_BASENAME || ""
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], null, _routes__WEBPACK_IMPORTED_MODULE_5__["default"].map(function (route, index) {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], null, _routes_routes__WEBPACK_IMPORTED_MODULE_5__["default"].map(function (route, index) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
           key: index,
           path: route.path,
@@ -100212,7 +100212,7 @@ function (_Component) {
             return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(route.layout, props, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(route.component, props));
           })
         });
-      }), _privateRoutes__WEBPACK_IMPORTED_MODULE_6__["default"].map(function (route, index) {
+      }), _routes_privateRoutes__WEBPACK_IMPORTED_MODULE_6__["default"].map(function (route, index) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_services_PrivateRoute__WEBPACK_IMPORTED_MODULE_8__["default"], {
           key: index,
           path: route.path,
@@ -100220,8 +100220,8 @@ function (_Component) {
             return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(route.layout, props, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(route.component, props));
           })
         });
-      }), _guestRoutes__WEBPACK_IMPORTED_MODULE_7__["default"].map(function (route, index) {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_services_GuestRoute__WEBPACK_IMPORTED_MODULE_12__["default"], {
+      }), _routes_guestRoutes__WEBPACK_IMPORTED_MODULE_7__["default"].map(function (route, index) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_services_GuestRoute__WEBPACK_IMPORTED_MODULE_9__["default"], {
           key: index,
           path: route.path,
           component: Object(_withTracker__WEBPACK_IMPORTED_MODULE_4__["default"])(function (props) {
@@ -100363,21 +100363,12 @@ MainFooter.propTypes = {
 };
 MainFooter.defaultProps = {
   contained: false,
-  copyright: "Copyright © 2018 DesignRevision",
+  copyright: "Copyright © 2019 SvSport",
   menuItems: [{
-    title: "Home",
+    title: " FAQ",
     to: "#"
   }, {
-    title: "Services",
-    to: "#"
-  }, {
-    title: "About",
-    to: "#"
-  }, {
-    title: "Products",
-    to: "#"
-  }, {
-    title: "Blog",
+    title: "Contact",
     to: "#"
   }]
 };
@@ -100459,6 +100450,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _Notifications__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Notifications */ "./resources/js/components/layout/MainNavbar/NavbarNav/Notifications.js");
 /* harmony import */ var _UserActions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./UserActions */ "./resources/js/components/layout/MainNavbar/NavbarNav/UserActions.js");
+/* harmony import */ var _utils_cookies__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../utils/cookies */ "./resources/js/utils/cookies.js");
+
 
 
 
@@ -100468,7 +100461,7 @@ __webpack_require__.r(__webpack_exports__);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_1__["Nav"], {
     navbar: true,
     className: "border-left flex-row"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UserActions__WEBPACK_IMPORTED_MODULE_4__["default"], null));
+  }, Object(_utils_cookies__WEBPACK_IMPORTED_MODULE_5__["checkCookie"])() !== null ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UserActions__WEBPACK_IMPORTED_MODULE_4__["default"], null) : false);
 });
 
 /***/ }),
@@ -100670,7 +100663,6 @@ function (_React$Component) {
     key: "render",
     value: function render() {
       var isSuccess;
-      console.log(this.props.response);
 
       if (this.props.response.logout.hasOwnProperty('response')) {
         isSuccess = this.props.response.logout.response.success;
@@ -101250,10 +101242,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/components/user-profile-lite/UserDetails.js":
-/*!******************************************************************!*\
-  !*** ./resources/js/components/user-profile-lite/UserDetails.js ***!
-  \******************************************************************/
+/***/ "./resources/js/components/user-profile/UserDetails.js":
+/*!*************************************************************!*\
+  !*** ./resources/js/components/user-profile/UserDetails.js ***!
+  \*************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -101526,35 +101518,6 @@ function (_EventEmitter) {
 
 /***/ }),
 
-/***/ "./resources/js/guestRoutes.js":
-/*!*************************************!*\
-  !*** ./resources/js/guestRoutes.js ***!
-  \*************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _layouts__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./layouts */ "./resources/js/layouts/index.js");
-/* harmony import */ var _views_Auth_LoginPage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./views/Auth/LoginPage */ "./resources/js/views/Auth/LoginPage.js");
-/* harmony import */ var _views_Auth_RegisterPage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./views/Auth/RegisterPage */ "./resources/js/views/Auth/RegisterPage.js");
-// Layout Types
- // Route Views
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = ([{
-  path: "/register",
-  layout: _layouts__WEBPACK_IMPORTED_MODULE_0__["DefaultLayout"],
-  component: _views_Auth_RegisterPage__WEBPACK_IMPORTED_MODULE_2__["default"]
-}, {
-  path: "/login",
-  layout: _layouts__WEBPACK_IMPORTED_MODULE_0__["DefaultLayout"],
-  component: _views_Auth_LoginPage__WEBPACK_IMPORTED_MODULE_1__["default"]
-}]);
-
-/***/ }),
-
 /***/ "./resources/js/images/avatars/3.jpg":
 /*!*******************************************!*\
   !*** ./resources/js/images/avatars/3.jpg ***!
@@ -101664,11 +101627,65 @@ DefaultLayout.defaultProps = {
 
 /***/ }),
 
+/***/ "./resources/js/layouts/Guest.js":
+/*!***************************************!*\
+  !*** ./resources/js/layouts/Guest.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var shards_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! shards-react */ "./node_modules/shards-react/dist/shards-react.es.js");
+/* harmony import */ var _components_layout_MainNavbar_MainNavbar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/layout/MainNavbar/MainNavbar */ "./resources/js/components/layout/MainNavbar/MainNavbar.js");
+/* harmony import */ var _components_layout_MainFooter__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/layout/MainFooter */ "./resources/js/components/layout/MainFooter.js");
+
+
+
+
+
+
+var GuestLayout = function GuestLayout(_ref) {
+  var children = _ref.children,
+      noNavbar = _ref.noNavbar,
+      noFooter = _ref.noFooter;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_2__["Container"], {
+    fluid: true
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_2__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_2__["Col"], {
+    className: "main-content p-0",
+    sm: "12",
+    tag: "main"
+  }, !noNavbar && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_layout_MainNavbar_MainNavbar__WEBPACK_IMPORTED_MODULE_3__["default"], null), children, !noFooter && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_layout_MainFooter__WEBPACK_IMPORTED_MODULE_4__["default"], null))));
+};
+
+GuestLayout.propTypes = {
+  /**
+   * Whether to display the navbar, or not.
+   */
+  noNavbar: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool,
+
+  /**
+   * Whether to display the footer, or not.
+   */
+  noFooter: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool
+};
+GuestLayout.defaultProps = {
+  noNavbar: false,
+  noFooter: false
+};
+/* harmony default export */ __webpack_exports__["default"] = (GuestLayout);
+
+/***/ }),
+
 /***/ "./resources/js/layouts/index.js":
 /*!***************************************!*\
   !*** ./resources/js/layouts/index.js ***!
   \***************************************/
-/*! exports provided: DefaultLayout */
+/*! exports provided: DefaultLayout, GuestLayout */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -101676,31 +101693,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Default__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Default */ "./resources/js/layouts/Default.js");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "DefaultLayout", function() { return _Default__WEBPACK_IMPORTED_MODULE_0__["default"]; });
 
+/* harmony import */ var _Guest__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Guest */ "./resources/js/layouts/Guest.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "GuestLayout", function() { return _Guest__WEBPACK_IMPORTED_MODULE_1__["default"]; });
 
 
 
-/***/ }),
 
-/***/ "./resources/js/privateRoutes.js":
-/*!***************************************!*\
-  !*** ./resources/js/privateRoutes.js ***!
-  \***************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _layouts__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./layouts */ "./resources/js/layouts/index.js");
-/* harmony import */ var _views_UserProfile__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./views/UserProfile */ "./resources/js/views/UserProfile.js");
-// Layout Types
- // Route Views
-
-
-/* harmony default export */ __webpack_exports__["default"] = ([{
-  path: "/user-profile",
-  layout: _layouts__WEBPACK_IMPORTED_MODULE_0__["DefaultLayout"],
-  component: _views_UserProfile__WEBPACK_IMPORTED_MODULE_1__["default"]
-}]);
 
 /***/ }),
 
@@ -101888,10 +101886,80 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /***/ }),
 
-/***/ "./resources/js/routes.js":
-/*!********************************!*\
-  !*** ./resources/js/routes.js ***!
-  \********************************/
+/***/ "./resources/js/routes/guestRoutes.js":
+/*!********************************************!*\
+  !*** ./resources/js/routes/guestRoutes.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _layouts__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../layouts */ "./resources/js/layouts/index.js");
+/* harmony import */ var _views_Auth_LoginPage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../views/Auth/LoginPage */ "./resources/js/views/Auth/LoginPage.js");
+/* harmony import */ var _views_Auth_RegisterPage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../views/Auth/RegisterPage */ "./resources/js/views/Auth/RegisterPage.js");
+// Layout Types
+ // Route Views
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ([{
+  path: "/register",
+  layout: _layouts__WEBPACK_IMPORTED_MODULE_0__["GuestLayout"],
+  component: _views_Auth_RegisterPage__WEBPACK_IMPORTED_MODULE_2__["default"]
+}, {
+  path: "/login",
+  layout: _layouts__WEBPACK_IMPORTED_MODULE_0__["GuestLayout"],
+  component: _views_Auth_LoginPage__WEBPACK_IMPORTED_MODULE_1__["default"]
+}]);
+
+/***/ }),
+
+/***/ "./resources/js/routes/privateRoutes.js":
+/*!**********************************************!*\
+  !*** ./resources/js/routes/privateRoutes.js ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _layouts__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../layouts */ "./resources/js/layouts/index.js");
+/* harmony import */ var _views_UserProfile__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../views/UserProfile */ "./resources/js/views/UserProfile.js");
+/* harmony import */ var _views_Teams__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../views/Teams */ "./resources/js/views/Teams.js");
+/* harmony import */ var _views_Users__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../views/Users */ "./resources/js/views/Users.js");
+/* harmony import */ var _views_Competitions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../views/Competitions */ "./resources/js/views/Competitions.js");
+// Layout Types
+ // Route Views
+
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ([{
+  path: "/user-profile",
+  layout: _layouts__WEBPACK_IMPORTED_MODULE_0__["DefaultLayout"],
+  component: _views_UserProfile__WEBPACK_IMPORTED_MODULE_1__["default"]
+}, {
+  path: "/teams",
+  layout: _layouts__WEBPACK_IMPORTED_MODULE_0__["DefaultLayout"],
+  component: _views_Teams__WEBPACK_IMPORTED_MODULE_2__["default"]
+}, {
+  path: "/users",
+  layout: _layouts__WEBPACK_IMPORTED_MODULE_0__["DefaultLayout"],
+  component: _views_Users__WEBPACK_IMPORTED_MODULE_3__["default"]
+}, {
+  path: "/competitions",
+  layout: _layouts__WEBPACK_IMPORTED_MODULE_0__["DefaultLayout"],
+  component: _views_Competitions__WEBPACK_IMPORTED_MODULE_4__["default"]
+}]);
+
+/***/ }),
+
+/***/ "./resources/js/routes/routes.js":
+/*!***************************************!*\
+  !*** ./resources/js/routes/routes.js ***!
+  \***************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -101900,17 +101968,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _layouts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./layouts */ "./resources/js/layouts/index.js");
-/* harmony import */ var _views_Teams__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./views/Teams */ "./resources/js/views/Teams.js");
-/* harmony import */ var _views_Users__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./views/Users */ "./resources/js/views/Users.js");
-/* harmony import */ var _views_Competitions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./views/Competitions */ "./resources/js/views/Competitions.js");
+/* harmony import */ var _layouts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../layouts */ "./resources/js/layouts/index.js");
 
  // Layout Types
 
  // Route Views
-
-
-
 
 /* harmony default export */ __webpack_exports__["default"] = ([{
   path: "/",
@@ -101921,18 +101983,6 @@ __webpack_require__.r(__webpack_exports__);
       to: "/register"
     });
   }
-}, {
-  path: "/teams",
-  layout: _layouts__WEBPACK_IMPORTED_MODULE_2__["DefaultLayout"],
-  component: _views_Teams__WEBPACK_IMPORTED_MODULE_3__["default"]
-}, {
-  path: "/users",
-  layout: _layouts__WEBPACK_IMPORTED_MODULE_2__["DefaultLayout"],
-  component: _views_Users__WEBPACK_IMPORTED_MODULE_4__["default"]
-}, {
-  path: "/competitions",
-  layout: _layouts__WEBPACK_IMPORTED_MODULE_2__["DefaultLayout"],
-  component: _views_Competitions__WEBPACK_IMPORTED_MODULE_5__["default"]
 }]);
 
 /***/ }),
@@ -102703,12 +102753,19 @@ function (_Component) {
         noGutters: true,
         className: "page-header py-4"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_common_PageTitle__WEBPACK_IMPORTED_MODULE_4__["default"], {
-        sm: "4",
+        sm: {
+          size: 8,
+          order: 2,
+          offset: 2
+        },
         title: "Login",
         className: "text-sm-left"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_3__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_3__["Col"], {
-        lg: "9",
-        md: "12"
+        sm: {
+          size: 8,
+          order: 2,
+          offset: 2
+        }
       }, !isSuccess ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, message) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Redirect"], {
         to: "user-profile"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
@@ -102846,12 +102903,19 @@ function (_Component) {
         noGutters: true,
         className: "page-header py-4"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_common_PageTitle__WEBPACK_IMPORTED_MODULE_3__["default"], {
-        sm: "4",
+        sm: {
+          size: 8,
+          order: 2,
+          offset: 2
+        },
         title: "Register",
         className: "text-sm-left"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_1__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_1__["Col"], {
-        lg: "9",
-        md: "12"
+        sm: {
+          size: 8,
+          order: 2,
+          offset: 2
+        }
       }, !isSuccess ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, message) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Redirect"], {
         to: "login"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
@@ -103001,7 +103065,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var shards_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! shards-react */ "./node_modules/shards-react/dist/shards-react.es.js");
 /* harmony import */ var _components_common_PageTitle__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/common/PageTitle */ "./resources/js/components/common/PageTitle.js");
-/* harmony import */ var _components_user_profile_lite_UserDetails__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/user-profile-lite/UserDetails */ "./resources/js/components/user-profile-lite/UserDetails.js");
+/* harmony import */ var _components_user_profile_UserDetails__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/user-profile/UserDetails */ "./resources/js/components/user-profile/UserDetails.js");
 
 
 
@@ -103021,7 +103085,7 @@ var UserProfile = function UserProfile() {
     className: "ml-sm-auto mr-sm-auto"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_1__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_1__["Col"], {
     lg: "6"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_user_profile_lite_UserDetails__WEBPACK_IMPORTED_MODULE_3__["default"], null))));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_user_profile_UserDetails__WEBPACK_IMPORTED_MODULE_3__["default"], null))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (UserProfile);

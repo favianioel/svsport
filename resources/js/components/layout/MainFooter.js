@@ -39,28 +39,28 @@ MainFooter.propTypes = {
 
 MainFooter.defaultProps = {
   contained: false,
-  copyright: "Copyright © 2018 DesignRevision",
+  copyright: "Copyright © 2019 SvSport",
   menuItems: [
     {
-      title: "Home",
+      title: " FAQ",
       to: "#"
     },
     {
-      title: "Services",
+      title: "Contact",
       to: "#"
     },
-    {
-      title: "About",
-      to: "#"
-    },
-    {
-      title: "Products",
-      to: "#"
-    },
-    {
-      title: "Blog",
-      to: "#"
-    }
+    // {
+    //   title: "About",
+    //   to: "#"
+    // },
+    // {
+    //   title: "Products",
+    //   to: "#"
+    // },
+    // {
+    //   title: "Blog",
+    //   to: "#"
+    // }
   ]
 };
 

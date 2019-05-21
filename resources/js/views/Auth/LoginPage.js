@@ -44,11 +44,11 @@ class LoginPage extends Component {
         return (
         <Container fluid className='main-content-container px-4 pb-4'>
             <Row noGutters className="page-header py-4">
-                <PageTitle sm="4" title="Login" className="text-sm-left" />
+                <PageTitle sm={{ size: 8, order: 2, offset: 2 }} title="Login" className="text-sm-left" />
             </Row>
 
             <Row>
-            <Col lg="9" md="12">
+            <Col sm={{ size: 8, order: 2, offset: 2 }}>
             {!isSuccess ? <div>{message}</div> : <Redirect to='user-profile' />}
             <form onSubmit={this.onHandleLogin}>
                 <div className="form-group">

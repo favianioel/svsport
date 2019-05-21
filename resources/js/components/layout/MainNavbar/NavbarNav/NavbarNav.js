@@ -4,14 +4,17 @@ import { Link } from 'react-router-dom';
 
 import Notifications from "./Notifications";
 import UserActions from "./UserActions";
+import { checkCookie } from '../../../../utils/cookies';
 
 
 export default () => (
   <Nav navbar className="border-left flex-row">
-
     {/* <Notifications /> */}
 
-    <UserActions />
+    {checkCookie() !== null ? (
+      <UserActions />
+    ) : false
+    }
 
     {/* <NavItem className="border-right dropdown notifications">
       <NavLink active to='register'>
