@@ -13,7 +13,7 @@ export default () => (
 
     <UserActions />
 
-    <NavItem className="border-right dropdown notifications">
+    {/* <NavItem className="border-right dropdown notifications">
       <NavLink active to='register'>
         <span  className="d-none d-md-inline-block">register</span>
       </NavLink>
@@ -23,7 +23,7 @@ export default () => (
       <NavLink active to='login'>
       <span  className="d-none d-md-inline-block">login</span>
       </NavLink>
-    </NavItem>
+    </NavItem> */}
 
   </Nav>
 );
