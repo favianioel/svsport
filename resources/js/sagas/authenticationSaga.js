@@ -1,5 +1,10 @@
 import { put, call } from 'redux-saga/effects';
-import { registerUserService, loginUserService, logoutUserService, getUserService } from '../services/authenticationService';
+import { 
+  registerUserService,
+  loginUserService,
+  logoutUserService,
+  getUserService
+} from '../services/authenticationService';
 
 import * as types from '../actions'
 

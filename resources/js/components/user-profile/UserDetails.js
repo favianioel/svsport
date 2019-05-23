@@ -6,9 +6,9 @@ class UserDetails extends React.Component {
   render () {
     let user;
     let check = false;
-    if (this.props.response.getUser.hasOwnProperty('response')) {
+    if (this.props.response.getUserReducer.hasOwnProperty('response')) {
       check = true;
-      user = this.props.response.getUser.response;
+      user = this.props.response.getUserReducer.response;
     }
     return (
       <Card small className="mb-4 pt-3">

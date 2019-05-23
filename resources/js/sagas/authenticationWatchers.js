@@ -1,5 +1,10 @@
 import { takeLatest } from 'redux-saga/effects';
-import { registerSaga, loginSaga, logoutSaga, getUserSaga } from './authenticationSaga';
+import {
+    registerSaga,
+    loginSaga,
+    logoutSaga,
+    getUserSaga
+} from './authenticationSaga';
 
 import * as types from '../actions';
 

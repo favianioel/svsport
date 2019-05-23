@@ -1,14 +1,11 @@
 import React from "react";
 import { Nav, NavItem, NavLink} from "shards-react";
-import { Link } from 'react-router-dom';
-
-import Notifications from "./Notifications";
 import UserActions from "./UserActions";
 import { checkCookie } from '../../../../utils/cookies';
 
 
 export default () => (
-  <Nav navbar className="border-left flex-row">
+  <Nav  navbar className="ml-auto">
     {/* <Notifications /> */}
 
     {checkCookie() !== null ? (

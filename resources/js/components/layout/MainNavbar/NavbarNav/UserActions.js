@@ -43,8 +43,9 @@ class UserActions extends React.Component {
 
   render() {
     let isSuccess;
-    if (this.props.response.logout.hasOwnProperty('response')) {
-        isSuccess = this.props.response.logout.response.success;
+    console.log(this.props.response);
+    if (this.props.response.logoutReducer.hasOwnProperty('response')) {
+        isSuccess = this.props.response.logoutReducer.response.success;
         if (isSuccess) {
           deleteCookie('token');
           window.location.reload();
@@ -59,8 +60,8 @@ class UserActions extends React.Component {
             alt="User Avatar"
           />{" "}
           <span className="d-none d-md-inline-block">
-          { _.size(this.props.response.getUser) > 0 &&
-          this.props.response.getUser.response.name
+          { _.size(this.props.response.getUserReducer) > 0 &&
+          this.props.response.getUserReducer.response.name
           }
           </span>
         </DropdownToggle>

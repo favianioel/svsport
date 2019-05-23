@@ -18,50 +18,50 @@ class RegisterPage extends Component {
         const data = {
             name, email, password, password_confirmation
         };
-        
+
         this.props.dispatch(registerUserAction(data));
     }
     render() {
         let message, isSuccess;
 
-        if (this.props.response.register.hasOwnProperty('response')) {
-            isSuccess = this.props.response.register.response.success;
-            message = this.props.response.register.response.message;
+        if (this.props.response.registerReducer.hasOwnProperty('response')) {
+            isSuccess = this.props.response.registerReducer.response.success;
+            message = this.props.response.registerReducer.response.message;
         }
 
-        return(
-        <Container fluid className='main-content-container px-4 pb-4'>
-            <Row noGutters className="page-header py-4">
-                <PageTitle sm={{ size: 8, order: 2, offset: 2 }} title="Register" className="text-sm-left" />
-            </Row>
-            <Row>
-                <Col sm={{ size: 8, order: 2, offset: 2 }}>
-                    {!isSuccess ? <div>{message}</div> : <Redirect to='login' />}
-                    <form onSubmit={this.onHandleRegistration}>
-                        <div className="form-group">
-                            <label>Name</label>
-                            <input className="form-control" type="text" name="name" />
-                        </div>
-                        <div className="form-group">
-                            <label>Email</label>
-                            <input className="form-control" type="email" name="email" />
-                        </div>
-                        <div className="form-group">
-                            <label>Password</label>
-                            <input className="form-control" type="password" name="password" />
-                        </div>
-                        <div className="form-group">
-                            <label>Confirm Password</label>
-                            <input className="form-control" type="password" name="password_confirmation" />
-                        </div>
+        return (
+            <Container fluid className='main-content-container px-4 pb-4'>
+                <Row noGutters className="page-header py-4">
+                    <PageTitle sm={{ size: 8, order: 2, offset: 2 }} title="Register" className="text-sm-left" />
+                </Row>
+                <Row>
+                    <Col sm={{ size: 8, order: 2, offset: 2 }}>
+                        {!isSuccess ? <div>{message}</div> : <Redirect to='login' />}
+                        <form onSubmit={this.onHandleRegistration}>
                             <div className="form-group">
-                            <button type="submit" className="mb-2 btn-outline-primary mr-2">Register</button>
-                        </div>
-                    </form>
-                    Already have account? <Link to='login'>Login here</Link>
-                </Col>
-            </Row>
-        </Container>
+                                <label>Name</label>
+                                <input className="form-control" type="text" name="name" />
+                            </div>
+                            <div className="form-group">
+                                <label>Email</label>
+                                <input className="form-control" type="email" name="email" />
+                            </div>
+                            <div className="form-group">
+                                <label>Password</label>
+                                <input className="form-control" type="password" name="password" />
+                            </div>
+                            <div className="form-group">
+                                <label>Confirm Password</label>
+                                <input className="form-control" type="password" name="password_confirmation" />
+                            </div>
+                            <div className="form-group">
+                                <button type="submit" className="mb-2 btn-outline-primary mr-2">Register</button>
+                            </div>
+                        </form>
+                        Already have account? <Link to='login'>Login here</Link>
+                    </Col>
+                </Row>
+            </Container>
         )
     }
 }
