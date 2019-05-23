@@ -30,22 +30,3 @@ use \App\Role\UserRole;
 */
 
 Route::view('/{path?}', 'app');
-// Auth::routes();
-
-// Route::get('/', function () {
-    // return view('welcome');
-// });
-// Route::get('/landing_page', 'LandingController@index');
-// Route::get('/profile', 'ProfileController@index');
-// Route::get('/dashboard', 'DashboardController@index')
-
-// ->middleware('check_user_role:' . UserRole::ROLE_SUPERADMIN);
-
-// Route::resource('teams', 'TeamController')
-// ->middleware('check_user_role:'. UserRole::ROLE_ADMIN);
-
-// Route::resource('competitions', 'CompetitionController')
-// ->middleware('check_user_role:' . UserRole::ROLE_ADMIN);
-
-// Route::resource('users', 'UserController')
-// ->middleware('check_user_role:'. UserRole::ROLE_SUPERADMIN);

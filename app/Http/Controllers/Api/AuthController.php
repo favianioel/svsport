@@ -10,6 +10,12 @@ use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
+    /**
+     * Signs in a new User
+     *
+     * @param Request $request
+     * @return Json
+     */
     public function register(Request $request)
     {
         $validator = Validator::make($request->all(), [
@@ -19,18 +25,30 @@ class AuthController extends Controller
         ]);
 
         if ($validator->fails()) {
-            return response(['errors' => $validator->errors()->all()], 422);
+            return response([
+                'success' => false,
+                'message' => join(" ", $validator->errors()->all())
+            ], 422);
         }
 
         $request['password'] = Hash::make($request['password']);
         $user = User::create($request->toArray());
 
         $token = $user->createToken('Laravel Password Grant Client')->accessToken;
-        $response = ['token' => $token];
+        $response = [
+            'success' => true,
+            'token' => $token
+        ];
 
         return response($response, 200);
     }
 
+    /**
+     * Signs in the user found in db
+     *
+     * @param Request $request
+     * @return Json
+     */
     public function login(Request $request)
     {
 
@@ -39,24 +57,53 @@ class AuthController extends Controller
         if ($user) {
             if (Hash::check($request->password, $user->password)) {
                 $token = $user->createToken('Laravel Password Grant Client')->accessToken;
-                $response = ['token' => $token];
+                $response = [
+                    'success' => true,
+                    'token' => $token
+                ];
                 return response($response, 200);
             } else {
-                $response = "Password miss-match";
+                $response = [
+                    'success' => false,
+                    'message' => "Passwords did not match."
+                ];
                 return response($response, 422);
             }
         } else {
-            $response = 'User does not exist';
+            $response = [
+                'success' => false,
+                'message' => 'User not found.'
+            ];
             return response($response, 422);
         }
     }
 
+    /**
+     * Signs out the user with the given token
+     *
+     * @param Request $request
+     * @return Json
+     */
     public function logout(Request $request)
     {
         $token = $request->user()->token();
         $token->revoke();
-
-        $response = 'You have been successfully logged out!';
+        $response = [
+            'success' => true,
+            'message' => 'User has been logged out.'
+        ];
+        
         return response($response, 200);
+    }
+
+    /**
+     * returns current logged user session
+     *
+     * @param Request $request
+     * @return Json User
+     */
+    public function session(Request $request)
+    {
+        return response($request->user(), 200);
     }
 }

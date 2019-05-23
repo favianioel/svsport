@@ -8,10 +8,12 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <title>SvSports</title>
         <!-- Styles -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     </head>
     <body>
-        <div id="app"></div>
+        <div id="root"></div>
 
         <script src="{{ asset('js/app.js') }}"></script>
     </body>
