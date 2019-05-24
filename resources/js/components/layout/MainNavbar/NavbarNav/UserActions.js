@@ -14,38 +14,33 @@ import {
 } from "shards-react";
 
 class UserActions extends React.Component {
+
   constructor(props) {
     super(props);
-
     this.state = {
       visible: false
     };
-
     this.toggleUserActions = this.toggleUserActions.bind(this);
   }
-
   toggleUserActions() {
     this.setState({
       visible: !this.state.visible
     });
   }
-
   onHandleLogout = (event) => {
     event.preventDefault();
     let token = getCookie('token');
     const data = { 
       token
     };
-
     this.props.dispatch(logoutUserAction(data));
   }
 
 
   render() {
     let isSuccess;
-    console.log(this.props.response);
-    if (this.props.response.logoutReducer.hasOwnProperty('response')) {
-        isSuccess = this.props.response.logoutReducer.response.success;
+    if (this.props.logoutReducer.hasOwnProperty('response')) {
+        isSuccess = this.props.logoutReducer.response.success;
         if (isSuccess) {
           deleteCookie('token');
           window.location.reload();
@@ -60,8 +55,8 @@ class UserActions extends React.Component {
             alt="User Avatar"
           />{" "}
           <span className="d-none d-md-inline-block">
-          { _.size(this.props.response.getUserReducer) > 0 &&
-          this.props.response.getUserReducer.response.name
+          { _.size(this.props.userSession) > 0 &&
+          this.props.userSession.response.name
           }
           </span>
         </DropdownToggle>
@@ -69,15 +64,6 @@ class UserActions extends React.Component {
           <DropdownItem tag={Link} to="user-profile">
             <i className="material-icons">&#xE7FD;</i> Profile
           </DropdownItem>
-          {/* <DropdownItem tag={Link} to="edit-user-profile">
-            <i className="material-icons">&#xE8B8;</i> Edit Profile
-          </DropdownItem> */}
-          {/* <DropdownItem tag={Link} to="file-manager-list">
-            <i className="material-icons">&#xE2C7;</i> Files
-          </DropdownItem> */}
-          {/* <DropdownItem tag={Link} to="transaction-history">
-            <i className="material-icons">&#xE896;</i> Transactions
-          </DropdownItem> */}
           <DropdownItem divider />
           <DropdownItem onClick={this.onHandleLogout} className="text-danger">
             <i className="material-icons text-danger">&#xE879;</i> Logout
@@ -88,8 +74,11 @@ class UserActions extends React.Component {
   }
 }
 
-const mapStateToProps = (response) => ({
-  response
-})
+function mapStateToProps(state){
+  return {
+    userSession: state.getUserReducer,
+    logoutReducer: state.logoutReducer
+  }
+}
 
 export default connect(mapStateToProps)(UserActions);

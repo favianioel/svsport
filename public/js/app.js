@@ -100321,16 +100321,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _shards_dashboard_styles_shards_dashboards_1_1_0_min_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../shards-dashboard/styles/shards-dashboards.1.1.0.min.css */ "./resources/js/shards-dashboard/styles/shards-dashboards.1.1.0.min.css");
-/* harmony import */ var _shards_dashboard_styles_shards_dashboards_1_1_0_min_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_shards_dashboard_styles_shards_dashboards_1_1_0_min_css__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _withTracker__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../withTracker */ "./resources/js/withTracker.js");
-/* harmony import */ var _routes_routes__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../routes/routes */ "./resources/js/routes/routes.js");
-/* harmony import */ var _routes_privateRoutes__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../routes/privateRoutes */ "./resources/js/routes/privateRoutes.js");
-/* harmony import */ var _routes_guestRoutes__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../routes/guestRoutes */ "./resources/js/routes/guestRoutes.js");
-/* harmony import */ var _services_PrivateRoute__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./../services/PrivateRoute */ "./resources/js/services/PrivateRoute.js");
-/* harmony import */ var _services_GuestRoute__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./../services/GuestRoute */ "./resources/js/services/GuestRoute.js");
-/* harmony import */ var _utils_cookies__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./../utils/cookies */ "./resources/js/utils/cookies.js");
-/* harmony import */ var _actions_authenticationActions__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./../actions/authenticationActions */ "./resources/js/actions/authenticationActions.js");
+/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
+/* harmony import */ var _shards_dashboard_styles_shards_dashboards_1_1_0_min_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../shards-dashboard/styles/shards-dashboards.1.1.0.min.css */ "./resources/js/shards-dashboard/styles/shards-dashboards.1.1.0.min.css");
+/* harmony import */ var _shards_dashboard_styles_shards_dashboards_1_1_0_min_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_shards_dashboard_styles_shards_dashboards_1_1_0_min_css__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _withTracker__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../withTracker */ "./resources/js/withTracker.js");
+/* harmony import */ var _routes_routes__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../routes/routes */ "./resources/js/routes/routes.js");
+/* harmony import */ var _routes_privateRoutes__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../routes/privateRoutes */ "./resources/js/routes/privateRoutes.js");
+/* harmony import */ var _routes_guestRoutes__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../routes/guestRoutes */ "./resources/js/routes/guestRoutes.js");
+/* harmony import */ var _services_PrivateRoute__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./../services/PrivateRoute */ "./resources/js/services/PrivateRoute.js");
+/* harmony import */ var _services_GuestRoute__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./../services/GuestRoute */ "./resources/js/services/GuestRoute.js");
+/* harmony import */ var _utils_cookies__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./../utils/cookies */ "./resources/js/utils/cookies.js");
+/* harmony import */ var _actions_authenticationActions__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./../actions/authenticationActions */ "./resources/js/actions/authenticationActions.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -100350,6 +100351,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 // react and installed components
+
 
 
  // shards files
@@ -100378,13 +100380,13 @@ function (_Component) {
   _createClass(App, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      var token = Object(_utils_cookies__WEBPACK_IMPORTED_MODULE_10__["checkCookie"])();
+      var token = Object(_utils_cookies__WEBPACK_IMPORTED_MODULE_11__["checkCookie"])();
 
       if (token !== null) {
         var data = {
           token: token
         };
-        this.props.dispatch(Object(_actions_authenticationActions__WEBPACK_IMPORTED_MODULE_11__["getUserAction"])(data));
+        this.props.dispatch(Object(_actions_authenticationActions__WEBPACK_IMPORTED_MODULE_12__["getUserAction"])(data));
       }
     }
   }, {
@@ -100392,28 +100394,28 @@ function (_Component) {
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["BrowserRouter"], {
         basename: Object({"MIX_PUSHER_APP_KEY":"","MIX_PUSHER_APP_CLUSTER":"mt1","NODE_ENV":"development"}).REACT_APP_BASENAME || ""
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], null, _routes_routes__WEBPACK_IMPORTED_MODULE_5__["default"].map(function (route, index) {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], null, _routes_routes__WEBPACK_IMPORTED_MODULE_6__["default"].map(function (route, index) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
           key: index,
           path: route.path,
           exact: route.exact,
-          component: Object(_withTracker__WEBPACK_IMPORTED_MODULE_4__["default"])(function (props) {
+          component: Object(_withTracker__WEBPACK_IMPORTED_MODULE_5__["default"])(function (props) {
             return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(route.layout, props, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(route.component, props));
           })
         });
-      }), _routes_privateRoutes__WEBPACK_IMPORTED_MODULE_6__["default"].map(function (route, index) {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_services_PrivateRoute__WEBPACK_IMPORTED_MODULE_8__["default"], {
+      }), _routes_privateRoutes__WEBPACK_IMPORTED_MODULE_7__["default"].map(function (route, index) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_services_PrivateRoute__WEBPACK_IMPORTED_MODULE_9__["default"], {
           key: index,
           path: route.path,
-          component: Object(_withTracker__WEBPACK_IMPORTED_MODULE_4__["default"])(function (props) {
+          component: Object(_withTracker__WEBPACK_IMPORTED_MODULE_5__["default"])(function (props) {
             return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(route.layout, props, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(route.component, props));
           })
         });
-      }), _routes_guestRoutes__WEBPACK_IMPORTED_MODULE_7__["default"].map(function (route, index) {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_services_GuestRoute__WEBPACK_IMPORTED_MODULE_9__["default"], {
+      }), _routes_guestRoutes__WEBPACK_IMPORTED_MODULE_8__["default"].map(function (route, index) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_services_GuestRoute__WEBPACK_IMPORTED_MODULE_10__["default"], {
           key: index,
           path: route.path,
-          component: Object(_withTracker__WEBPACK_IMPORTED_MODULE_4__["default"])(function (props) {
+          component: Object(_withTracker__WEBPACK_IMPORTED_MODULE_5__["default"])(function (props) {
             return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(route.layout, props, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(route.component, props));
           })
         });
@@ -100424,13 +100426,13 @@ function (_Component) {
   return App;
 }(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
 
-var mapStateToProps = function mapStateToProps(response) {
+function mapDispatchToProps(dispatch) {
   return {
-    response: response
+    actions: Object(redux__WEBPACK_IMPORTED_MODULE_3__["bindActionCreators"])(_actions_authenticationActions__WEBPACK_IMPORTED_MODULE_12__["getUserAction"], dispatch)
   };
-};
+}
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mapStateToProps)(App));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mapDispatchToProps)(App));
 
 /***/ }),
 
@@ -100734,10 +100736,9 @@ function (_React$Component) {
     key: "render",
     value: function render() {
       var isSuccess;
-      console.log(this.props.response);
 
-      if (this.props.response.logoutReducer.hasOwnProperty('response')) {
-        isSuccess = this.props.response.logoutReducer.response.success;
+      if (this.props.logoutReducer.hasOwnProperty('response')) {
+        isSuccess = this.props.logoutReducer.response.success;
 
         if (isSuccess) {
           Object(_utils_cookies__WEBPACK_IMPORTED_MODULE_2__["deleteCookie"])('token');
@@ -100759,7 +100760,7 @@ function (_React$Component) {
         alt: "User Avatar"
       }), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: "d-none d-md-inline-block"
-      }, _.size(this.props.response.getUserReducer) > 0 && this.props.response.getUserReducer.response.name)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_5__["Collapse"], {
+      }, _.size(this.props.userSession) > 0 && this.props.userSession.response.name)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_5__["Collapse"], {
         tag: shards_react__WEBPACK_IMPORTED_MODULE_5__["DropdownMenu"],
         right: true,
         small: true,
@@ -100783,11 +100784,12 @@ function (_React$Component) {
   return UserActions;
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
-var mapStateToProps = function mapStateToProps(response) {
+function mapStateToProps(state) {
   return {
-    response: response
+    userSession: state.getUserReducer,
+    logoutReducer: state.logoutReducer
   };
-};
+}
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_4__["connect"])(mapStateToProps)(UserActions));
 
@@ -104855,13 +104857,13 @@ function (_Component) {
     value: function render() {
       var isSuccess, message;
 
-      if (this.props.response.loginReducer.hasOwnProperty('response')) {
-        isSuccess = this.props.response.loginReducer.response.success;
-        message = this.props.response.loginReducer.response.message;
+      if (this.props.login.hasOwnProperty('response')) {
+        isSuccess = this.props.login.response.success;
+        message = this.props.login.response.message;
 
         if (isSuccess) {
-          Object(_utils_cookies__WEBPACK_IMPORTED_MODULE_6__["setCookie"])('token', this.props.response.loginReducer.response.token, 1);
-          var token = this.props.response.loginReducer.response.token;
+          Object(_utils_cookies__WEBPACK_IMPORTED_MODULE_6__["setCookie"])('token', this.props.login.response.token, 1);
+          var token = this.props.login.response.token;
           var data = {
             token: token
           };
@@ -104919,11 +104921,11 @@ function (_Component) {
   return LoginPage;
 }(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
 
-var mapStateToProps = function mapStateToProps(response) {
+function mapStateToProps(state) {
   return {
-    response: response
+    login: state.loginReducer
   };
-};
+}
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mapStateToProps)(LoginPage));
 
@@ -105014,9 +105016,9 @@ function (_Component) {
     value: function render() {
       var message, isSuccess;
 
-      if (this.props.response.registerReducer.hasOwnProperty('response')) {
-        isSuccess = this.props.response.registerReducer.response.success;
-        message = this.props.response.registerReducer.response.message;
+      if (this.props.register.hasOwnProperty('response')) {
+        isSuccess = this.props.register.response.success;
+        message = this.props.register.response.message;
       }
 
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_1__["Container"], {
@@ -105081,12 +105083,13 @@ function (_Component) {
   return RegisterPage;
 }(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
 
-var mapStateToProps = function mapStateToProps(response) {
+function mapStateToProps(state) {
   return {
-    response: response
+    register: state.registerReducer
   };
-};
+}
 
+;
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_4__["connect"])(mapStateToProps)(RegisterPage));
 
 /***/ }),
@@ -105439,13 +105442,14 @@ function (_React$Component) {
 
   _createClass(Users, [{
     key: "componentDidMount",
-    value: function componentDidMount() {// here happens a nasty loop
-      // this.props.dispatch(indexUsersAction());
+    value: function componentDidMount() {
+      debugger;
+      console.log(this.props);
+      this.props.dispatch(Object(_actions_usersActions__WEBPACK_IMPORTED_MODULE_4__["indexUsersAction"])());
     }
   }, {
     key: "render",
     value: function render() {
-      console.log(this.props);
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_2__["Container"], {
         fluid: true,
         className: "main-content-container px-4 pb-4"
@@ -105519,11 +105523,11 @@ function (_React$Component) {
   return Users;
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
-var mapStateToProps = function mapStateToProps(state) {
+function mapStateToProps(state) {
   return {
-    indexUserReducer: state.indexUserReducer
+    users: state.indexUsersReducer
   };
-};
+}
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps)(Users));
 

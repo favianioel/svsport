@@ -24,9 +24,9 @@ class RegisterPage extends Component {
     render() {
         let message, isSuccess;
 
-        if (this.props.response.registerReducer.hasOwnProperty('response')) {
-            isSuccess = this.props.response.registerReducer.response.success;
-            message = this.props.response.registerReducer.response.message;
+        if (this.props.register.hasOwnProperty('response')) {
+            isSuccess = this.props.register.response.success;
+            message = this.props.register.response.message;
         }
 
         return (
@@ -66,7 +66,10 @@ class RegisterPage extends Component {
     }
 }
 
-const mapStateToProps = (response) => ({
-    response
-});
+function mapStateToProps(state) {
+    return {
+        register: state.registerReducer
+    }
+};
+
 export default connect(mapStateToProps)(RegisterPage);

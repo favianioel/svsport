@@ -2,6 +2,7 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
 // shards files
 import "./../shards-dashboard/styles/shards-dashboards.1.1.0.min.css";
@@ -21,76 +22,77 @@ export class App extends Component {
 
     componentDidMount() {
         let token = checkCookie();
-        if(token !== null) {
-            const data = { 
+        if (token !== null) {
+            const data = {
                 token
             };
-          
+
             this.props.dispatch(getUserAction(data));
         }
     }
-    
+
     render() {
-        return(
-        <Router basename={process.env.REACT_APP_BASENAME || ""}>
-         <div>
-            <Switch>
-                {routes.map((route, index) => {
-                    return (
-                        <Route
-                        key={index}
-                        path={route.path}
-                        exact={route.exact}
-                        component={withTracker(props => {
+        return (
+            <Router basename={process.env.REACT_APP_BASENAME || ""}>
+                <div>
+                    <Switch>
+                        {routes.map((route, index) => {
                             return (
-                            <route.layout {...props}>
-                            <route.component {...props} />
-                            </route.layout>
+                                <Route
+                                    key={index}
+                                    path={route.path}
+                                    exact={route.exact}
+                                    component={withTracker(props => {
+                                        return (
+                                            <route.layout {...props}>
+                                                <route.component {...props} />
+                                            </route.layout>
+                                        );
+                                    })}
+                                />
                             );
                         })}
-                        />
-                    );
-                })}
-                {privateRoutes.map((route, index) => {
-                    return (
-                        <PrivateRoute
-                        key={index}
-                        path={route.path}
-                        component={withTracker(props => {
+                        {privateRoutes.map((route, index) => {
                             return (
-                                <route.layout {...props}>
-                                <route.component {...props}/>
-                                </route.layout>
+                                <PrivateRoute
+                                    key={index}
+                                    path={route.path}
+                                    component={withTracker(props => {
+                                        return (
+                                            <route.layout {...props}>
+                                                <route.component {...props} />
+                                            </route.layout>
+                                        );
+                                    })}
+                                />
                             );
                         })}
-                        />
-                    );
-                })}
-                {guestRoutes.map((route, index) => {
-                    return (
-                        <GuestRoute
-                        key={index}
-                        path={route.path}
-                        component={withTracker(props => {
+                        {guestRoutes.map((route, index) => {
                             return (
-                                <route.layout {...props}>
-                                <route.component {...props}/>
-                                </route.layout>
+                                <GuestRoute
+                                    key={index}
+                                    path={route.path}
+                                    component={withTracker(props => {
+                                        return (
+                                            <route.layout {...props}>
+                                                <route.component {...props} />
+                                            </route.layout>
+                                        );
+                                    })}
+                                />
                             );
                         })}
-                        />
-                    );
-                })}
-            </Switch>
-        </div>
-        </Router>
+                    </Switch>
+                </div>
+            </Router>
         );
     }
-} 
+}
 
-const mapStateToProps = (response) => ({
-    response
-  })
-  
-  export default connect(mapStateToProps)(App);
-  
+function mapDispatchToProps(dispatch) {
+    return {
+        actions: bindActionCreators(getUserAction, dispatch)
+    }
+}
+
+export default connect(mapDispatchToProps)(App);

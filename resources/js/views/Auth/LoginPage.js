@@ -22,13 +22,13 @@ class LoginPage extends Component {
 
     render() {
         let isSuccess, message;
-        if (this.props.response.loginReducer.hasOwnProperty('response')) {
-            isSuccess = this.props.response.loginReducer.response.success;
-            message = this.props.response.loginReducer.response.message;
+        if (this.props.login.hasOwnProperty('response')) {
+            isSuccess = this.props.login.response.success;
+            message = this.props.login.response.message;
 
             if (isSuccess) {
-                setCookie('token', this.props.response.loginReducer.response.token, 1);
-                let token = this.props.response.loginReducer.response.token;
+                setCookie('token', this.props.login.response.token, 1);
+                let token = this.props.login.response.token;
                 const data = {
                     token
                 };
@@ -68,6 +68,10 @@ class LoginPage extends Component {
     }
 }
 
-const mapStateToProps = (response) => ({ response });
+function mapStateToProps(state) {
+    return{
+        login: state.loginReducer
+    }
+}
 
 export default connect(mapStateToProps)(LoginPage);

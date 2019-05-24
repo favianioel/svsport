@@ -6,12 +6,12 @@ import { indexUsersAction } from '../actions/usersActions';
 
 class Users extends React.Component {
   componentDidMount() {
-    // here happens a nasty loop
-    // this.props.dispatch(indexUsersAction());
+    debugger;
+    console.log(this.props)
+    this.props.dispatch(indexUsersAction());
   }
 
   render() {
-    console.log(this.props);
     return (
     <Container fluid className="main-content-container px-4 pb-4">
       <Row noGutters className="page-header py-4">
@@ -64,5 +64,9 @@ class Users extends React.Component {
   }
 }
 
-const mapStateToProps = state => ({indexUserReducer: state.indexUserReducer});
+function mapStateToProps(state) {
+  return {
+    users: state.indexUsersReducer
+  }
+}
 export default connect(mapStateToProps)(Users);
