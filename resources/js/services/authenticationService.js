@@ -1,5 +1,7 @@
+import { host } from './envService';
+
 export const registerUserService = (request) => {
-  const REGISTER_API_ENDPOINT = 'http://localhost:8000/api/register';
+  const REGISTER_API_ENDPOINT = host+'/api/register';
   
   const parameters = {
     method: 'POST',
@@ -19,7 +21,7 @@ export const registerUserService = (request) => {
 };
 
 export const loginUserService = (request) => {
-  const LOGIN_API_ENDPOINT = 'http://localhost:8000/api/login';
+  const LOGIN_API_ENDPOINT = host+'/api/login';
 
   const parameters = {
     method: 'POST',
@@ -39,7 +41,7 @@ export const loginUserService = (request) => {
 };
 
 export const getUserService = (request) => {
-  const GET_USER_API_ENDPOINT = 'http://localhost:8000/api/user-session';
+  const GET_USER_API_ENDPOINT = host+'/api/user-session';
   const parameters = {
     method: 'GET',
     headers: {
@@ -55,7 +57,7 @@ export const getUserService = (request) => {
 };
 
 export const logoutUserService = (request) => {
-  const LOGOUT_API_ENDPOINT = 'http://localhost:8000/api/logout';
+  const LOGOUT_API_ENDPOINT = host+'/api/logout';
   const parameters = {
     method: 'GET',
     headers: {

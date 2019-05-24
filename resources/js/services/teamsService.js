@@ -1,5 +1,7 @@
+import { host } from './envService';
+
 export const indexTeamsService = (request) => {
-    const INDEX_TEAM_API_ENDPOINT = 'http://localhost:8000/api/teams';
+    const INDEX_TEAM_API_ENDPOINT = host+'/api/teams';
     const parameters = {
       method: 'GET',
       headers: {
@@ -17,7 +19,7 @@ export const indexTeamsService = (request) => {
   };
 
   export const createTeamsService = (request) => {
-    const CREATE_TEAM_API_ENDPOINT = 'http://localhost:8000/api/teams/create';
+    const CREATE_TEAM_API_ENDPOINT = host+'/api/teams/create';
     const parameters = {
       method: 'GET',
       headers: {
@@ -35,7 +37,7 @@ export const indexTeamsService = (request) => {
   };
 
   export const showTeamsService = (request) => {
-    const SHOW_TEAM_API_ENDPOINT = 'http://localhost:8000/api/teams/{}';
+    const SHOW_TEAM_API_ENDPOINT = host+'/api/teams/{}';
     const parameters = {
       method: 'GET',
       headers: {
@@ -53,7 +55,7 @@ export const indexTeamsService = (request) => {
   };
 
   export const storeTeamsService = (request) => {
-    const STORE_TEAM_API_ENDPOINT = 'http://localhost:8000/api/teams';
+    const STORE_TEAM_API_ENDPOINT = host+'/api/teams';
     const parameters = {
       method: 'POST',
       headers: {
@@ -73,7 +75,7 @@ export const indexTeamsService = (request) => {
   };
 
   export const editTeamsService = (request) => {
-    const EDIT_TEAM_API_ENDPOINT = 'http://localhost:8000/api/teams/{}/edit';
+    const EDIT_TEAM_API_ENDPOINT = host+'/api/teams/{}/edit';
     const parameters = {
       method: 'GET',
       headers: {
@@ -91,7 +93,7 @@ export const indexTeamsService = (request) => {
   };
 
   export const updateTeamsService = (request) => {
-    const UPDATE_TEAM_API_ENDPOINT = 'http://localhost:8000/api/teams/{}';
+    const UPDATE_TEAM_API_ENDPOINT = host+'/api/teams/{}';
     const parameters = {
       method: 'PATCH',
       headers: {

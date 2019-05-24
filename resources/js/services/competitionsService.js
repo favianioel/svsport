@@ -1,5 +1,7 @@
+import { host } from './envService';
+
 export const indexCompetitionsService = (request) => {
-    const INDEX_COMPETITION_API_ENDPOINT = 'http://localhost:8000/api/competitions';
+    const INDEX_COMPETITION_API_ENDPOINT = host+'/api/competitions';
     const parameters = {
       method: 'GET',
       headers: {
@@ -17,7 +19,7 @@ export const indexCompetitionsService = (request) => {
   };
 
   export const createCompetitionsService = (request) => {
-    const CREATE_COMPETITION_API_ENDPOINT = 'http://localhost:8000/api/competitions/create';
+    const CREATE_COMPETITION_API_ENDPOINT = host+'/api/competitions/create';
     const parameters = {
       method: 'GET',
       headers: {
@@ -35,7 +37,7 @@ export const indexCompetitionsService = (request) => {
   };
 
   export const showCompetitionsService = (request) => {
-    const SHOW_COMPETITION_API_ENDPOINT = 'http://localhost:8000/api/competitions/{}';
+    const SHOW_COMPETITION_API_ENDPOINT = host+'/api/competitions/{}';
     const parameters = {
       method: 'GET',
       headers: {
@@ -53,7 +55,7 @@ export const indexCompetitionsService = (request) => {
   };
 
   export const storeCompetitionsService = (request) => {
-    const STORE_COMPETITION_API_ENDPOINT = 'http://localhost:8000/api/competitions';
+    const STORE_COMPETITION_API_ENDPOINT = host+'/api/competitions';
     const parameters = {
       method: 'POST',
       headers: {
@@ -73,7 +75,7 @@ export const indexCompetitionsService = (request) => {
   };
 
   export const editCompetitionsService = (request) => {
-    const EDIT_COMPETITION_API_ENDPOINT = 'http://localhost:8000/api/competitions/{}/edit';
+    const EDIT_COMPETITION_API_ENDPOINT = host+'/api/competitions/{}/edit';
     const parameters = {
       method: 'GET',
       headers: {
@@ -91,7 +93,7 @@ export const indexCompetitionsService = (request) => {
   };
 
   export const updateCompetitionsService = (request) => {
-    const UPDATE_COMPETITION_API_ENDPOINT = 'http://localhost:8000/api/competitions/{}';
+    const UPDATE_COMPETITION_API_ENDPOINT = host+'/api/competitions/{}';
     const parameters = {
       method: 'PATCH',
       headers: {
@@ -111,7 +113,7 @@ export const indexCompetitionsService = (request) => {
   };
 
   export const destroyCompetitionsService = (request) => {
-    const DESTROY_COMPETITION_API_ENDPOINT = 'http://localhost:8000/api/competitions/{}';
+    const DESTROY_COMPETITION_API_ENDPOINT = host+'/api/competitions/{}';
     const parameters = {
       method: 'DELETE',
       headers: {

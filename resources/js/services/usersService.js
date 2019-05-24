@@ -1,9 +1,10 @@
 import {getCookie} from '../utils/cookies';
+import { host } from './envService';
 
 const token = getCookie('token');
 
 export const indexUsersService = () => {
-    const INDEX_USER_API_ENDPOINT = 'http://localhost:8000/api/users';
+    const INDEX_USER_API_ENDPOINT = host+'/api/users';
     const parameters = {
       method: 'GET',
       headers: {
@@ -21,7 +22,7 @@ export const indexUsersService = () => {
   };
 
   export const createUsersService = () => {
-    const CREATE_USER_API_ENDPOINT = 'http://localhost:8000/api/users/create';
+    const CREATE_USER_API_ENDPOINT = host+'/api/users/create';
     const parameters = {
       method: 'GET',
       headers: {
@@ -39,7 +40,7 @@ export const indexUsersService = () => {
   };
 
   export const showUsersService = () => {
-    const SHOW_USER_API_ENDPOINT = 'http://localhost:8000/api/users/{}';
+    const SHOW_USER_API_ENDPOINT = host+'/api/users/{}';
     const parameters = {
       method: 'GET',
       headers: {
@@ -57,7 +58,7 @@ export const indexUsersService = () => {
   };
 
   export const storeUsersService = (request) => {
-    const STORE_USER_API_ENDPOINT = 'http://localhost:8000/api/users';
+    const STORE_USER_API_ENDPOINT = host+'/api/users';
     const parameters = {
       method: 'POST',
       headers: {
@@ -77,7 +78,7 @@ export const indexUsersService = () => {
   };
 
   export const editUsersService = () => {
-    const EDIT_USER_API_ENDPOINT = 'http://localhost:8000/api/users/{}/edit';
+    const EDIT_USER_API_ENDPOINT = host+'/api/users/{}/edit';
     const parameters = {
       method: 'GET',
       headers: {
@@ -95,7 +96,7 @@ export const indexUsersService = () => {
   };
 
   export const updateUsersService = (request) => {
-    const UPDATE_USER_API_ENDPOINT = 'http://localhost:8000/api/users/{}';
+    const UPDATE_USER_API_ENDPOINT = host+'/api/users/{}';
     const parameters = {
       method: 'PATCH',
       headers: {
@@ -115,7 +116,7 @@ export const indexUsersService = () => {
   };
 
   export const destroyUsersService = (request) => {
-    const DESTROY_USER_API_ENDPOINT = 'http://localhost:8000/api/users/{}';
+    const DESTROY_USER_API_ENDPOINT = host+'/api/users/{}';
     const parameters = {
       method: 'DELETE',
       headers: {

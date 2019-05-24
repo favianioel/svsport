@@ -104205,8 +104205,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loginUserService", function() { return loginUserService; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getUserService", function() { return getUserService; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "logoutUserService", function() { return logoutUserService; });
+/* harmony import */ var _envService__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./envService */ "./resources/js/services/envService.js");
+
 var registerUserService = function registerUserService(request) {
-  var REGISTER_API_ENDPOINT = 'http://localhost:8000/api/register';
+  var REGISTER_API_ENDPOINT = _envService__WEBPACK_IMPORTED_MODULE_0__["host"] + '/api/register';
   var parameters = {
     method: 'POST',
     headers: {
@@ -104221,7 +104223,7 @@ var registerUserService = function registerUserService(request) {
   });
 };
 var loginUserService = function loginUserService(request) {
-  var LOGIN_API_ENDPOINT = 'http://localhost:8000/api/login';
+  var LOGIN_API_ENDPOINT = _envService__WEBPACK_IMPORTED_MODULE_0__["host"] + '/api/login';
   var parameters = {
     method: 'POST',
     headers: {
@@ -104236,7 +104238,7 @@ var loginUserService = function loginUserService(request) {
   });
 };
 var getUserService = function getUserService(request) {
-  var GET_USER_API_ENDPOINT = 'http://localhost:8000/api/user-session';
+  var GET_USER_API_ENDPOINT = _envService__WEBPACK_IMPORTED_MODULE_0__["host"] + '/api/user-session';
   var parameters = {
     method: 'GET',
     headers: {
@@ -104250,7 +104252,7 @@ var getUserService = function getUserService(request) {
   });
 };
 var logoutUserService = function logoutUserService(request) {
-  var LOGOUT_API_ENDPOINT = 'http://localhost:8000/api/logout';
+  var LOGOUT_API_ENDPOINT = _envService__WEBPACK_IMPORTED_MODULE_0__["host"] + '/api/logout';
   var parameters = {
     method: 'GET',
     headers: {
@@ -104282,8 +104284,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "editCompetitionsService", function() { return editCompetitionsService; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "updateCompetitionsService", function() { return updateCompetitionsService; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "destroyCompetitionsService", function() { return destroyCompetitionsService; });
+/* harmony import */ var _envService__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./envService */ "./resources/js/services/envService.js");
+
 var indexCompetitionsService = function indexCompetitionsService(request) {
-  var INDEX_COMPETITION_API_ENDPOINT = 'http://localhost:8000/api/competitions';
+  var INDEX_COMPETITION_API_ENDPOINT = _envService__WEBPACK_IMPORTED_MODULE_0__["host"] + '/api/competitions';
   var parameters = {
     method: 'GET',
     headers: {
@@ -104297,7 +104301,7 @@ var indexCompetitionsService = function indexCompetitionsService(request) {
   });
 };
 var createCompetitionsService = function createCompetitionsService(request) {
-  var CREATE_COMPETITION_API_ENDPOINT = 'http://localhost:8000/api/competitions/create';
+  var CREATE_COMPETITION_API_ENDPOINT = _envService__WEBPACK_IMPORTED_MODULE_0__["host"] + '/api/competitions/create';
   var parameters = {
     method: 'GET',
     headers: {
@@ -104311,7 +104315,7 @@ var createCompetitionsService = function createCompetitionsService(request) {
   });
 };
 var showCompetitionsService = function showCompetitionsService(request) {
-  var SHOW_COMPETITION_API_ENDPOINT = 'http://localhost:8000/api/competitions/{}';
+  var SHOW_COMPETITION_API_ENDPOINT = _envService__WEBPACK_IMPORTED_MODULE_0__["host"] + '/api/competitions/{}';
   var parameters = {
     method: 'GET',
     headers: {
@@ -104325,7 +104329,7 @@ var showCompetitionsService = function showCompetitionsService(request) {
   });
 };
 var storeCompetitionsService = function storeCompetitionsService(request) {
-  var STORE_COMPETITION_API_ENDPOINT = 'http://localhost:8000/api/competitions';
+  var STORE_COMPETITION_API_ENDPOINT = _envService__WEBPACK_IMPORTED_MODULE_0__["host"] + '/api/competitions';
   var parameters = {
     method: 'POST',
     headers: {
@@ -104341,7 +104345,7 @@ var storeCompetitionsService = function storeCompetitionsService(request) {
   });
 };
 var editCompetitionsService = function editCompetitionsService(request) {
-  var EDIT_COMPETITION_API_ENDPOINT = 'http://localhost:8000/api/competitions/{}/edit';
+  var EDIT_COMPETITION_API_ENDPOINT = _envService__WEBPACK_IMPORTED_MODULE_0__["host"] + '/api/competitions/{}/edit';
   var parameters = {
     method: 'GET',
     headers: {
@@ -104355,7 +104359,7 @@ var editCompetitionsService = function editCompetitionsService(request) {
   });
 };
 var updateCompetitionsService = function updateCompetitionsService(request) {
-  var UPDATE_COMPETITION_API_ENDPOINT = 'http://localhost:8000/api/competitions/{}';
+  var UPDATE_COMPETITION_API_ENDPOINT = _envService__WEBPACK_IMPORTED_MODULE_0__["host"] + '/api/competitions/{}';
   var parameters = {
     method: 'PATCH',
     headers: {
@@ -104371,7 +104375,7 @@ var updateCompetitionsService = function updateCompetitionsService(request) {
   });
 };
 var destroyCompetitionsService = function destroyCompetitionsService(request) {
-  var DESTROY_COMPETITION_API_ENDPOINT = 'http://localhost:8000/api/competitions/{}';
+  var DESTROY_COMPETITION_API_ENDPOINT = _envService__WEBPACK_IMPORTED_MODULE_0__["host"] + '/api/competitions/{}';
   var parameters = {
     method: 'DELETE',
     headers: {
@@ -104384,6 +104388,22 @@ var destroyCompetitionsService = function destroyCompetitionsService(request) {
     return json;
   });
 };
+
+/***/ }),
+
+/***/ "./resources/js/services/envService.js":
+/*!*********************************************!*\
+  !*** ./resources/js/services/envService.js ***!
+  \*********************************************/
+/*! exports provided: host */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "host", function() { return host; });
+var url = window.location.href;
+var arr = url.split("/");
+var host = arr[0] + "//" + arr[2];
 
 /***/ }),
 
@@ -104403,8 +104423,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "editTeamsService", function() { return editTeamsService; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "updateTeamsService", function() { return updateTeamsService; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "destroyTeamsService", function() { return destroyTeamsService; });
+/* harmony import */ var _envService__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./envService */ "./resources/js/services/envService.js");
+
 var indexTeamsService = function indexTeamsService(request) {
-  var INDEX_TEAM_API_ENDPOINT = 'http://localhost:8000/api/teams';
+  var INDEX_TEAM_API_ENDPOINT = _envService__WEBPACK_IMPORTED_MODULE_0__["host"] + '/api/teams';
   var parameters = {
     method: 'GET',
     headers: {
@@ -104418,7 +104440,7 @@ var indexTeamsService = function indexTeamsService(request) {
   });
 };
 var createTeamsService = function createTeamsService(request) {
-  var CREATE_TEAM_API_ENDPOINT = 'http://localhost:8000/api/teams/create';
+  var CREATE_TEAM_API_ENDPOINT = _envService__WEBPACK_IMPORTED_MODULE_0__["host"] + '/api/teams/create';
   var parameters = {
     method: 'GET',
     headers: {
@@ -104432,7 +104454,7 @@ var createTeamsService = function createTeamsService(request) {
   });
 };
 var showTeamsService = function showTeamsService(request) {
-  var SHOW_TEAM_API_ENDPOINT = 'http://localhost:8000/api/teams/{}';
+  var SHOW_TEAM_API_ENDPOINT = _envService__WEBPACK_IMPORTED_MODULE_0__["host"] + '/api/teams/{}';
   var parameters = {
     method: 'GET',
     headers: {
@@ -104446,7 +104468,7 @@ var showTeamsService = function showTeamsService(request) {
   });
 };
 var storeTeamsService = function storeTeamsService(request) {
-  var STORE_TEAM_API_ENDPOINT = 'http://localhost:8000/api/teams';
+  var STORE_TEAM_API_ENDPOINT = _envService__WEBPACK_IMPORTED_MODULE_0__["host"] + '/api/teams';
   var parameters = {
     method: 'POST',
     headers: {
@@ -104462,7 +104484,7 @@ var storeTeamsService = function storeTeamsService(request) {
   });
 };
 var editTeamsService = function editTeamsService(request) {
-  var EDIT_TEAM_API_ENDPOINT = 'http://localhost:8000/api/teams/{}/edit';
+  var EDIT_TEAM_API_ENDPOINT = _envService__WEBPACK_IMPORTED_MODULE_0__["host"] + '/api/teams/{}/edit';
   var parameters = {
     method: 'GET',
     headers: {
@@ -104476,7 +104498,7 @@ var editTeamsService = function editTeamsService(request) {
   });
 };
 var updateTeamsService = function updateTeamsService(request) {
-  var UPDATE_TEAM_API_ENDPOINT = 'http://localhost:8000/api/teams/{}';
+  var UPDATE_TEAM_API_ENDPOINT = _envService__WEBPACK_IMPORTED_MODULE_0__["host"] + '/api/teams/{}';
   var parameters = {
     method: 'PATCH',
     headers: {
@@ -104525,10 +104547,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "updateUsersService", function() { return updateUsersService; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "destroyUsersService", function() { return destroyUsersService; });
 /* harmony import */ var _utils_cookies__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/cookies */ "./resources/js/utils/cookies.js");
+/* harmony import */ var _envService__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./envService */ "./resources/js/services/envService.js");
+
 
 var token = Object(_utils_cookies__WEBPACK_IMPORTED_MODULE_0__["getCookie"])('token');
 var indexUsersService = function indexUsersService() {
-  var INDEX_USER_API_ENDPOINT = 'http://localhost:8000/api/users';
+  var INDEX_USER_API_ENDPOINT = _envService__WEBPACK_IMPORTED_MODULE_1__["host"] + '/api/users';
   var parameters = {
     method: 'GET',
     headers: {
@@ -104542,7 +104566,7 @@ var indexUsersService = function indexUsersService() {
   });
 };
 var createUsersService = function createUsersService() {
-  var CREATE_USER_API_ENDPOINT = 'http://localhost:8000/api/users/create';
+  var CREATE_USER_API_ENDPOINT = _envService__WEBPACK_IMPORTED_MODULE_1__["host"] + '/api/users/create';
   var parameters = {
     method: 'GET',
     headers: {
@@ -104556,7 +104580,7 @@ var createUsersService = function createUsersService() {
   });
 };
 var showUsersService = function showUsersService() {
-  var SHOW_USER_API_ENDPOINT = 'http://localhost:8000/api/users/{}';
+  var SHOW_USER_API_ENDPOINT = _envService__WEBPACK_IMPORTED_MODULE_1__["host"] + '/api/users/{}';
   var parameters = {
     method: 'GET',
     headers: {
@@ -104570,7 +104594,7 @@ var showUsersService = function showUsersService() {
   });
 };
 var storeUsersService = function storeUsersService(request) {
-  var STORE_USER_API_ENDPOINT = 'http://localhost:8000/api/users';
+  var STORE_USER_API_ENDPOINT = _envService__WEBPACK_IMPORTED_MODULE_1__["host"] + '/api/users';
   var parameters = {
     method: 'POST',
     headers: {
@@ -104586,7 +104610,7 @@ var storeUsersService = function storeUsersService(request) {
   });
 };
 var editUsersService = function editUsersService() {
-  var EDIT_USER_API_ENDPOINT = 'http://localhost:8000/api/users/{}/edit';
+  var EDIT_USER_API_ENDPOINT = _envService__WEBPACK_IMPORTED_MODULE_1__["host"] + '/api/users/{}/edit';
   var parameters = {
     method: 'GET',
     headers: {
@@ -104600,7 +104624,7 @@ var editUsersService = function editUsersService() {
   });
 };
 var updateUsersService = function updateUsersService(request) {
-  var UPDATE_USER_API_ENDPOINT = 'http://localhost:8000/api/users/{}';
+  var UPDATE_USER_API_ENDPOINT = _envService__WEBPACK_IMPORTED_MODULE_1__["host"] + '/api/users/{}';
   var parameters = {
     method: 'PATCH',
     headers: {
@@ -104616,7 +104640,7 @@ var updateUsersService = function updateUsersService(request) {
   });
 };
 var destroyUsersService = function destroyUsersService(request) {
-  var DESTROY_USER_API_ENDPOINT = 'http://localhost:8000/api/users/{}';
+  var DESTROY_USER_API_ENDPOINT = _envService__WEBPACK_IMPORTED_MODULE_1__["host"] + '/api/users/{}';
   var parameters = {
     method: 'DELETE',
     headers: {
