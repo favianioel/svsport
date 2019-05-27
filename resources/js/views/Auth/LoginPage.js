@@ -32,6 +32,7 @@ class LoginPage extends Component {
                 const data = {
                     token
                 };
+                console.log('renders');
                 this.props.dispatch(getUserAction(data));
 
             }

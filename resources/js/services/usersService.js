@@ -1,14 +1,11 @@
-import {getCookie} from '../utils/cookies';
 import { host } from './envService';
 
-const token = getCookie('token');
-
-export const indexUsersService = () => {
+export const indexUsersService = (data) => {
     const INDEX_USER_API_ENDPOINT = host+'/api/users';
     const parameters = {
       method: 'GET',
       headers: {
-        'Authorization': 'Bearer '+ token
+        'Authorization': 'Bearer '+ data.user.token
       }
     };
   
@@ -21,12 +18,12 @@ export const indexUsersService = () => {
       })
   };
 
-  export const createUsersService = () => {
+  export const createUsersService = (data) => {
     const CREATE_USER_API_ENDPOINT = host+'/api/users/create';
     const parameters = {
       method: 'GET',
       headers: {
-        'Authorization': 'Bearer ' + token
+        'Authorization': 'Bearer ' + data.user.token
       }
     };
   
@@ -39,7 +36,7 @@ export const indexUsersService = () => {
       })
   };
 
-  export const showUsersService = () => {
+  export const showUsersService = (data) => {
     const SHOW_USER_API_ENDPOINT = host+'/api/users/{}';
     const parameters = {
       method: 'GET',
@@ -57,15 +54,15 @@ export const indexUsersService = () => {
       })
   };
 
-  export const storeUsersService = (request) => {
+  export const storeUsersService = (data) => {
     const STORE_USER_API_ENDPOINT = host+'/api/users';
     const parameters = {
       method: 'POST',
       headers: {
-        'Authorization': 'Bearer ' + token,
+        'Authorization': 'Bearer ' + data.user.token,
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(request.user)
+      body: JSON.stringify(data.user)
     };
   
     return fetch(STORE_USER_API_ENDPOINT, parameters)
@@ -77,12 +74,12 @@ export const indexUsersService = () => {
       })
   };
 
-  export const editUsersService = () => {
+  export const editUsersService = (data) => {
     const EDIT_USER_API_ENDPOINT = host+'/api/users/{}/edit';
     const parameters = {
       method: 'GET',
       headers: {
-        'Authorization': 'Bearer ' + token
+        'Authorization': 'Bearer ' + data.user.token
       }
     };
   
@@ -95,15 +92,15 @@ export const indexUsersService = () => {
       })
   };
 
-  export const updateUsersService = (request) => {
+  export const updateUsersService = (data) => {
     const UPDATE_USER_API_ENDPOINT = host+'/api/users/{}';
     const parameters = {
       method: 'PATCH',
       headers: {
-        'Authorization': 'Bearer ' + token,
+        'Authorization': 'Bearer ' + data.user.token,
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(request.user)
+      body: JSON.stringify(data.user)
     };
   
     return fetch(UPDATE_USER_API_ENDPOINT, parameters)
@@ -115,12 +112,12 @@ export const indexUsersService = () => {
       })
   };
 
-  export const destroyUsersService = (request) => {
+  export const destroyUsersService = (data) => {
     const DESTROY_USER_API_ENDPOINT = host+'/api/users/{}';
     const parameters = {
       method: 'DELETE',
       headers: {
-        'Authorization': 'Bearer ' + token
+        'Authorization': 'Bearer ' + data.user.token
       }
     };
   

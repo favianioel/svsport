@@ -3,9 +3,9 @@ import { DefaultLayout } from "./../layouts";
 
 // Route Views
 import UserProfile from "./../views/UserProfile";
-import Teams from "./../views/Teams";
-import Users from "./../views/Users";
-import Competitions from "./../views/Competitions";
+import Teams from "./../views/Team/TeamsWrapper";
+import Users from "../views/User/UsersWrapper";
+import Competitions from "./../views/Competition/CompetitionsWrapper";
 
 export default [
 

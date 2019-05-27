@@ -1,17 +1,17 @@
 import React from "react";
 import { connect } from 'react-redux';
 import { Container, Row, Col, Card, CardHeader, CardBody } from "shards-react";
-import PageTitle from "../components/common/PageTitle";
 
-class Teams extends React.Component {
+import PageTitle from "../../components/common/PageTitle";
+
+class Competitions extends React.Component {
   render() {
     return (
       <Container fluid className="main-content-container px-4 pb-4">
         {/* Page Header */}
         <Row noGutters className="page-header py-4">
-          <PageTitle sm="4" title="Teams" subtitle="Teams" className="text-sm-left" />
+          <PageTitle sm="4" title="Competitions" subtitle="Competitions" className="text-sm-left" />
         </Row>
-
         <Row>
           <Col>
             <Card small className="mb-4">
@@ -55,4 +55,4 @@ class Teams extends React.Component {
 }
 
 const mapStateToProps = (response) => ({ response });
-export default connect(mapStateToProps)(Teams);
+export default connect(mapStateToProps)(Competitions);

@@ -1,5 +1,5 @@
 // react and installed components
-import React, { Component } from "react";
+import React, { Component, PureComponent } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -26,7 +26,6 @@ export class App extends Component {
             const data = {
                 token
             };
-
             this.props.dispatch(getUserAction(data));
         }
     }
@@ -89,10 +88,4 @@ export class App extends Component {
     }
 }
 
-function mapDispatchToProps(dispatch) {
-    return {
-        actions: bindActionCreators(getUserAction, dispatch)
-    }
-}
-
-export default connect(mapDispatchToProps)(App);
+export default connect()(App);
