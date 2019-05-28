@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-import { Container, Row, Col } from "shards-react";
+import { Button, Container, Row, Col } from "shards-react";
 import PageTitle from "../../components/common/PageTitle";
 import { loginUserAction, getUserAction } from '../../actions/authenticationActions';
 import { setCookie } from '../../utils/cookies';
@@ -57,7 +57,7 @@ class LoginPage extends Component {
                                 <input className="form-control" type="password" name="password" />
                             </div>
                             <div className="form-group">
-                                <button type="submit" className="mb-2 btn-outline-primary mr-2">Login</button>
+                                <Button type="submit">Login</Button>
                             </div>
                         </form>
                         Don't have an acount? <Link to='register'>Register here</Link>

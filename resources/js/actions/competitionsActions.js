@@ -1,50 +1,50 @@
 import * as types from './index';
 
-export const indexCompetitionsAction = (data) => {
+export const indexCompetitionsAction = (user) => {
     return {
         type: types.INDEX_COMPETITION,
-        data
+        user
     }
 };
 
-export const storeCompetitionsAction = (data) => {
+export const storeCompetitionsAction = (user) => {
     return {
         type: types.STORE_COMPETITION,
-        data
+        user
     }
 };
 
-export const createCompetitionsAction = (data) => {
+export const createCompetitionsAction = (user) => {
     return {
         type: types.CREATE_COMPETITION,
-        data
+        user
     }
 }
 
-export const showCompetitionsAction = (data) => {
+export const showCompetitionsAction = (user) => {
     return {
         type: types.SHOW_COMPETITION,
-        data
+        user
     }
 }
 
-export const updateCompetitionsAction = (data) => {
+export const updateCompetitionsAction = (user) => {
     return {
         type: types.UPDATE_COMPETITION,
-        data
+        user
     }
 }
 
-export const editCompetitionsAction = (data) => {
+export const editCompetitionsAction = (user) => {
     return {
         type: types.EDIT_COMPETITION,
-        data
+        user
     }
 }
 
-export const destroyCompetitionsAction = (data) => {
+export const destroyCompetitionsAction = (user) => {
     return {
         type: types.DESTROY_COMPETITION,
-        data
+        user
     }
 }

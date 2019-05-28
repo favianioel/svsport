@@ -11,6 +11,6 @@ export default [
     path: "/",
     exact: true,
     layout: DefaultLayout,
-    component: () => <Redirect to="/register" />
+    component: () => <Redirect to="/login" />
   }
 ];

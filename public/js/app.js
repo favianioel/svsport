@@ -99996,6 +99996,69 @@ var getUserAction = function getUserAction(user) {
 
 /***/ }),
 
+/***/ "./resources/js/actions/competitionsActions.js":
+/*!*****************************************************!*\
+  !*** ./resources/js/actions/competitionsActions.js ***!
+  \*****************************************************/
+/*! exports provided: indexCompetitionsAction, storeCompetitionsAction, createCompetitionsAction, showCompetitionsAction, updateCompetitionsAction, editCompetitionsAction, destroyCompetitionsAction */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "indexCompetitionsAction", function() { return indexCompetitionsAction; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "storeCompetitionsAction", function() { return storeCompetitionsAction; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createCompetitionsAction", function() { return createCompetitionsAction; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "showCompetitionsAction", function() { return showCompetitionsAction; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "updateCompetitionsAction", function() { return updateCompetitionsAction; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "editCompetitionsAction", function() { return editCompetitionsAction; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "destroyCompetitionsAction", function() { return destroyCompetitionsAction; });
+/* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index */ "./resources/js/actions/index.js");
+
+var indexCompetitionsAction = function indexCompetitionsAction(user) {
+  return {
+    type: _index__WEBPACK_IMPORTED_MODULE_0__["INDEX_COMPETITION"],
+    user: user
+  };
+};
+var storeCompetitionsAction = function storeCompetitionsAction(user) {
+  return {
+    type: _index__WEBPACK_IMPORTED_MODULE_0__["STORE_COMPETITION"],
+    user: user
+  };
+};
+var createCompetitionsAction = function createCompetitionsAction(user) {
+  return {
+    type: _index__WEBPACK_IMPORTED_MODULE_0__["CREATE_COMPETITION"],
+    user: user
+  };
+};
+var showCompetitionsAction = function showCompetitionsAction(user) {
+  return {
+    type: _index__WEBPACK_IMPORTED_MODULE_0__["SHOW_COMPETITION"],
+    user: user
+  };
+};
+var updateCompetitionsAction = function updateCompetitionsAction(user) {
+  return {
+    type: _index__WEBPACK_IMPORTED_MODULE_0__["UPDATE_COMPETITION"],
+    user: user
+  };
+};
+var editCompetitionsAction = function editCompetitionsAction(user) {
+  return {
+    type: _index__WEBPACK_IMPORTED_MODULE_0__["EDIT_COMPETITION"],
+    user: user
+  };
+};
+var destroyCompetitionsAction = function destroyCompetitionsAction(user) {
+  return {
+    type: _index__WEBPACK_IMPORTED_MODULE_0__["DESTROY_COMPETITION"],
+    user: user
+  };
+};
+
+/***/ }),
+
 /***/ "./resources/js/actions/index.js":
 /*!***************************************!*\
   !*** ./resources/js/actions/index.js ***!
@@ -102608,7 +102671,7 @@ __webpack_require__.r(__webpack_exports__);
   layout: _layouts__WEBPACK_IMPORTED_MODULE_2__["DefaultLayout"],
   component: function component() {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Redirect"], {
-      to: "/register"
+      to: "/login"
     });
   }
 }]);
@@ -104967,9 +105030,8 @@ function (_Component) {
         name: "password"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-group"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        type: "submit",
-        className: "mb-2 btn-outline-primary mr-2"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_3__["Button"], {
+        type: "submit"
       }, "Login"))), "Don't have an acount? ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: "register"
       }, "Register here"))));
@@ -105129,9 +105191,8 @@ function (_Component) {
         name: "password_confirmation"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-group"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        type: "submit",
-        className: "mb-2 btn-outline-primary mr-2"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_1__["Button"], {
+        type: "submit"
       }, "Register"))), "Already have account? ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
         to: "login"
       }, "Login here"))));
@@ -105166,6 +105227,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var shards_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! shards-react */ "./node_modules/shards-react/dist/shards-react.es.js");
 /* harmony import */ var _components_common_PageTitle__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/common/PageTitle */ "./resources/js/components/common/PageTitle.js");
+/* harmony import */ var _utils_cookies__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../utils/cookies */ "./resources/js/utils/cookies.js");
+/* harmony import */ var _actions_competitionsActions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../actions/competitionsActions */ "./resources/js/actions/competitionsActions.js");
+/* harmony import */ var _IndexCompetitions__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./IndexCompetitions */ "./resources/js/views/Competition/IndexCompetitions.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -105183,6 +105247,9 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
 
 
 
@@ -105203,6 +105270,10 @@ function (_React$Component) {
   _createClass(Competitions, [{
     key: "render",
     value: function render() {
+      var isSuccess;
+      if (_.size(this.props.response) > 0) if (this.props.competitions.hasOwnProperty('response')) {
+        isSuccess = true;
+      }
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_2__["Container"], {
         fluid: true,
         className: "main-content-container px-4 pb-4"
@@ -105221,7 +105292,7 @@ function (_React$Component) {
         className: "border-bottom"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", {
         className: "m-0"
-      }, "Active Users")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_2__["CardBody"], {
+      }, "Competitions")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_2__["CardBody"], {
         className: "p-0 pb-3"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", {
         className: "table mb-0"
@@ -105236,54 +105307,29 @@ function (_React$Component) {
       }, "Name"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", {
         scope: "col",
         className: "border-0"
-      }, "actions"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "2"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Clark"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        style: {
-          fontSize: 15,
-          color: 'blue',
-          padding: '2 5 2 5',
-          margin: 3
-        }
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "fas fa-eye"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        style: {
-          fontSize: 15,
-          color: 'green',
-          padding: '2 5 2 5',
-          margin: 3
-        }
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "fas fa-edit"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        style: {
-          fontSize: 15,
-          color: 'red',
-          padding: '2 5 2 5',
-          margin: 3
-        }
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "fas fa-trash-alt"
-      })))))))))));
+      }, "actions"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_IndexCompetitions__WEBPACK_IMPORTED_MODULE_6__["default"], null)))))));
     }
   }]);
 
   return Competitions;
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
-var mapStateToProps = function mapStateToProps(response) {
-  return {
-    response: response
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+  var token = Object(_utils_cookies__WEBPACK_IMPORTED_MODULE_4__["getCookie"])('token');
+  var data = {
+    token: token
   };
+  return dispatch(Object(_actions_competitionsActions__WEBPACK_IMPORTED_MODULE_5__["indexCompetitionsAction"])(data));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps)(Competitions));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(null, mapDispatchToProps)(Competitions));
 
 /***/ }),
 
-/***/ "./resources/js/views/Team/IndexTeams.js":
-/*!***********************************************!*\
-  !*** ./resources/js/views/Team/IndexTeams.js ***!
-  \***********************************************/
+/***/ "./resources/js/views/Competition/IndexCompetitions.js":
+/*!*************************************************************!*\
+  !*** ./resources/js/views/Competition/IndexCompetitions.js ***!
+  \*************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -105292,6 +105338,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var shards_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! shards-react */ "./node_modules/shards-react/dist/shards-react.es.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -105309,6 +105356,104 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
+
+var IndexCompetitions =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(IndexCompetitions, _Component);
+
+  function IndexCompetitions() {
+    _classCallCheck(this, IndexCompetitions);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(IndexCompetitions).apply(this, arguments));
+  }
+
+  _createClass(IndexCompetitions, [{
+    key: "render",
+    value: function render() {
+      var isSuccess;
+      if (_.size(this.props.response) > 0) if (this.props.competitions.hasOwnProperty('response')) {
+        isSuccess = true;
+      }
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, isSuccess && this.props.competitions.response.map(function (obj, index) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
+          key: index
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, obj.id), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, obj.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_2__["Button"], {
+          theme: "info",
+          style: {
+            padding: '2 5 2 5',
+            margin: 3
+          }
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+          className: "fas fa-eye"
+        })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_2__["Button"], {
+          style: {
+            padding: '2 5 2 5',
+            margin: 3
+          }
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+          className: "fas fa-edit"
+        })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_2__["Button"], {
+          theme: "danger",
+          style: {
+            padding: '2 5 2 5',
+            margin: 3
+          }
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+          className: "fas fa-trash-alt"
+        }))));
+      }));
+    }
+  }]);
+
+  return IndexCompetitions;
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+
+var mapStateToProps = function mapStateToProps(state) {
+  return {
+    competitions: state.indexCompetitionsReducer
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps)(IndexCompetitions));
+
+/***/ }),
+
+/***/ "./resources/js/views/Team/IndexTeams.js":
+/*!***********************************************!*\
+  !*** ./resources/js/views/Team/IndexTeams.js ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var shards_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! shards-react */ "./node_modules/shards-react/dist/shards-react.es.js");
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -105334,28 +105479,24 @@ function (_Component) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, isSuccess && this.props.teams.response.map(function (obj, index) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
           key: index
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, obj.id), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, obj.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, obj.id), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, obj.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_2__["Button"], {
+          theme: "info",
           style: {
-            fontSize: 15,
-            color: 'blue',
             padding: '2 5 2 5',
             margin: 3
           }
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
           className: "fas fa-eye"
-        })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_2__["Button"], {
           style: {
-            fontSize: 15,
-            color: 'green',
             padding: '2 5 2 5',
             margin: 3
           }
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
           className: "fas fa-edit"
-        })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_2__["Button"], {
+          theme: "danger",
           style: {
-            fontSize: 15,
-            color: 'red',
             padding: '2 5 2 5',
             margin: 3
           }
@@ -105500,6 +105641,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var shards_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! shards-react */ "./node_modules/shards-react/dist/shards-react.es.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -105517,6 +105659,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -105544,28 +105687,24 @@ function (_Component) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, isSuccess && this.props.users.response.map(function (obj, index) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
           key: index
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, obj.id), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, obj.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, obj.email), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, obj.roles), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, obj.id), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, obj.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, obj.email), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, obj.roles), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_2__["Button"], {
+          theme: "info",
           style: {
-            fontSize: 15,
-            color: 'blue',
             padding: '2 5 2 5',
             margin: 3
           }
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
           className: "fas fa-eye"
-        })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_2__["Button"], {
           style: {
-            fontSize: 15,
-            color: 'green',
             padding: '2 5 2 5',
             margin: 3
           }
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
           className: "fas fa-edit"
-        })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_2__["Button"], {
+          theme: "danger",
           style: {
-            fontSize: 15,
-            color: 'red',
             padding: '2 5 2 5',
             margin: 3
           }

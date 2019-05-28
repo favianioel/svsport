@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Row, Col } from "shards-react";
+import { Button, Container, Row, Col } from "shards-react";
 import { Link, Redirect } from 'react-router-dom';
 import PageTitle from "../../components/common/PageTitle";
 import { connect } from 'react-redux';
@@ -55,7 +55,7 @@ class RegisterPage extends Component {
                                 <input className="form-control" type="password" name="password_confirmation" />
                             </div>
                             <div className="form-group">
-                                <button type="submit" className="mb-2 btn-outline-primary mr-2">Register</button>
+                                <Button type="submit">Register</Button>
                             </div>
                         </form>
                         Already have account? <Link to='login'>Login here</Link>

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { Button } from "shards-react";
 
 class IndexUsers extends Component {
 
@@ -20,15 +21,15 @@ class IndexUsers extends Component {
                                 <td>{obj.email}</td>
                                 <td>{obj.roles}</td>
                                 <td>
-                                    <button style={{ fontSize: 15, color: 'blue', padding: '2 5 2 5', margin: 3 }}>
+                                    <Button theme="info" style={{ padding: '2 5 2 5', margin: 3 }}>
                                         <i className="fas fa-eye"></i>
-                                    </button>
-                                    <button style={{ fontSize: 15, color: 'green', padding: '2 5 2 5', margin: 3 }}>
+                                    </Button>
+                                    <Button style={{ padding: '2 5 2 5', margin: 3 }}>
                                         <i className="fas fa-edit"></i>
-                                    </button>
-                                    <button style={{ fontSize: 15, color: 'red', padding: '2 5 2 5', margin: 3 }}>
+                                    </Button>
+                                    <Button theme="danger" style={{ padding: '2 5 2 5', margin: 3 }}>
                                         <i className="fas fa-trash-alt"></i>
-                                    </button>
+                                    </Button>
                                 </td>
                             </tr>
                         );
