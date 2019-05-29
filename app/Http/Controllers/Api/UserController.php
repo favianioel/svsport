@@ -16,7 +16,7 @@ class UserController extends Controller
     public function index()
     {
         $users = User::all();
-        return $users->toJson();
+        return response($users);
     }
 
     /**
@@ -34,7 +34,7 @@ class UserController extends Controller
         $user->addRole($role);
         $user->save();
 
-        return response()->json('User created!');
+        return response(['message' => 'User created!']);
     }
 
     /**
@@ -70,7 +70,7 @@ class UserController extends Controller
         }
         $entity->save();
 
-        return response()->toJson('User updated');
+        return response(['message' => 'User updated']);
     }
 
     /**
@@ -84,6 +84,6 @@ class UserController extends Controller
         $entity = User::find($user);
         $entity->delete();
 
-        return response()->toJson('User deleted');
+        return response(['message' => 'User deleted']);
     }
 }

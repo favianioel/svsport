@@ -1,11 +1,11 @@
 import { host } from './envService';
 
-export const indexUsersService = (data) => {
+export const indexUsersService = (request) => {
     const INDEX_USER_API_ENDPOINT = host+'/api/users';
     const parameters = {
       method: 'GET',
       headers: {
-        'Authorization': 'Bearer '+ data.user.token
+        'Authorization': 'Bearer '+ request.data.token
       }
     };
   
@@ -18,12 +18,12 @@ export const indexUsersService = (data) => {
       })
   };
 
-  export const createUsersService = (data) => {
+  export const createUsersService = (request) => {
     const CREATE_USER_API_ENDPOINT = host+'/api/users/create';
     const parameters = {
       method: 'GET',
       headers: {
-        'Authorization': 'Bearer ' + data.user.token
+        'Authorization': 'Bearer ' + request.data.token
       }
     };
   
@@ -36,12 +36,12 @@ export const indexUsersService = (data) => {
       })
   };
 
-  export const showUsersService = (data) => {
+  export const showUsersService = (request) => {
     const SHOW_USER_API_ENDPOINT = host+'/api/users/{}';
     const parameters = {
       method: 'GET',
       headers: {
-        'Authorization': 'Bearer ' + token
+        'Authorization': 'Bearer ' + request.data.token
       }
     };
   
@@ -54,15 +54,15 @@ export const indexUsersService = (data) => {
       })
   };
 
-  export const storeUsersService = (data) => {
+  export const storeUsersService = (request) => {
     const STORE_USER_API_ENDPOINT = host+'/api/users';
     const parameters = {
       method: 'POST',
       headers: {
-        'Authorization': 'Bearer ' + data.user.token,
+        'Authorization': 'Bearer ' + request.data.token,
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(data.user)
+      body: JSON.stringify(request.data)
     };
   
     return fetch(STORE_USER_API_ENDPOINT, parameters)
@@ -74,12 +74,12 @@ export const indexUsersService = (data) => {
       })
   };
 
-  export const editUsersService = (data) => {
+  export const editUsersService = (request) => {
     const EDIT_USER_API_ENDPOINT = host+'/api/users/{}/edit';
     const parameters = {
       method: 'GET',
       headers: {
-        'Authorization': 'Bearer ' + data.user.token
+        'Authorization': 'Bearer ' + request.data.token
       }
     };
   
@@ -92,15 +92,15 @@ export const indexUsersService = (data) => {
       })
   };
 
-  export const updateUsersService = (data) => {
+  export const updateUsersService = (request) => {
     const UPDATE_USER_API_ENDPOINT = host+'/api/users/{}';
     const parameters = {
       method: 'PATCH',
       headers: {
-        'Authorization': 'Bearer ' + data.user.token,
+        'Authorization': 'Bearer ' + request.data.token,
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(data.user)
+      body: JSON.stringify(request.data)
     };
   
     return fetch(UPDATE_USER_API_ENDPOINT, parameters)
@@ -112,12 +112,12 @@ export const indexUsersService = (data) => {
       })
   };
 
-  export const destroyUsersService = (data) => {
+  export const destroyUsersService = (request) => {
     const DESTROY_USER_API_ENDPOINT = host+'/api/users/{}';
     const parameters = {
       method: 'DELETE',
       headers: {
-        'Authorization': 'Bearer ' + data.user.token
+        'Authorization': 'Bearer ' + request.data.token
       }
     };
   

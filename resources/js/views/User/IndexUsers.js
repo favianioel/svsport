@@ -6,6 +6,7 @@ class IndexUsers extends Component {
 
     render() {
         let isSuccess;
+        if (_.size(this.props.users) > 0)
         if (this.props.users.hasOwnProperty('response')) {
             isSuccess = true;
         }

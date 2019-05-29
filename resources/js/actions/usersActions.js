@@ -1,50 +1,50 @@
 import * as types from './index';
 
-export const indexUsersAction = (user) => {
+export const indexUsersAction = (data) => {
     return {
         type: types.INDEX_USER,
-        user
+        data
     }
 };
 
-export const storeUsersAction = (user) => {
+export const storeUsersAction = (data) => {
     return {
         type: types.STORE_USER,
-        user
+        data
     }
 };
 
-export const createUsersAction = (user) => {
+export const createUsersAction = (data) => {
     return {
         type: types.CREATE_USER,
-        user
+        data
     }
 }
 
-export const showUsersAction = (user) => {
+export const showUsersAction = (data) => {
     return {
         type: types.SHOW_USER,
-        user
+        data
     }
 }
 
-export const updateUsersAction = (user) => {
+export const updateUsersAction = (data) => {
     return {
         type: types.UPDATE_USER,
         data
     }
 }
 
-export const editUsersAction = (user) => {
+export const editUsersAction = (data) => {
     return {
         type: types.EDIT_USER,
-        user
+        data
     }
 }
 
-export const destroyUsersAction = (user) => {
+export const destroyUsersAction = (data) => {
     return {
         type: types.DESTROY_USER,
-        user
+        data
     }
 }

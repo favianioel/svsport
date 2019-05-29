@@ -1,50 +1,50 @@
 import * as types from './index';
 
-export const indexTeamsAction = (user) => {
+export const indexTeamsAction = (data) => {
     return {
         type: types.INDEX_TEAM,
-        user
+        data
     }
 };
 
-export const storeTeamsAction = (user) => {
+export const storeTeamsAction = (data) => {
     return {
         type: types.STORE_TEAM,
-        user
+        data
     }
 };
 
-export const createTeamsAction = (user) => {
+export const createTeamsAction = (data) => {
     return {
         type: types.CREATE_TEAM,
-        user
+        data
     }
 }
 
-export const showTeamsAction = (user) => {
+export const showTeamsAction = (data) => {
     return {
         type: types.SHOW_TEAM,
-        user
+        data
     }
 }
 
-export const updateTeamsAction = (user) => {
+export const updateTeamsAction = (data) => {
     return {
         type: types.UPDATE_TEAM,
-        user
+        data
     }
 }
 
-export const editTeamsAction = (user) => {
+export const editTeamsAction = (data) => {
     return {
         type: types.EDIT_TEAM,
-        user
+        data
     }
 }
 
-export const destroyTeamsAction = (user) => {
+export const destroyTeamsAction = (data) => {
     return {
         type: types.DESTROY_TEAM,
-        user
+        data
     }
 }

@@ -100014,46 +100014,46 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "destroyCompetitionsAction", function() { return destroyCompetitionsAction; });
 /* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index */ "./resources/js/actions/index.js");
 
-var indexCompetitionsAction = function indexCompetitionsAction(user) {
+var indexCompetitionsAction = function indexCompetitionsAction(data) {
   return {
     type: _index__WEBPACK_IMPORTED_MODULE_0__["INDEX_COMPETITION"],
-    user: user
+    data: data
   };
 };
-var storeCompetitionsAction = function storeCompetitionsAction(user) {
+var storeCompetitionsAction = function storeCompetitionsAction(data) {
   return {
     type: _index__WEBPACK_IMPORTED_MODULE_0__["STORE_COMPETITION"],
-    user: user
+    data: data
   };
 };
-var createCompetitionsAction = function createCompetitionsAction(user) {
+var createCompetitionsAction = function createCompetitionsAction(data) {
   return {
     type: _index__WEBPACK_IMPORTED_MODULE_0__["CREATE_COMPETITION"],
-    user: user
+    data: data
   };
 };
-var showCompetitionsAction = function showCompetitionsAction(user) {
+var showCompetitionsAction = function showCompetitionsAction(data) {
   return {
     type: _index__WEBPACK_IMPORTED_MODULE_0__["SHOW_COMPETITION"],
-    user: user
+    data: data
   };
 };
-var updateCompetitionsAction = function updateCompetitionsAction(user) {
+var updateCompetitionsAction = function updateCompetitionsAction(data) {
   return {
     type: _index__WEBPACK_IMPORTED_MODULE_0__["UPDATE_COMPETITION"],
-    user: user
+    data: data
   };
 };
-var editCompetitionsAction = function editCompetitionsAction(user) {
+var editCompetitionsAction = function editCompetitionsAction(data) {
   return {
     type: _index__WEBPACK_IMPORTED_MODULE_0__["EDIT_COMPETITION"],
-    user: user
+    data: data
   };
 };
-var destroyCompetitionsAction = function destroyCompetitionsAction(user) {
+var destroyCompetitionsAction = function destroyCompetitionsAction(data) {
   return {
     type: _index__WEBPACK_IMPORTED_MODULE_0__["DESTROY_COMPETITION"],
-    user: user
+    data: data
   };
 };
 
@@ -100243,46 +100243,46 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "destroyTeamsAction", function() { return destroyTeamsAction; });
 /* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index */ "./resources/js/actions/index.js");
 
-var indexTeamsAction = function indexTeamsAction(user) {
+var indexTeamsAction = function indexTeamsAction(data) {
   return {
     type: _index__WEBPACK_IMPORTED_MODULE_0__["INDEX_TEAM"],
-    user: user
+    data: data
   };
 };
-var storeTeamsAction = function storeTeamsAction(user) {
+var storeTeamsAction = function storeTeamsAction(data) {
   return {
     type: _index__WEBPACK_IMPORTED_MODULE_0__["STORE_TEAM"],
-    user: user
+    data: data
   };
 };
-var createTeamsAction = function createTeamsAction(user) {
+var createTeamsAction = function createTeamsAction(data) {
   return {
     type: _index__WEBPACK_IMPORTED_MODULE_0__["CREATE_TEAM"],
-    user: user
+    data: data
   };
 };
-var showTeamsAction = function showTeamsAction(user) {
+var showTeamsAction = function showTeamsAction(data) {
   return {
     type: _index__WEBPACK_IMPORTED_MODULE_0__["SHOW_TEAM"],
-    user: user
+    data: data
   };
 };
-var updateTeamsAction = function updateTeamsAction(user) {
+var updateTeamsAction = function updateTeamsAction(data) {
   return {
     type: _index__WEBPACK_IMPORTED_MODULE_0__["UPDATE_TEAM"],
-    user: user
+    data: data
   };
 };
-var editTeamsAction = function editTeamsAction(user) {
+var editTeamsAction = function editTeamsAction(data) {
   return {
     type: _index__WEBPACK_IMPORTED_MODULE_0__["EDIT_TEAM"],
-    user: user
+    data: data
   };
 };
-var destroyTeamsAction = function destroyTeamsAction(user) {
+var destroyTeamsAction = function destroyTeamsAction(data) {
   return {
     type: _index__WEBPACK_IMPORTED_MODULE_0__["DESTROY_TEAM"],
-    user: user
+    data: data
   };
 };
 
@@ -100306,46 +100306,46 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "destroyUsersAction", function() { return destroyUsersAction; });
 /* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index */ "./resources/js/actions/index.js");
 
-var indexUsersAction = function indexUsersAction(user) {
+var indexUsersAction = function indexUsersAction(data) {
   return {
     type: _index__WEBPACK_IMPORTED_MODULE_0__["INDEX_USER"],
-    user: user
+    data: data
   };
 };
-var storeUsersAction = function storeUsersAction(user) {
+var storeUsersAction = function storeUsersAction(data) {
   return {
     type: _index__WEBPACK_IMPORTED_MODULE_0__["STORE_USER"],
-    user: user
+    data: data
   };
 };
-var createUsersAction = function createUsersAction(user) {
+var createUsersAction = function createUsersAction(data) {
   return {
     type: _index__WEBPACK_IMPORTED_MODULE_0__["CREATE_USER"],
-    user: user
+    data: data
   };
 };
-var showUsersAction = function showUsersAction(user) {
+var showUsersAction = function showUsersAction(data) {
   return {
     type: _index__WEBPACK_IMPORTED_MODULE_0__["SHOW_USER"],
-    user: user
+    data: data
   };
 };
-var updateUsersAction = function updateUsersAction(user) {
+var updateUsersAction = function updateUsersAction(data) {
   return {
     type: _index__WEBPACK_IMPORTED_MODULE_0__["UPDATE_USER"],
     data: data
   };
 };
-var editUsersAction = function editUsersAction(user) {
+var editUsersAction = function editUsersAction(data) {
   return {
     type: _index__WEBPACK_IMPORTED_MODULE_0__["EDIT_USER"],
-    user: user
+    data: data
   };
 };
-var destroyUsersAction = function destroyUsersAction(user) {
+var destroyUsersAction = function destroyUsersAction(data) {
   return {
     type: _index__WEBPACK_IMPORTED_MODULE_0__["DESTROY_USER"],
-    user: user
+    data: data
   };
 };
 
@@ -102620,8 +102620,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _views_Team_TeamsWrapper__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../views/Team/TeamsWrapper */ "./resources/js/views/Team/TeamsWrapper.js");
 /* harmony import */ var _views_User_UsersWrapper__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../views/User/UsersWrapper */ "./resources/js/views/User/UsersWrapper.js");
 /* harmony import */ var _views_Competition_CompetitionsWrapper__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../views/Competition/CompetitionsWrapper */ "./resources/js/views/Competition/CompetitionsWrapper.js");
+/* harmony import */ var _views_Team_CreateTeams__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../views/Team/CreateTeams */ "./resources/js/views/Team/CreateTeams.js");
+/* harmony import */ var _views_Competition_CreateCompetitions__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../views/Competition/CreateCompetitions */ "./resources/js/views/Competition/CreateCompetitions.js");
 // Layout Types
  // Route Views
+
+
 
 
 
@@ -102632,17 +102636,25 @@ __webpack_require__.r(__webpack_exports__);
   layout: _layouts__WEBPACK_IMPORTED_MODULE_0__["DefaultLayout"],
   component: _views_UserProfile__WEBPACK_IMPORTED_MODULE_1__["default"]
 }, {
-  path: "/teams",
-  layout: _layouts__WEBPACK_IMPORTED_MODULE_0__["DefaultLayout"],
-  component: _views_Team_TeamsWrapper__WEBPACK_IMPORTED_MODULE_2__["default"]
-}, {
   path: "/users",
   layout: _layouts__WEBPACK_IMPORTED_MODULE_0__["DefaultLayout"],
   component: _views_User_UsersWrapper__WEBPACK_IMPORTED_MODULE_3__["default"]
 }, {
+  path: "/teams",
+  layout: _layouts__WEBPACK_IMPORTED_MODULE_0__["DefaultLayout"],
+  component: _views_Team_TeamsWrapper__WEBPACK_IMPORTED_MODULE_2__["default"]
+}, {
+  path: "/teams-create",
+  layout: _layouts__WEBPACK_IMPORTED_MODULE_0__["DefaultLayout"],
+  component: _views_Team_CreateTeams__WEBPACK_IMPORTED_MODULE_5__["default"]
+}, {
   path: "/competitions",
   layout: _layouts__WEBPACK_IMPORTED_MODULE_0__["DefaultLayout"],
   component: _views_Competition_CompetitionsWrapper__WEBPACK_IMPORTED_MODULE_4__["default"]
+}, {
+  path: "/competitions-create",
+  layout: _layouts__WEBPACK_IMPORTED_MODULE_0__["DefaultLayout"],
+  component: _views_Competition_CreateCompetitions__WEBPACK_IMPORTED_MODULE_6__["default"]
 }]);
 
 /***/ }),
@@ -104416,7 +104428,7 @@ var indexCompetitionsService = function indexCompetitionsService(request) {
   var parameters = {
     method: 'GET',
     headers: {
-      'Authorization': 'Bearer ' + request.user.token
+      'Authorization': 'Bearer ' + request.data.token
     }
   };
   return fetch(INDEX_COMPETITION_API_ENDPOINT, parameters).then(function (response) {
@@ -104430,7 +104442,7 @@ var createCompetitionsService = function createCompetitionsService(request) {
   var parameters = {
     method: 'GET',
     headers: {
-      'Authorization': 'Bearer ' + request.user.token
+      'Authorization': 'Bearer ' + request.data.token
     }
   };
   return fetch(CREATE_COMPETITION_API_ENDPOINT, parameters).then(function (response) {
@@ -104440,11 +104452,11 @@ var createCompetitionsService = function createCompetitionsService(request) {
   });
 };
 var showCompetitionsService = function showCompetitionsService(request) {
-  var SHOW_COMPETITION_API_ENDPOINT = _envService__WEBPACK_IMPORTED_MODULE_0__["host"] + '/api/competitions/{}';
+  var SHOW_COMPETITION_API_ENDPOINT = _envService__WEBPACK_IMPORTED_MODULE_0__["host"] + '/api/competitions/' + request.data.id;
   var parameters = {
     method: 'GET',
     headers: {
-      'Authorization': 'Bearer ' + request.user.token
+      'Authorization': 'Bearer ' + request.data.token
     }
   };
   return fetch(SHOW_COMPETITION_API_ENDPOINT, parameters).then(function (response) {
@@ -104458,10 +104470,10 @@ var storeCompetitionsService = function storeCompetitionsService(request) {
   var parameters = {
     method: 'POST',
     headers: {
-      'Authorization': 'Bearer ' + request.user.token,
+      'Authorization': 'Bearer ' + request.data.token,
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify(request.user)
+    body: JSON.stringify(request.data)
   };
   return fetch(STORE_COMPETITION_API_ENDPOINT, parameters).then(function (response) {
     return response.json();
@@ -104474,7 +104486,7 @@ var editCompetitionsService = function editCompetitionsService(request) {
   var parameters = {
     method: 'GET',
     headers: {
-      'Authorization': 'Bearer ' + request.user.token
+      'Authorization': 'Bearer ' + request.data.token
     }
   };
   return fetch(EDIT_COMPETITION_API_ENDPOINT, parameters).then(function (response) {
@@ -104484,14 +104496,14 @@ var editCompetitionsService = function editCompetitionsService(request) {
   });
 };
 var updateCompetitionsService = function updateCompetitionsService(request) {
-  var UPDATE_COMPETITION_API_ENDPOINT = _envService__WEBPACK_IMPORTED_MODULE_0__["host"] + '/api/competitions/{}';
+  var UPDATE_COMPETITION_API_ENDPOINT = _envService__WEBPACK_IMPORTED_MODULE_0__["host"] + '/api/competitions/' + request.data.id;
   var parameters = {
     method: 'PATCH',
     headers: {
-      'Authorization': 'Bearer ' + request.user.token,
+      'Authorization': 'Bearer ' + request.data.token,
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify(request.user)
+    body: JSON.stringify(request.data)
   };
   return fetch(UPDATE_COMPETITION_API_ENDPOINT, parameters).then(function (response) {
     return response.json();
@@ -104500,11 +104512,11 @@ var updateCompetitionsService = function updateCompetitionsService(request) {
   });
 };
 var destroyCompetitionsService = function destroyCompetitionsService(request) {
-  var DESTROY_COMPETITION_API_ENDPOINT = _envService__WEBPACK_IMPORTED_MODULE_0__["host"] + '/api/competitions/{}';
+  var DESTROY_COMPETITION_API_ENDPOINT = _envService__WEBPACK_IMPORTED_MODULE_0__["host"] + '/api/competitions/' + request.data.id;
   var parameters = {
     method: 'DELETE',
     headers: {
-      'Authorization': 'Bearer ' + request.user.token
+      'Authorization': 'Bearer ' + request.data.token
     }
   };
   return fetch(DESTROY_COMPETITION_API_ENDPOINT, parameters).then(function (response) {
@@ -104555,7 +104567,7 @@ var indexTeamsService = function indexTeamsService(request) {
   var parameters = {
     method: 'GET',
     headers: {
-      'Authorization': 'Bearer ' + request.user.token
+      'Authorization': 'Bearer ' + request.data.token
     }
   };
   return fetch(INDEX_TEAM_API_ENDPOINT, parameters).then(function (response) {
@@ -104569,7 +104581,7 @@ var createTeamsService = function createTeamsService(request) {
   var parameters = {
     method: 'GET',
     headers: {
-      'Authorization': 'Bearer ' + request.user.token
+      'Authorization': 'Bearer ' + request.data.token
     }
   };
   return fetch(CREATE_TEAM_API_ENDPOINT, parameters).then(function (response) {
@@ -104579,11 +104591,11 @@ var createTeamsService = function createTeamsService(request) {
   });
 };
 var showTeamsService = function showTeamsService(request) {
-  var SHOW_TEAM_API_ENDPOINT = _envService__WEBPACK_IMPORTED_MODULE_0__["host"] + '/api/teams/{}';
+  var SHOW_TEAM_API_ENDPOINT = _envService__WEBPACK_IMPORTED_MODULE_0__["host"] + '/api/teams/' + request.data.id;
   var parameters = {
     method: 'GET',
     headers: {
-      'Authorization': 'Bearer ' + request.user.token
+      'Authorization': 'Bearer ' + request.data.token
     }
   };
   return fetch(SHOW_TEAM_API_ENDPOINT, parameters).then(function (response) {
@@ -104597,10 +104609,10 @@ var storeTeamsService = function storeTeamsService(request) {
   var parameters = {
     method: 'POST',
     headers: {
-      'Authorization': 'Bearer ' + request.user.token,
+      'Authorization': 'Bearer ' + request.data.token,
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify(request.user)
+    body: JSON.stringify(request.data)
   };
   return fetch(STORE_TEAM_API_ENDPOINT, parameters).then(function (response) {
     return response.json();
@@ -104609,11 +104621,11 @@ var storeTeamsService = function storeTeamsService(request) {
   });
 };
 var editTeamsService = function editTeamsService(request) {
-  var EDIT_TEAM_API_ENDPOINT = _envService__WEBPACK_IMPORTED_MODULE_0__["host"] + '/api/teams/{}/edit';
+  var EDIT_TEAM_API_ENDPOINT = _envService__WEBPACK_IMPORTED_MODULE_0__["host"] + '/api/teams/' + request.data.id + '/edit';
   var parameters = {
     method: 'GET',
     headers: {
-      'Authorization': 'Bearer ' + request.user.token
+      'Authorization': 'Bearer ' + request.data.token
     }
   };
   return fetch(EDIT_TEAM_API_ENDPOINT, parameters).then(function (response) {
@@ -104623,14 +104635,14 @@ var editTeamsService = function editTeamsService(request) {
   });
 };
 var updateTeamsService = function updateTeamsService(request) {
-  var UPDATE_TEAM_API_ENDPOINT = _envService__WEBPACK_IMPORTED_MODULE_0__["host"] + '/api/teams/{}';
+  var UPDATE_TEAM_API_ENDPOINT = _envService__WEBPACK_IMPORTED_MODULE_0__["host"] + '/api/teams/' + request.data.id;
   var parameters = {
     method: 'PATCH',
     headers: {
-      'Authorization': 'Bearer ' + request.user.token,
+      'Authorization': 'Bearer ' + request.data.token,
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify(request.user)
+    body: JSON.stringify(request.data)
   };
   return fetch(UPDATE_TEAM_API_ENDPOINT, parameters).then(function (response) {
     return response.json();
@@ -104639,11 +104651,11 @@ var updateTeamsService = function updateTeamsService(request) {
   });
 };
 var destroyTeamsService = function destroyTeamsService(request) {
-  var DESTROY_TEAM_API_ENDPOINT = 'http://localhost:8000/api/teams/{}';
+  var DESTROY_TEAM_API_ENDPOINT = 'http://localhost:8000/api/teams/' + request.data.id;
   var parameters = {
     method: 'DELETE',
     headers: {
-      'Authorization': 'Bearer ' + request.user.token
+      'Authorization': 'Bearer ' + request.data.token
     }
   };
   return fetch(DESTROY_TEAM_API_ENDPOINT, parameters).then(function (response) {
@@ -104673,12 +104685,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "destroyUsersService", function() { return destroyUsersService; });
 /* harmony import */ var _envService__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./envService */ "./resources/js/services/envService.js");
 
-var indexUsersService = function indexUsersService(data) {
+var indexUsersService = function indexUsersService(request) {
   var INDEX_USER_API_ENDPOINT = _envService__WEBPACK_IMPORTED_MODULE_0__["host"] + '/api/users';
   var parameters = {
     method: 'GET',
     headers: {
-      'Authorization': 'Bearer ' + data.user.token
+      'Authorization': 'Bearer ' + request.data.token
     }
   };
   return fetch(INDEX_USER_API_ENDPOINT, parameters).then(function (response) {
@@ -104687,12 +104699,12 @@ var indexUsersService = function indexUsersService(data) {
     return json;
   });
 };
-var createUsersService = function createUsersService(data) {
+var createUsersService = function createUsersService(request) {
   var CREATE_USER_API_ENDPOINT = _envService__WEBPACK_IMPORTED_MODULE_0__["host"] + '/api/users/create';
   var parameters = {
     method: 'GET',
     headers: {
-      'Authorization': 'Bearer ' + data.user.token
+      'Authorization': 'Bearer ' + request.data.token
     }
   };
   return fetch(CREATE_USER_API_ENDPOINT, parameters).then(function (response) {
@@ -104701,12 +104713,12 @@ var createUsersService = function createUsersService(data) {
     return json;
   });
 };
-var showUsersService = function showUsersService(data) {
+var showUsersService = function showUsersService(request) {
   var SHOW_USER_API_ENDPOINT = _envService__WEBPACK_IMPORTED_MODULE_0__["host"] + '/api/users/{}';
   var parameters = {
     method: 'GET',
     headers: {
-      'Authorization': 'Bearer ' + token
+      'Authorization': 'Bearer ' + request.data.token
     }
   };
   return fetch(SHOW_USER_API_ENDPOINT, parameters).then(function (response) {
@@ -104715,15 +104727,15 @@ var showUsersService = function showUsersService(data) {
     return json;
   });
 };
-var storeUsersService = function storeUsersService(data) {
+var storeUsersService = function storeUsersService(request) {
   var STORE_USER_API_ENDPOINT = _envService__WEBPACK_IMPORTED_MODULE_0__["host"] + '/api/users';
   var parameters = {
     method: 'POST',
     headers: {
-      'Authorization': 'Bearer ' + data.user.token,
+      'Authorization': 'Bearer ' + request.data.token,
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify(data.user)
+    body: JSON.stringify(request.data)
   };
   return fetch(STORE_USER_API_ENDPOINT, parameters).then(function (response) {
     return response.json();
@@ -104731,12 +104743,12 @@ var storeUsersService = function storeUsersService(data) {
     return json;
   });
 };
-var editUsersService = function editUsersService(data) {
+var editUsersService = function editUsersService(request) {
   var EDIT_USER_API_ENDPOINT = _envService__WEBPACK_IMPORTED_MODULE_0__["host"] + '/api/users/{}/edit';
   var parameters = {
     method: 'GET',
     headers: {
-      'Authorization': 'Bearer ' + data.user.token
+      'Authorization': 'Bearer ' + request.data.token
     }
   };
   return fetch(EDIT_USER_API_ENDPOINT, parameters).then(function (response) {
@@ -104745,15 +104757,15 @@ var editUsersService = function editUsersService(data) {
     return json;
   });
 };
-var updateUsersService = function updateUsersService(data) {
+var updateUsersService = function updateUsersService(request) {
   var UPDATE_USER_API_ENDPOINT = _envService__WEBPACK_IMPORTED_MODULE_0__["host"] + '/api/users/{}';
   var parameters = {
     method: 'PATCH',
     headers: {
-      'Authorization': 'Bearer ' + data.user.token,
+      'Authorization': 'Bearer ' + request.data.token,
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify(data.user)
+    body: JSON.stringify(request.data)
   };
   return fetch(UPDATE_USER_API_ENDPOINT, parameters).then(function (response) {
     return response.json();
@@ -104761,12 +104773,12 @@ var updateUsersService = function updateUsersService(data) {
     return json;
   });
 };
-var destroyUsersService = function destroyUsersService(data) {
+var destroyUsersService = function destroyUsersService(request) {
   var DESTROY_USER_API_ENDPOINT = _envService__WEBPACK_IMPORTED_MODULE_0__["host"] + '/api/users/{}';
   var parameters = {
     method: 'DELETE',
     headers: {
-      'Authorization': 'Bearer ' + data.user.token
+      'Authorization': 'Bearer ' + request.data.token
     }
   };
   return fetch(DESTROY_USER_API_ENDPOINT, parameters).then(function (response) {
@@ -105222,14 +105234,15 @@ function mapStateToProps(state) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var shards_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! shards-react */ "./node_modules/shards-react/dist/shards-react.es.js");
-/* harmony import */ var _components_common_PageTitle__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/common/PageTitle */ "./resources/js/components/common/PageTitle.js");
+/* harmony import */ var shards_react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! shards-react */ "./node_modules/shards-react/dist/shards-react.es.js");
+/* harmony import */ var _actions_competitionsActions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../actions/competitionsActions */ "./resources/js/actions/competitionsActions.js");
+/* harmony import */ var _components_common_PageTitle__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/common/PageTitle */ "./resources/js/components/common/PageTitle.js");
+/* harmony import */ var _IndexCompetitions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./IndexCompetitions */ "./resources/js/views/Competition/IndexCompetitions.js");
 /* harmony import */ var _utils_cookies__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../utils/cookies */ "./resources/js/utils/cookies.js");
-/* harmony import */ var _actions_competitionsActions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../actions/competitionsActions */ "./resources/js/actions/competitionsActions.js");
-/* harmony import */ var _IndexCompetitions__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./IndexCompetitions */ "./resources/js/views/Competition/IndexCompetitions.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -105247,6 +105260,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -105274,55 +105288,182 @@ function (_React$Component) {
       if (_.size(this.props.response) > 0) if (this.props.competitions.hasOwnProperty('response')) {
         isSuccess = true;
       }
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_2__["Container"], {
+      return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_0__["Container"], {
         fluid: true,
         className: "main-content-container px-4 pb-4"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_2__["Row"], {
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_0__["Row"], {
         noGutters: true,
         className: "page-header py-4"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_common_PageTitle__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_components_common_PageTitle__WEBPACK_IMPORTED_MODULE_2__["default"], {
         sm: "4",
         title: "Competitions",
         subtitle: "Competitions",
         className: "text-sm-left"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_2__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_2__["Col"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_2__["Card"], {
+      })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_0__["Row"], {
+        noGutters: true,
+        className: "py-3"
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_0__["Button"], {
+        tag: react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Link"],
+        to: "/competitions-create"
+      }, "add competition")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_0__["Row"], null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_0__["Col"], null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_0__["Card"], {
         small: true,
         className: "mb-4"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_2__["CardHeader"], {
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_0__["CardHeader"], {
         className: "border-bottom"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", {
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h6", {
         className: "m-0"
-      }, "Competitions")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_2__["CardBody"], {
+      }, "Competitions")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_0__["CardBody"], {
         className: "p-0 pb-3"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", {
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("table", {
         className: "table mb-0"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead", {
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("thead", {
         className: "bg-light"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", {
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("th", {
         scope: "col",
         className: "border-0"
-      }, "#ID"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", {
+      }, "#ID"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("th", {
         scope: "col",
         className: "border-0"
-      }, "Name"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", {
+      }, "Name"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("th", {
         scope: "col",
         className: "border-0"
-      }, "actions"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_IndexCompetitions__WEBPACK_IMPORTED_MODULE_6__["default"], null)))))));
+      }, "actions"))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_IndexCompetitions__WEBPACK_IMPORTED_MODULE_3__["default"], null)))))));
     }
   }]);
 
   return Competitions;
-}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+}(react__WEBPACK_IMPORTED_MODULE_5___default.a.Component);
 
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   var token = Object(_utils_cookies__WEBPACK_IMPORTED_MODULE_4__["getCookie"])('token');
   var data = {
     token: token
   };
-  return dispatch(Object(_actions_competitionsActions__WEBPACK_IMPORTED_MODULE_5__["indexCompetitionsAction"])(data));
+  return dispatch(Object(_actions_competitionsActions__WEBPACK_IMPORTED_MODULE_1__["indexCompetitionsAction"])(data));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(null, mapDispatchToProps)(Competitions));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_7__["connect"])(null, mapDispatchToProps)(Competitions));
+
+/***/ }),
+
+/***/ "./resources/js/views/Competition/CreateCompetitions.js":
+/*!**************************************************************!*\
+  !*** ./resources/js/views/Competition/CreateCompetitions.js ***!
+  \**************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var shards_react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! shards-react */ "./node_modules/shards-react/dist/shards-react.es.js");
+/* harmony import */ var _actions_competitionsActions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../actions/competitionsActions */ "./resources/js/actions/competitionsActions.js");
+/* harmony import */ var _components_common_PageTitle__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/common/PageTitle */ "./resources/js/components/common/PageTitle.js");
+/* harmony import */ var _utils_cookies__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../utils/cookies */ "./resources/js/utils/cookies.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+
+
+
+
+var CreateCompetitions =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(CreateCompetitions, _Component);
+
+  function CreateCompetitions() {
+    var _getPrototypeOf2;
+
+    var _this;
+
+    _classCallCheck(this, CreateCompetitions);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(CreateCompetitions)).call.apply(_getPrototypeOf2, [this].concat(args)));
+
+    _defineProperty(_assertThisInitialized(_this), "onHandleSubmit", function (event) {
+      event.preventDefault();
+      var name = event.target.name.value;
+      var token = Object(_utils_cookies__WEBPACK_IMPORTED_MODULE_3__["getCookie"])('token');
+      var data = {
+        name: name,
+        token: token
+      };
+
+      _this.props.dispatch(Object(_actions_competitionsActions__WEBPACK_IMPORTED_MODULE_1__["storeCompetitionsAction"])(data));
+    });
+
+    return _this;
+  }
+
+  _createClass(CreateCompetitions, [{
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_0__["Container"], {
+        fluid: true,
+        className: "main-content-container px-4 pb-4"
+      }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_0__["Row"], {
+        noGutters: true,
+        className: "page-header py-4"
+      }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_components_common_PageTitle__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        sm: "4",
+        title: "Add Competition",
+        subtitle: "Competitions",
+        className: "text-sm-left"
+      })), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_0__["Row"], null, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_0__["Col"], null, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_0__["Card"], {
+        small: true,
+        className: "mb-4"
+      }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_0__["CardHeader"], {
+        className: "border-bottom"
+      }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("h6", {
+        className: "m-0"
+      }, "Competition")), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_0__["CardBody"], {
+        className: "p-0 pb-3"
+      }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_0__["Col"], {
+        sm: "12",
+        lg: "6"
+      }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_0__["Form"], {
+        onSubmit: this.onHandleSubmit
+      }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_0__["FormGroup"], null, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("label", {
+        htmlFor: "#name"
+      }, "Name the Competition"), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_0__["FormInput"], {
+        id: "#name",
+        placeholder: "Name",
+        name: "name"
+      }), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_0__["Button"], null, "create")))))))));
+    }
+  }]);
+
+  return CreateCompetitions;
+}(react__WEBPACK_IMPORTED_MODULE_4__["Component"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_5__["connect"])()(CreateCompetitions));
 
 /***/ }),
 
@@ -105335,10 +105476,12 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var shards_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! shards-react */ "./node_modules/shards-react/dist/shards-react.es.js");
+/* harmony import */ var _actions_competitionsActions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../actions/competitionsActions */ "./resources/js/actions/competitionsActions.js");
+/* harmony import */ var _utils_cookies__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utils/cookies */ "./resources/js/utils/cookies.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var shards_react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! shards-react */ "./node_modules/shards-react/dist/shards-react.es.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -105349,13 +105492,17 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
 
 
 
@@ -105367,43 +105514,69 @@ function (_Component) {
   _inherits(IndexCompetitions, _Component);
 
   function IndexCompetitions() {
+    var _getPrototypeOf2;
+
+    var _this;
+
     _classCallCheck(this, IndexCompetitions);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(IndexCompetitions).apply(this, arguments));
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(IndexCompetitions)).call.apply(_getPrototypeOf2, [this].concat(args)));
+
+    _defineProperty(_assertThisInitialized(_this), "onHandleDelete", function (id, event) {
+      event.preventDefault();
+      var token = Object(_utils_cookies__WEBPACK_IMPORTED_MODULE_1__["getCookie"])('token');
+      var data = {
+        id: id,
+        token: token
+      };
+
+      _this.props.dispatch(Object(_actions_competitionsActions__WEBPACK_IMPORTED_MODULE_0__["destroyCompetitionsAction"])(data));
+    });
+
+    return _this;
   }
 
   _createClass(IndexCompetitions, [{
     key: "render",
     value: function render() {
+      var _this2 = this;
+
       var isSuccess;
-      if (_.size(this.props.response) > 0) if (this.props.competitions.hasOwnProperty('response')) {
+      if (_.size(this.props.competitions) > 0) if (this.props.competitions.hasOwnProperty('response')) {
         isSuccess = true;
       }
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, isSuccess && this.props.competitions.response.map(function (obj, index) {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
+      return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("tbody", null, isSuccess && this.props.competitions.response.map(function (obj, index) {
+        return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("tr", {
           key: index
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, obj.id), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, obj.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_2__["Button"], {
+        }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("td", null, obj.id), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("td", null, obj.name), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_4__["Button"], {
           theme: "info",
           style: {
             padding: '2 5 2 5',
             margin: 3
           }
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("i", {
           className: "fas fa-eye"
-        })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_2__["Button"], {
+        })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_4__["Button"], {
           style: {
             padding: '2 5 2 5',
             margin: 3
           }
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("i", {
           className: "fas fa-edit"
-        })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_2__["Button"], {
+        })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_4__["Button"], {
           theme: "danger",
           style: {
             padding: '2 5 2 5',
             margin: 3
+          },
+          onClick: function onClick(e) {
+            return _this2.onHandleDelete(obj.id, e);
           }
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("i", {
           className: "fas fa-trash-alt"
         }))));
       }));
@@ -105411,15 +105584,136 @@ function (_Component) {
   }]);
 
   return IndexCompetitions;
-}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+}(react__WEBPACK_IMPORTED_MODULE_2__["Component"]);
 
 var mapStateToProps = function mapStateToProps(state) {
   return {
-    competitions: state.indexCompetitionsReducer
+    competitions: state.indexCompetitionReducer
   };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps)(IndexCompetitions));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_3__["connect"])(mapStateToProps)(IndexCompetitions));
+
+/***/ }),
+
+/***/ "./resources/js/views/Team/CreateTeams.js":
+/*!************************************************!*\
+  !*** ./resources/js/views/Team/CreateTeams.js ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var shards_react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! shards-react */ "./node_modules/shards-react/dist/shards-react.es.js");
+/* harmony import */ var _actions_teamsActions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../actions/teamsActions */ "./resources/js/actions/teamsActions.js");
+/* harmony import */ var _components_common_PageTitle__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/common/PageTitle */ "./resources/js/components/common/PageTitle.js");
+/* harmony import */ var _utils_cookies__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../utils/cookies */ "./resources/js/utils/cookies.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+
+
+
+
+var CreateTeams =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(CreateTeams, _Component);
+
+  function CreateTeams() {
+    var _getPrototypeOf2;
+
+    var _this;
+
+    _classCallCheck(this, CreateTeams);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(CreateTeams)).call.apply(_getPrototypeOf2, [this].concat(args)));
+
+    _defineProperty(_assertThisInitialized(_this), "onHandleSubmit", function (event) {
+      event.preventDefault();
+      var name = event.target.name.value;
+      var token = Object(_utils_cookies__WEBPACK_IMPORTED_MODULE_3__["getCookie"])('token');
+      var data = {
+        name: name,
+        token: token
+      };
+
+      _this.props.dispatch(Object(_actions_teamsActions__WEBPACK_IMPORTED_MODULE_1__["storeTeamsAction"])(data));
+    });
+
+    return _this;
+  }
+
+  _createClass(CreateTeams, [{
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_0__["Container"], {
+        fluid: true,
+        className: "main-content-container px-4 pb-4"
+      }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_0__["Row"], {
+        noGutters: true,
+        className: "page-header py-4"
+      }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_components_common_PageTitle__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        sm: "4",
+        title: "Add Team",
+        subtitle: "Teams",
+        className: "text-sm-left"
+      })), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_0__["Row"], null, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_0__["Col"], null, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_0__["Card"], {
+        small: true,
+        className: "mb-4"
+      }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_0__["CardHeader"], {
+        className: "border-bottom"
+      }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("h6", {
+        className: "m-0"
+      }, "Team")), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_0__["CardBody"], {
+        className: "p-0 pb-3"
+      }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_0__["Col"], {
+        sm: "12",
+        lg: "6"
+      }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_0__["Form"], {
+        onSubmit: this.onHandleSubmit
+      }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_0__["FormGroup"], null, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("label", {
+        htmlFor: "#name"
+      }, "Name the team"), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_0__["FormInput"], {
+        id: "#name",
+        placeholder: "Name",
+        name: "name"
+      }), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_0__["Button"], null, "create")))))))));
+    }
+  }]);
+
+  return CreateTeams;
+}(react__WEBPACK_IMPORTED_MODULE_4__["Component"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_5__["connect"])()(CreateTeams));
 
 /***/ }),
 
@@ -105432,10 +105726,13 @@ var mapStateToProps = function mapStateToProps(state) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var shards_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! shards-react */ "./node_modules/shards-react/dist/shards-react.es.js");
+/* harmony import */ var _actions_teamsActions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../actions/teamsActions */ "./resources/js/actions/teamsActions.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _utils_cookies__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../utils/cookies */ "./resources/js/utils/cookies.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var shards_react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! shards-react */ "./node_modules/shards-react/dist/shards-react.es.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -105446,13 +105743,18 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
 
 
 
@@ -105464,43 +105766,77 @@ function (_Component) {
   _inherits(IndexTeams, _Component);
 
   function IndexTeams() {
+    var _getPrototypeOf2;
+
+    var _this;
+
     _classCallCheck(this, IndexTeams);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(IndexTeams).apply(this, arguments));
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(IndexTeams)).call.apply(_getPrototypeOf2, [this].concat(args)));
+
+    _defineProperty(_assertThisInitialized(_this), "onHandleDelete", function (id, event) {
+      event.preventDefault();
+      var token = Object(_utils_cookies__WEBPACK_IMPORTED_MODULE_2__["getCookie"])('token');
+      var data = {
+        id: id,
+        token: token
+      };
+
+      _this.props.dispatch(Object(_actions_teamsActions__WEBPACK_IMPORTED_MODULE_0__["destroyTeamsAction"])(data));
+
+      return function () {
+        return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Redirect"], {
+          to: {
+            pathname: "/teams"
+          }
+        });
+      };
+    });
+
+    return _this;
   }
 
   _createClass(IndexTeams, [{
     key: "render",
     value: function render() {
+      var _this2 = this;
+
       var isSuccess;
-      if (_.size(this.props.response) > 0) if (this.props.teams.hasOwnProperty('response')) {
+      if (_.size(this.props.teams) > 0) if (this.props.teams.hasOwnProperty('response')) {
         isSuccess = true;
       }
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, isSuccess && this.props.teams.response.map(function (obj, index) {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
+      return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("tbody", null, isSuccess && this.props.teams.response.map(function (obj, index) {
+        return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("tr", {
           key: index
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, obj.id), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, obj.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_2__["Button"], {
+        }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("td", null, obj.id), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("td", null, obj.name), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_5__["Button"], {
           theme: "info",
           style: {
             padding: '2 5 2 5',
             margin: 3
           }
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("i", {
           className: "fas fa-eye"
-        })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_2__["Button"], {
+        })), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_5__["Button"], {
           style: {
             padding: '2 5 2 5',
             margin: 3
           }
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("i", {
           className: "fas fa-edit"
-        })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_2__["Button"], {
+        })), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_5__["Button"], {
           theme: "danger",
           style: {
             padding: '2 5 2 5',
             margin: 3
+          },
+          onClick: function onClick(e) {
+            return _this2.onHandleDelete(obj.id, e);
           }
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("i", {
           className: "fas fa-trash-alt"
         }))));
       }));
@@ -105508,15 +105844,15 @@ function (_Component) {
   }]);
 
   return IndexTeams;
-}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+}(react__WEBPACK_IMPORTED_MODULE_3__["Component"]);
 
 var mapStateToProps = function mapStateToProps(state) {
   return {
-    teams: state.indexTeamsReducer
+    teams: state.indexTeamReducer
   };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps)(IndexTeams));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_4__["connect"])(mapStateToProps)(IndexTeams));
 
 /***/ }),
 
@@ -105529,14 +105865,15 @@ var mapStateToProps = function mapStateToProps(state) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var shards_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! shards-react */ "./node_modules/shards-react/dist/shards-react.es.js");
-/* harmony import */ var _components_common_PageTitle__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/common/PageTitle */ "./resources/js/components/common/PageTitle.js");
-/* harmony import */ var _utils_cookies__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../utils/cookies */ "./resources/js/utils/cookies.js");
-/* harmony import */ var _actions_teamsActions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../actions/teamsActions */ "./resources/js/actions/teamsActions.js");
-/* harmony import */ var _IndexTeams__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./IndexTeams */ "./resources/js/views/Team/IndexTeams.js");
+/* harmony import */ var shards_react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! shards-react */ "./node_modules/shards-react/dist/shards-react.es.js");
+/* harmony import */ var _actions_teamsActions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../actions/teamsActions */ "./resources/js/actions/teamsActions.js");
+/* harmony import */ var _components_common_PageTitle__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/common/PageTitle */ "./resources/js/components/common/PageTitle.js");
+/* harmony import */ var _utils_cookies__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../utils/cookies */ "./resources/js/utils/cookies.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _IndexTeams__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./IndexTeams */ "./resources/js/views/Team/IndexTeams.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -105554,6 +105891,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -105577,55 +105915,61 @@ function (_Component) {
   _createClass(Teams, [{
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_2__["Container"], {
+      return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_0__["Container"], {
         fluid: true,
         className: "main-content-container px-4 pb-4"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_2__["Row"], {
+      }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_0__["Row"], {
         noGutters: true,
         className: "page-header py-4"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_common_PageTitle__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_components_common_PageTitle__WEBPACK_IMPORTED_MODULE_2__["default"], {
         sm: "4",
         title: "Teams",
         subtitle: "Teams",
         className: "text-sm-left"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_2__["Row"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_2__["Col"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_2__["Card"], {
+      })), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_0__["Row"], {
+        noGutters: true,
+        className: "py-3"
+      }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_0__["Button"], {
+        tag: react_router_dom__WEBPACK_IMPORTED_MODULE_5__["Link"],
+        to: "/teams-create"
+      }, "add team")), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_0__["Row"], null, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_0__["Col"], null, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_0__["Card"], {
         small: true,
         className: "mb-4"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_2__["CardHeader"], {
+      }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_0__["CardHeader"], {
         className: "border-bottom"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", {
+      }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("h6", {
         className: "m-0"
-      }, "Teams")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_2__["CardBody"], {
+      }, "Teams")), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_0__["CardBody"], {
         className: "p-0 pb-3"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", {
+      }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("table", {
         className: "table mb-0"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead", {
+      }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("thead", {
         className: "bg-light"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", {
+      }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("th", {
         scope: "col",
         className: "border-0"
-      }, "#ID"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", {
+      }, "#ID"), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("th", {
         scope: "col",
         className: "border-0"
-      }, "Name"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", {
+      }, "Name"), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("th", {
         scope: "col",
         className: "border-0"
-      }, "actions"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_IndexTeams__WEBPACK_IMPORTED_MODULE_6__["default"], null)))))));
+      }, "actions"))), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_IndexTeams__WEBPACK_IMPORTED_MODULE_7__["default"], null)))))));
     }
   }]);
 
   return Teams;
-}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+}(react__WEBPACK_IMPORTED_MODULE_4__["Component"]);
 
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
-  var token = Object(_utils_cookies__WEBPACK_IMPORTED_MODULE_4__["getCookie"])('token');
+  var token = Object(_utils_cookies__WEBPACK_IMPORTED_MODULE_3__["getCookie"])('token');
   var data = {
     token: token
   };
-  return dispatch(Object(_actions_teamsActions__WEBPACK_IMPORTED_MODULE_5__["indexTeamsAction"])(data));
+  return dispatch(Object(_actions_teamsActions__WEBPACK_IMPORTED_MODULE_1__["indexTeamsAction"])(data));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(null, mapDispatchToProps)(Teams));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_6__["connect"])(null, mapDispatchToProps)(Teams));
 
 /***/ }),
 
@@ -105679,11 +106023,9 @@ function (_Component) {
     key: "render",
     value: function render() {
       var isSuccess;
-
-      if (this.props.users.hasOwnProperty('response')) {
+      if (_.size(this.props.users) > 0) if (this.props.users.hasOwnProperty('response')) {
         isSuccess = true;
       }
-
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, isSuccess && this.props.users.response.map(function (obj, index) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
           key: index

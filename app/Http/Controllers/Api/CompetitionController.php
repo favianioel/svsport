@@ -32,7 +32,7 @@ class CompetitionController extends Controller
         $competition->name = $name;
         $competition->save();
 
-        return response()->toJson('Competition created');
+        return response(['message' => 'Competition created']);
     }
 
     /**
@@ -61,7 +61,7 @@ class CompetitionController extends Controller
         $entity->name = $name;
         $entity->save();
 
-        return response()->toJson('Competition updated');
+        return response(['message' => 'Competition updated']);
     }
 
     /**
@@ -70,11 +70,12 @@ class CompetitionController extends Controller
      * @param  \App\Competition  $competition
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Competition $competition)
+    public function destroy($competition)
     {
+
         $entity = Competition::find($competition);
         $entity->delete();
        
-        return response()->toJson('Competition deleted');
+        return response(['message' => 'Competition deleted']);
     }
 }

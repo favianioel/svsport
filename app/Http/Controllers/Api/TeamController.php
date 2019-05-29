@@ -16,7 +16,7 @@ class TeamController extends Controller
     public function index()
     {
         $teams = Team::all();
-        return $teams->toJson();
+        return response($teams);
     }
 
     /**
@@ -31,7 +31,7 @@ class TeamController extends Controller
         $team = new Team;
         $team->name = $teamName;
         $team->save();
-        return response()->toJson('Team created');
+        return response(['message'=>'Team created']);
     }
 
     /**
@@ -43,7 +43,7 @@ class TeamController extends Controller
     public function show($team)
     {
         $team = Team::find($team);
-        return $team->toJson();
+        return response($team);
     }
 
     /**
@@ -59,7 +59,7 @@ class TeamController extends Controller
         $entity = Team::find($team);
         $entity->name = $name;
         $entity->save();
-        return response()->toJson('Team updated');
+        return response(['message'=>'Team updated']);
     }
 
     /**
@@ -72,6 +72,6 @@ class TeamController extends Controller
     {
         $entity = Team::find($team);
         $entity->delete();
-        return response()->toJson('Team deleted');
+        return response(['message'=>'Team deleted']);
     }
 }

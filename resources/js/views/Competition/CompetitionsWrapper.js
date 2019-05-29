@@ -1,10 +1,11 @@
-import React, { Component } from "react";
-import { connect } from 'react-redux';
-import { Container, Row, Col, Card, CardHeader, CardBody } from "shards-react";
-import PageTitle from "../../components/common/PageTitle";
-import { getCookie } from "../../utils/cookies";
+import { Container, Row, Col, Card, CardHeader, CardBody, Button } from "shards-react";
 import { indexCompetitionsAction } from '../../actions/competitionsActions';
+import PageTitle from "../../components/common/PageTitle";
 import IndexCompetitions from './IndexCompetitions';
+import { getCookie } from "../../utils/cookies";
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import { connect } from 'react-redux';
 
 class Competitions extends React.Component {
   render() {
@@ -18,6 +19,9 @@ class Competitions extends React.Component {
       <Container fluid className="main-content-container px-4 pb-4">
         <Row noGutters className="page-header py-4">
           <PageTitle sm="4" title="Competitions" subtitle="Competitions" className="text-sm-left" />
+        </Row>
+        <Row noGutters className="py-3">
+          <Button tag={Link} to="/competitions-create" >add competition</Button>
         </Row>
         <Row>
           <Col>

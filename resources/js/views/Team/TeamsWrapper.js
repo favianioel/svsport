@@ -1,9 +1,10 @@
-import React, { Component } from "react";
-import { connect } from 'react-redux';
-import { Container, Row, Col, Card, CardHeader, CardBody } from "shards-react";
+import { Container, Row, Col, Card, CardHeader, CardBody, Button } from "shards-react";
+import { indexTeamsAction } from '../../actions/teamsActions';
 import PageTitle from "../../components/common/PageTitle";
 import { getCookie } from "../../utils/cookies";
-import { indexTeamsAction } from '../../actions/teamsActions';
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import { connect } from 'react-redux';
 import IndexTeams from './IndexTeams';
 
 class Teams extends Component {
@@ -13,6 +14,9 @@ class Teams extends Component {
       <Container fluid className="main-content-container px-4 pb-4">
         <Row noGutters className="page-header py-4">
           <PageTitle sm="4" title="Teams" subtitle="Teams" className="text-sm-left" />
+        </Row>
+        <Row noGutters className="py-3">
+          <Button tag={Link} to="/teams-create" >add team</Button>
         </Row>
         <Row>
           <Col>

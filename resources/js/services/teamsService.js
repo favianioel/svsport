@@ -5,7 +5,7 @@ export const indexTeamsService = (request) => {
     const parameters = {
       method: 'GET',
       headers: {
-        'Authorization': 'Bearer '+request.user.token
+        'Authorization': 'Bearer '+request.data.token
       }
     };
   
@@ -23,7 +23,7 @@ export const indexTeamsService = (request) => {
     const parameters = {
       method: 'GET',
       headers: {
-        'Authorization': 'Bearer '+request.user.token
+        'Authorization': 'Bearer '+request.data.token
       }
     };
   
@@ -37,11 +37,11 @@ export const indexTeamsService = (request) => {
   };
 
   export const showTeamsService = (request) => {
-    const SHOW_TEAM_API_ENDPOINT = host+'/api/teams/{}';
+    const SHOW_TEAM_API_ENDPOINT = host+'/api/teams/'+request.data.id;
     const parameters = {
       method: 'GET',
       headers: {
-        'Authorization': 'Bearer '+request.user.token
+        'Authorization': 'Bearer '+request.data.token
       }
     };
   
@@ -59,10 +59,10 @@ export const indexTeamsService = (request) => {
     const parameters = {
       method: 'POST',
       headers: {
-        'Authorization': 'Bearer '+request.user.token,
+        'Authorization': 'Bearer '+ request.data.token,
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(request.user)
+      body: JSON.stringify(request.data)
     };
   
     return fetch(STORE_TEAM_API_ENDPOINT, parameters)
@@ -75,11 +75,11 @@ export const indexTeamsService = (request) => {
   };
 
   export const editTeamsService = (request) => {
-    const EDIT_TEAM_API_ENDPOINT = host+'/api/teams/{}/edit';
+    const EDIT_TEAM_API_ENDPOINT = host+'/api/teams/'+request.data.id+'/edit';
     const parameters = {
       method: 'GET',
       headers: {
-        'Authorization': 'Bearer '+request.user.token
+        'Authorization': 'Bearer '+request.data.token
       }
     };
   
@@ -93,14 +93,14 @@ export const indexTeamsService = (request) => {
   };
 
   export const updateTeamsService = (request) => {
-    const UPDATE_TEAM_API_ENDPOINT = host+'/api/teams/{}';
+    const UPDATE_TEAM_API_ENDPOINT = host+'/api/teams/'+request.data.id;
     const parameters = {
       method: 'PATCH',
       headers: {
-        'Authorization': 'Bearer '+request.user.token,
+        'Authorization': 'Bearer '+request.data.token,
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(request.user)
+      body: JSON.stringify(request.data)
     };
   
     return fetch(UPDATE_TEAM_API_ENDPOINT, parameters)
@@ -113,11 +113,11 @@ export const indexTeamsService = (request) => {
   };
 
   export const destroyTeamsService = (request) => {
-    const DESTROY_TEAM_API_ENDPOINT = 'http://localhost:8000/api/teams/{}';
+    const DESTROY_TEAM_API_ENDPOINT = 'http://localhost:8000/api/teams/'+request.data.id;
     const parameters = {
       method: 'DELETE',
       headers: {
-        'Authorization': 'Bearer '+request.user.token
+        'Authorization': 'Bearer '+request.data.token
       }
     };
   

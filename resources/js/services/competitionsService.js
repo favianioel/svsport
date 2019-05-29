@@ -5,7 +5,7 @@ export const indexCompetitionsService = (request) => {
     const parameters = {
       method: 'GET',
       headers: {
-        'Authorization': 'Bearer '+request.user.token
+        'Authorization': 'Bearer '+request.data.token
       }
     };
   
@@ -23,7 +23,7 @@ export const indexCompetitionsService = (request) => {
     const parameters = {
       method: 'GET',
       headers: {
-        'Authorization': 'Bearer '+request.user.token
+        'Authorization': 'Bearer '+request.data.token
       }
     };
   
@@ -37,11 +37,11 @@ export const indexCompetitionsService = (request) => {
   };
 
   export const showCompetitionsService = (request) => {
-    const SHOW_COMPETITION_API_ENDPOINT = host+'/api/competitions/{}';
+    const SHOW_COMPETITION_API_ENDPOINT = host+'/api/competitions/'+request.data.id;
     const parameters = {
       method: 'GET',
       headers: {
-        'Authorization': 'Bearer '+request.user.token
+        'Authorization': 'Bearer '+request.data.token
       }
     };
   
@@ -59,10 +59,10 @@ export const indexCompetitionsService = (request) => {
     const parameters = {
       method: 'POST',
       headers: {
-        'Authorization': 'Bearer '+request.user.token,
+        'Authorization': 'Bearer '+request.data.token,
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(request.user)
+      body: JSON.stringify(request.data)
     };
   
     return fetch(STORE_COMPETITION_API_ENDPOINT, parameters)
@@ -79,7 +79,7 @@ export const indexCompetitionsService = (request) => {
     const parameters = {
       method: 'GET',
       headers: {
-        'Authorization': 'Bearer '+request.user.token
+        'Authorization': 'Bearer '+request.data.token
       }
     };
   
@@ -93,14 +93,14 @@ export const indexCompetitionsService = (request) => {
   };
 
   export const updateCompetitionsService = (request) => {
-    const UPDATE_COMPETITION_API_ENDPOINT = host+'/api/competitions/{}';
+    const UPDATE_COMPETITION_API_ENDPOINT = host+'/api/competitions/'+request.data.id;
     const parameters = {
       method: 'PATCH',
       headers: {
-        'Authorization': 'Bearer '+request.user.token,
+        'Authorization': 'Bearer '+request.data.token,
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(request.user)
+      body: JSON.stringify(request.data)
     };
   
     return fetch(UPDATE_COMPETITION_API_ENDPOINT, parameters)
@@ -113,11 +113,11 @@ export const indexCompetitionsService = (request) => {
   };
 
   export const destroyCompetitionsService = (request) => {
-    const DESTROY_COMPETITION_API_ENDPOINT = host+'/api/competitions/{}';
+    const DESTROY_COMPETITION_API_ENDPOINT = host+'/api/competitions/'+request.data.id;
     const parameters = {
       method: 'DELETE',
       headers: {
-        'Authorization': 'Bearer '+request.user.token
+        'Authorization': 'Bearer '+request.data.token
       }
     };
   
