@@ -100000,17 +100000,15 @@ var getUserAction = function getUserAction(user) {
 /*!*****************************************************!*\
   !*** ./resources/js/actions/competitionsActions.js ***!
   \*****************************************************/
-/*! exports provided: indexCompetitionsAction, storeCompetitionsAction, createCompetitionsAction, showCompetitionsAction, updateCompetitionsAction, editCompetitionsAction, destroyCompetitionsAction */
+/*! exports provided: indexCompetitionsAction, storeCompetitionsAction, showCompetitionsAction, updateCompetitionsAction, destroyCompetitionsAction */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "indexCompetitionsAction", function() { return indexCompetitionsAction; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "storeCompetitionsAction", function() { return storeCompetitionsAction; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createCompetitionsAction", function() { return createCompetitionsAction; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "showCompetitionsAction", function() { return showCompetitionsAction; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "updateCompetitionsAction", function() { return updateCompetitionsAction; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "editCompetitionsAction", function() { return editCompetitionsAction; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "destroyCompetitionsAction", function() { return destroyCompetitionsAction; });
 /* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index */ "./resources/js/actions/index.js");
 
@@ -100026,12 +100024,6 @@ var storeCompetitionsAction = function storeCompetitionsAction(data) {
     data: data
   };
 };
-var createCompetitionsAction = function createCompetitionsAction(data) {
-  return {
-    type: _index__WEBPACK_IMPORTED_MODULE_0__["CREATE_COMPETITION"],
-    data: data
-  };
-};
 var showCompetitionsAction = function showCompetitionsAction(data) {
   return {
     type: _index__WEBPACK_IMPORTED_MODULE_0__["SHOW_COMPETITION"],
@@ -100041,12 +100033,6 @@ var showCompetitionsAction = function showCompetitionsAction(data) {
 var updateCompetitionsAction = function updateCompetitionsAction(data) {
   return {
     type: _index__WEBPACK_IMPORTED_MODULE_0__["UPDATE_COMPETITION"],
-    data: data
-  };
-};
-var editCompetitionsAction = function editCompetitionsAction(data) {
-  return {
-    type: _index__WEBPACK_IMPORTED_MODULE_0__["EDIT_COMPETITION"],
     data: data
   };
 };
@@ -100063,7 +100049,7 @@ var destroyCompetitionsAction = function destroyCompetitionsAction(data) {
 /*!***************************************!*\
   !*** ./resources/js/actions/index.js ***!
   \***************************************/
-/*! exports provided: REGISTER_USER, REGISTER_USER_SUCCESS, REGISTER_USER_ERROR, LOGIN_USER, LOGIN_USER_SUCCESS, LOGIN_USER_ERROR, LOGOUT_USER, LOGOUT_USER_SUCCESS, LOGOUT_USER_ERROR, GET_USER, GET_USER_SUCCESS, GET_USER_ERROR, INDEX_USER, INDEX_USER_SUCCESS, INDEX_USER_ERROR, STORE_USER, STORE_USER_SUCCESS, STORE_USER_ERROR, CREATE_USER, CREATE_USER_SUCCESS, CREATE_USER_ERROR, SHOW_USER, SHOW_USER_SUCCESS, SHOW_USER_ERROR, UPDATE_USER, UPDATE_USER_SUCCESS, UPDATE_USER_ERROR, EDIT_USER, EDIT_USER_SUCCESS, EDIT_USER_ERROR, DESTROY_USER, DESTROY_USER_SUCCESS, DESTROY_USER_ERROR, INDEX_TEAM, INDEX_TEAM_SUCCESS, INDEX_TEAM_ERROR, STORE_TEAM, STORE_TEAM_SUCCESS, STORE_TEAM_ERROR, CREATE_TEAM, CREATE_TEAM_SUCCESS, CREATE_TEAM_ERROR, SHOW_TEAM, SHOW_TEAM_SUCCESS, SHOW_TEAM_ERROR, UPDATE_TEAM, UPDATE_TEAM_SUCCESS, UPDATE_TEAM_ERROR, EDIT_TEAM, EDIT_TEAM_SUCCESS, EDIT_TEAM_ERROR, DESTROY_TEAM, DESTROY_TEAM_SUCCESS, DESTROY_TEAM_ERROR, INDEX_COMPETITION, INDEX_COMPETITION_SUCCESS, INDEX_COMPETITION_ERROR, STORE_COMPETITION, STORE_COMPETITION_SUCCESS, STORE_COMPETITION_ERROR, CREATE_COMPETITION, CREATE_COMPETITION_SUCCESS, CREATE_COMPETITION_ERROR, SHOW_COMPETITION, SHOW_COMPETITION_SUCCESS, SHOW_COMPETITION_ERROR, UPDATE_COMPETITION, UPDATE_COMPETITION_SUCCESS, UPDATE_COMPETITION_ERROR, EDIT_COMPETITION, EDIT_COMPETITION_SUCCESS, EDIT_COMPETITION_ERROR, DESTROY_COMPETITION, DESTROY_COMPETITION_SUCCESS, DESTROY_COMPETITION_ERROR */
+/*! exports provided: REGISTER_USER, REGISTER_USER_SUCCESS, REGISTER_USER_ERROR, LOGIN_USER, LOGIN_USER_SUCCESS, LOGIN_USER_ERROR, LOGOUT_USER, LOGOUT_USER_SUCCESS, LOGOUT_USER_ERROR, GET_USER, GET_USER_SUCCESS, GET_USER_ERROR, INDEX_USER, INDEX_USER_SUCCESS, INDEX_USER_ERROR, STORE_USER, STORE_USER_SUCCESS, STORE_USER_ERROR, SHOW_USER, SHOW_USER_SUCCESS, SHOW_USER_ERROR, UPDATE_USER, UPDATE_USER_SUCCESS, UPDATE_USER_ERROR, DESTROY_USER, DESTROY_USER_SUCCESS, DESTROY_USER_ERROR, INDEX_TEAM, INDEX_TEAM_SUCCESS, INDEX_TEAM_ERROR, STORE_TEAM, STORE_TEAM_SUCCESS, STORE_TEAM_ERROR, SHOW_TEAM, SHOW_TEAM_SUCCESS, SHOW_TEAM_ERROR, UPDATE_TEAM, UPDATE_TEAM_SUCCESS, UPDATE_TEAM_ERROR, DESTROY_TEAM, DESTROY_TEAM_SUCCESS, DESTROY_TEAM_ERROR, INDEX_COMPETITION, INDEX_COMPETITION_SUCCESS, INDEX_COMPETITION_ERROR, STORE_COMPETITION, STORE_COMPETITION_SUCCESS, STORE_COMPETITION_ERROR, SHOW_COMPETITION, SHOW_COMPETITION_SUCCESS, SHOW_COMPETITION_ERROR, UPDATE_COMPETITION, UPDATE_COMPETITION_SUCCESS, UPDATE_COMPETITION_ERROR, DESTROY_COMPETITION, DESTROY_COMPETITION_SUCCESS, DESTROY_COMPETITION_ERROR */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -100086,18 +100072,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "STORE_USER", function() { return STORE_USER; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "STORE_USER_SUCCESS", function() { return STORE_USER_SUCCESS; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "STORE_USER_ERROR", function() { return STORE_USER_ERROR; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CREATE_USER", function() { return CREATE_USER; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CREATE_USER_SUCCESS", function() { return CREATE_USER_SUCCESS; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CREATE_USER_ERROR", function() { return CREATE_USER_ERROR; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SHOW_USER", function() { return SHOW_USER; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SHOW_USER_SUCCESS", function() { return SHOW_USER_SUCCESS; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SHOW_USER_ERROR", function() { return SHOW_USER_ERROR; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UPDATE_USER", function() { return UPDATE_USER; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UPDATE_USER_SUCCESS", function() { return UPDATE_USER_SUCCESS; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UPDATE_USER_ERROR", function() { return UPDATE_USER_ERROR; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EDIT_USER", function() { return EDIT_USER; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EDIT_USER_SUCCESS", function() { return EDIT_USER_SUCCESS; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EDIT_USER_ERROR", function() { return EDIT_USER_ERROR; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DESTROY_USER", function() { return DESTROY_USER; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DESTROY_USER_SUCCESS", function() { return DESTROY_USER_SUCCESS; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DESTROY_USER_ERROR", function() { return DESTROY_USER_ERROR; });
@@ -100107,18 +100087,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "STORE_TEAM", function() { return STORE_TEAM; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "STORE_TEAM_SUCCESS", function() { return STORE_TEAM_SUCCESS; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "STORE_TEAM_ERROR", function() { return STORE_TEAM_ERROR; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CREATE_TEAM", function() { return CREATE_TEAM; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CREATE_TEAM_SUCCESS", function() { return CREATE_TEAM_SUCCESS; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CREATE_TEAM_ERROR", function() { return CREATE_TEAM_ERROR; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SHOW_TEAM", function() { return SHOW_TEAM; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SHOW_TEAM_SUCCESS", function() { return SHOW_TEAM_SUCCESS; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SHOW_TEAM_ERROR", function() { return SHOW_TEAM_ERROR; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UPDATE_TEAM", function() { return UPDATE_TEAM; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UPDATE_TEAM_SUCCESS", function() { return UPDATE_TEAM_SUCCESS; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UPDATE_TEAM_ERROR", function() { return UPDATE_TEAM_ERROR; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EDIT_TEAM", function() { return EDIT_TEAM; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EDIT_TEAM_SUCCESS", function() { return EDIT_TEAM_SUCCESS; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EDIT_TEAM_ERROR", function() { return EDIT_TEAM_ERROR; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DESTROY_TEAM", function() { return DESTROY_TEAM; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DESTROY_TEAM_SUCCESS", function() { return DESTROY_TEAM_SUCCESS; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DESTROY_TEAM_ERROR", function() { return DESTROY_TEAM_ERROR; });
@@ -100128,18 +100102,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "STORE_COMPETITION", function() { return STORE_COMPETITION; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "STORE_COMPETITION_SUCCESS", function() { return STORE_COMPETITION_SUCCESS; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "STORE_COMPETITION_ERROR", function() { return STORE_COMPETITION_ERROR; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CREATE_COMPETITION", function() { return CREATE_COMPETITION; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CREATE_COMPETITION_SUCCESS", function() { return CREATE_COMPETITION_SUCCESS; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CREATE_COMPETITION_ERROR", function() { return CREATE_COMPETITION_ERROR; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SHOW_COMPETITION", function() { return SHOW_COMPETITION; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SHOW_COMPETITION_SUCCESS", function() { return SHOW_COMPETITION_SUCCESS; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SHOW_COMPETITION_ERROR", function() { return SHOW_COMPETITION_ERROR; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UPDATE_COMPETITION", function() { return UPDATE_COMPETITION; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UPDATE_COMPETITION_SUCCESS", function() { return UPDATE_COMPETITION_SUCCESS; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UPDATE_COMPETITION_ERROR", function() { return UPDATE_COMPETITION_ERROR; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EDIT_COMPETITION", function() { return EDIT_COMPETITION; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EDIT_COMPETITION_SUCCESS", function() { return EDIT_COMPETITION_SUCCESS; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EDIT_COMPETITION_ERROR", function() { return EDIT_COMPETITION_ERROR; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DESTROY_COMPETITION", function() { return DESTROY_COMPETITION; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DESTROY_COMPETITION_SUCCESS", function() { return DESTROY_COMPETITION_SUCCESS; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DESTROY_COMPETITION_ERROR", function() { return DESTROY_COMPETITION_ERROR; });
@@ -100163,18 +100131,12 @@ var INDEX_USER_ERROR = 'INDEX_USER_ERROR';
 var STORE_USER = 'STORE_USER';
 var STORE_USER_SUCCESS = 'STORE_USER_SUCCESS';
 var STORE_USER_ERROR = 'STORE_USER_ERROR';
-var CREATE_USER = 'CREATE_USER';
-var CREATE_USER_SUCCESS = 'CREATE_USER_SUCCESS';
-var CREATE_USER_ERROR = 'CREATE_USER_ERROR';
 var SHOW_USER = 'SHOW_USER';
 var SHOW_USER_SUCCESS = 'SHOW_USER_SUCCESS';
 var SHOW_USER_ERROR = 'SHOW_USER_ERROR';
 var UPDATE_USER = 'UPDATE_USER';
 var UPDATE_USER_SUCCESS = 'UPDATE_USER_SUCCESS';
 var UPDATE_USER_ERROR = 'UPDATE_USER_ERROR';
-var EDIT_USER = 'EDIT_USER';
-var EDIT_USER_SUCCESS = 'EDIT_USER_SUCCESS';
-var EDIT_USER_ERROR = 'EDIT_USER_ERROR';
 var DESTROY_USER = 'DESTROY_USER';
 var DESTROY_USER_SUCCESS = 'DESTROY_USER_SUCCESS';
 var DESTROY_USER_ERROR = 'DESTROY_USER_ERROR'; // Teams
@@ -100185,18 +100147,12 @@ var INDEX_TEAM_ERROR = 'INDEX_TEAM_ERROR';
 var STORE_TEAM = 'STORE_TEAM';
 var STORE_TEAM_SUCCESS = 'STORE_TEAM_SUCCESS';
 var STORE_TEAM_ERROR = 'STORE_TEAM_ERROR';
-var CREATE_TEAM = 'CREATE_TEAM';
-var CREATE_TEAM_SUCCESS = 'CREATE_TEAM_SUCCESS';
-var CREATE_TEAM_ERROR = 'CREATE_TEAM_ERROR';
 var SHOW_TEAM = 'SHOW_TEAM';
 var SHOW_TEAM_SUCCESS = 'SHOW_TEAM_SUCCESS';
 var SHOW_TEAM_ERROR = 'SHOW_TEAM_ERROR';
 var UPDATE_TEAM = 'UPDATE_TEAM';
 var UPDATE_TEAM_SUCCESS = 'UPDATE_TEAM_SUCCESS';
 var UPDATE_TEAM_ERROR = 'UPDATE_TEAM_ERROR';
-var EDIT_TEAM = 'EDIT_TEAM';
-var EDIT_TEAM_SUCCESS = 'EDIT_TEAM_SUCCESS';
-var EDIT_TEAM_ERROR = 'EDIT_TEAM_ERROR';
 var DESTROY_TEAM = 'DESTROY_TEAM';
 var DESTROY_TEAM_SUCCESS = 'DESTROY_TEAM_SUCCESS';
 var DESTROY_TEAM_ERROR = 'DESTROY_TEAM_ERROR'; // Competitions
@@ -100207,18 +100163,12 @@ var INDEX_COMPETITION_ERROR = 'INDEX_COMPETITION_ERROR';
 var STORE_COMPETITION = 'STORE_COMPETITION';
 var STORE_COMPETITION_SUCCESS = 'STORE_COMPETITION_SUCCESS';
 var STORE_COMPETITION_ERROR = 'STORE_COMPETITION_ERROR';
-var CREATE_COMPETITION = 'CREATE_COMPETITION';
-var CREATE_COMPETITION_SUCCESS = 'CREATE_COMPETITION_SUCCESS';
-var CREATE_COMPETITION_ERROR = 'CREATE_COMPETITION_ERROR';
 var SHOW_COMPETITION = 'SHOW_COMPETITION';
 var SHOW_COMPETITION_SUCCESS = 'SHOW_COMPETITION_SUCCESS';
 var SHOW_COMPETITION_ERROR = 'SHOW_COMPETITION_ERROR';
 var UPDATE_COMPETITION = 'UPDATE_COMPETITION';
 var UPDATE_COMPETITION_SUCCESS = 'UPDATE_COMPETITION_SUCCESS';
 var UPDATE_COMPETITION_ERROR = 'UPDATE_COMPETITION_ERROR';
-var EDIT_COMPETITION = 'EDIT_COMPETITION';
-var EDIT_COMPETITION_SUCCESS = 'EDIT_COMPETITION_SUCCESS';
-var EDIT_COMPETITION_ERROR = 'EDIT_COMPETITION_ERROR';
 var DESTROY_COMPETITION = 'DESTROY_COMPETITION';
 var DESTROY_COMPETITION_SUCCESS = 'DESTROY_COMPETITION_SUCCESS';
 var DESTROY_COMPETITION_ERROR = 'DESTROY_COMPETITION_ERROR';
@@ -100229,17 +100179,15 @@ var DESTROY_COMPETITION_ERROR = 'DESTROY_COMPETITION_ERROR';
 /*!**********************************************!*\
   !*** ./resources/js/actions/teamsActions.js ***!
   \**********************************************/
-/*! exports provided: indexTeamsAction, storeTeamsAction, createTeamsAction, showTeamsAction, updateTeamsAction, editTeamsAction, destroyTeamsAction */
+/*! exports provided: indexTeamsAction, storeTeamsAction, showTeamsAction, updateTeamsAction, destroyTeamsAction */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "indexTeamsAction", function() { return indexTeamsAction; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "storeTeamsAction", function() { return storeTeamsAction; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createTeamsAction", function() { return createTeamsAction; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "showTeamsAction", function() { return showTeamsAction; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "updateTeamsAction", function() { return updateTeamsAction; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "editTeamsAction", function() { return editTeamsAction; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "destroyTeamsAction", function() { return destroyTeamsAction; });
 /* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index */ "./resources/js/actions/index.js");
 
@@ -100255,12 +100203,6 @@ var storeTeamsAction = function storeTeamsAction(data) {
     data: data
   };
 };
-var createTeamsAction = function createTeamsAction(data) {
-  return {
-    type: _index__WEBPACK_IMPORTED_MODULE_0__["CREATE_TEAM"],
-    data: data
-  };
-};
 var showTeamsAction = function showTeamsAction(data) {
   return {
     type: _index__WEBPACK_IMPORTED_MODULE_0__["SHOW_TEAM"],
@@ -100270,12 +100212,6 @@ var showTeamsAction = function showTeamsAction(data) {
 var updateTeamsAction = function updateTeamsAction(data) {
   return {
     type: _index__WEBPACK_IMPORTED_MODULE_0__["UPDATE_TEAM"],
-    data: data
-  };
-};
-var editTeamsAction = function editTeamsAction(data) {
-  return {
-    type: _index__WEBPACK_IMPORTED_MODULE_0__["EDIT_TEAM"],
     data: data
   };
 };
@@ -100292,17 +100228,15 @@ var destroyTeamsAction = function destroyTeamsAction(data) {
 /*!**********************************************!*\
   !*** ./resources/js/actions/usersActions.js ***!
   \**********************************************/
-/*! exports provided: indexUsersAction, storeUsersAction, createUsersAction, showUsersAction, updateUsersAction, editUsersAction, destroyUsersAction */
+/*! exports provided: indexUsersAction, storeUsersAction, showUsersAction, updateUsersAction, destroyUsersAction */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "indexUsersAction", function() { return indexUsersAction; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "storeUsersAction", function() { return storeUsersAction; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createUsersAction", function() { return createUsersAction; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "showUsersAction", function() { return showUsersAction; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "updateUsersAction", function() { return updateUsersAction; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "editUsersAction", function() { return editUsersAction; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "destroyUsersAction", function() { return destroyUsersAction; });
 /* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index */ "./resources/js/actions/index.js");
 
@@ -100318,12 +100252,6 @@ var storeUsersAction = function storeUsersAction(data) {
     data: data
   };
 };
-var createUsersAction = function createUsersAction(data) {
-  return {
-    type: _index__WEBPACK_IMPORTED_MODULE_0__["CREATE_USER"],
-    data: data
-  };
-};
 var showUsersAction = function showUsersAction(data) {
   return {
     type: _index__WEBPACK_IMPORTED_MODULE_0__["SHOW_USER"],
@@ -100333,12 +100261,6 @@ var showUsersAction = function showUsersAction(data) {
 var updateUsersAction = function updateUsersAction(data) {
   return {
     type: _index__WEBPACK_IMPORTED_MODULE_0__["UPDATE_USER"],
-    data: data
-  };
-};
-var editUsersAction = function editUsersAction(data) {
-  return {
-    type: _index__WEBPACK_IMPORTED_MODULE_0__["EDIT_USER"],
     data: data
   };
 };
@@ -102011,7 +101933,7 @@ function registerReducer() {
 /*!******************************************************!*\
   !*** ./resources/js/reducers/competitionsReducer.js ***!
   \******************************************************/
-/*! exports provided: indexCompetitionReducer, storeCompetitionReducer, showCompetitionReducer, createCompetitionReducer, updateCompetitionReducer, editCompetitionReducer, destroyCompetitionReducer */
+/*! exports provided: indexCompetitionReducer, storeCompetitionReducer, showCompetitionReducer, updateCompetitionReducer, destroyCompetitionReducer */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -102019,9 +101941,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "indexCompetitionReducer", function() { return indexCompetitionReducer; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "storeCompetitionReducer", function() { return storeCompetitionReducer; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "showCompetitionReducer", function() { return showCompetitionReducer; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createCompetitionReducer", function() { return createCompetitionReducer; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "updateCompetitionReducer", function() { return updateCompetitionReducer; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "editCompetitionReducer", function() { return editCompetitionReducer; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "destroyCompetitionReducer", function() { return destroyCompetitionReducer; });
 /* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions */ "./resources/js/actions/index.js");
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
@@ -102092,27 +102012,6 @@ function showCompetitionReducer() {
   }
 }
 ;
-function createCompetitionReducer() {
-  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
-  var action = arguments.length > 1 ? arguments[1] : undefined;
-  var response = action.response;
-
-  switch (action.type) {
-    case _actions__WEBPACK_IMPORTED_MODULE_0__["CREATE_COMPETITION_SUCCESS"]:
-      return _objectSpread({}, state, {
-        response: response
-      });
-
-    case _actions__WEBPACK_IMPORTED_MODULE_0__["CREATE_COMPETITION_ERROR"]:
-      return _objectSpread({}, state, {
-        response: response
-      });
-
-    default:
-      return state;
-  }
-}
-;
 function updateCompetitionReducer() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
   var action = arguments.length > 1 ? arguments[1] : undefined;
@@ -102125,27 +102024,6 @@ function updateCompetitionReducer() {
       });
 
     case _actions__WEBPACK_IMPORTED_MODULE_0__["UPDATE_COMPETITION_ERROR"]:
-      return _objectSpread({}, state, {
-        response: response
-      });
-
-    default:
-      return state;
-  }
-}
-;
-function editCompetitionReducer() {
-  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
-  var action = arguments.length > 1 ? arguments[1] : undefined;
-  var response = action.response;
-
-  switch (action.type) {
-    case _actions__WEBPACK_IMPORTED_MODULE_0__["EDIT_COMPETITION_SUCCESS"]:
-      return _objectSpread({}, state, {
-        response: response
-      });
-
-    case _actions__WEBPACK_IMPORTED_MODULE_0__["EDIT_COMPETITION_ERROR"]:
       return _objectSpread({}, state, {
         response: response
       });
@@ -102208,25 +102086,19 @@ var rootReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])(
   indexUserReducer: _usersReducer__WEBPACK_IMPORTED_MODULE_2__["indexUserReducer"],
   storeUserReducer: _usersReducer__WEBPACK_IMPORTED_MODULE_2__["storeUserReducer"],
   showUserReducer: _usersReducer__WEBPACK_IMPORTED_MODULE_2__["showUserReducer"],
-  createUserReducer: _usersReducer__WEBPACK_IMPORTED_MODULE_2__["createUserReducer"],
   updateUserReducer: _usersReducer__WEBPACK_IMPORTED_MODULE_2__["updateUserReducer"],
-  editUserReducer: _usersReducer__WEBPACK_IMPORTED_MODULE_2__["editUserReducer"],
   destroyUserReducer: _usersReducer__WEBPACK_IMPORTED_MODULE_2__["destroyUserReducer"],
   //competitionCrud reducers
   indexCompetitionReducer: _competitionsReducer__WEBPACK_IMPORTED_MODULE_3__["indexCompetitionReducer"],
   storeCompetitionReducer: _competitionsReducer__WEBPACK_IMPORTED_MODULE_3__["storeCompetitionReducer"],
   showCompetitionReducer: _competitionsReducer__WEBPACK_IMPORTED_MODULE_3__["showCompetitionReducer"],
-  createCompetitionReducer: _competitionsReducer__WEBPACK_IMPORTED_MODULE_3__["createCompetitionReducer"],
   updateCompetitionReducer: _competitionsReducer__WEBPACK_IMPORTED_MODULE_3__["updateCompetitionReducer"],
-  editCompetitionReducer: _competitionsReducer__WEBPACK_IMPORTED_MODULE_3__["editCompetitionReducer"],
   destroyCompetitionReducer: _competitionsReducer__WEBPACK_IMPORTED_MODULE_3__["destroyCompetitionReducer"],
   //teamsCrud reducers
   indexTeamReducer: _teamsReducer__WEBPACK_IMPORTED_MODULE_4__["indexTeamReducer"],
   storeTeamReducer: _teamsReducer__WEBPACK_IMPORTED_MODULE_4__["storeTeamReducer"],
   showTeamReducer: _teamsReducer__WEBPACK_IMPORTED_MODULE_4__["showTeamReducer"],
-  createTeamReducer: _teamsReducer__WEBPACK_IMPORTED_MODULE_4__["createTeamReducer"],
   updateTeamReducer: _teamsReducer__WEBPACK_IMPORTED_MODULE_4__["updateTeamReducer"],
-  editTeamReducer: _teamsReducer__WEBPACK_IMPORTED_MODULE_4__["editTeamReducer"],
   destroyTeamReducer: _teamsReducer__WEBPACK_IMPORTED_MODULE_4__["destroyTeamReducer"]
 });
 /* harmony default export */ __webpack_exports__["default"] = (rootReducer);
@@ -102237,7 +102109,7 @@ var rootReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])(
 /*!***********************************************!*\
   !*** ./resources/js/reducers/teamsReducer.js ***!
   \***********************************************/
-/*! exports provided: indexTeamReducer, storeTeamReducer, showTeamReducer, createTeamReducer, updateTeamReducer, editTeamReducer, destroyTeamReducer */
+/*! exports provided: indexTeamReducer, storeTeamReducer, showTeamReducer, updateTeamReducer, destroyTeamReducer */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -102245,9 +102117,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "indexTeamReducer", function() { return indexTeamReducer; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "storeTeamReducer", function() { return storeTeamReducer; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "showTeamReducer", function() { return showTeamReducer; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createTeamReducer", function() { return createTeamReducer; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "updateTeamReducer", function() { return updateTeamReducer; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "editTeamReducer", function() { return editTeamReducer; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "destroyTeamReducer", function() { return destroyTeamReducer; });
 /* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions */ "./resources/js/actions/index.js");
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
@@ -102318,27 +102188,6 @@ function showTeamReducer() {
   }
 }
 ;
-function createTeamReducer() {
-  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
-  var action = arguments.length > 1 ? arguments[1] : undefined;
-  var response = action.response;
-
-  switch (action.type) {
-    case _actions__WEBPACK_IMPORTED_MODULE_0__["CREATE_TEAM_SUCCESS"]:
-      return _objectSpread({}, state, {
-        response: response
-      });
-
-    case _actions__WEBPACK_IMPORTED_MODULE_0__["CREATE_TEAM_ERROR"]:
-      return _objectSpread({}, state, {
-        response: response
-      });
-
-    default:
-      return state;
-  }
-}
-;
 function updateTeamReducer() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
   var action = arguments.length > 1 ? arguments[1] : undefined;
@@ -102351,27 +102200,6 @@ function updateTeamReducer() {
       });
 
     case _actions__WEBPACK_IMPORTED_MODULE_0__["UPDATE_TEAM_ERROR"]:
-      return _objectSpread({}, state, {
-        response: response
-      });
-
-    default:
-      return state;
-  }
-}
-;
-function editTeamReducer() {
-  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
-  var action = arguments.length > 1 ? arguments[1] : undefined;
-  var response = action.response;
-
-  switch (action.type) {
-    case _actions__WEBPACK_IMPORTED_MODULE_0__["EDIT_TEAM_SUCCESS"]:
-      return _objectSpread({}, state, {
-        response: response
-      });
-
-    case _actions__WEBPACK_IMPORTED_MODULE_0__["EDIT_TEAM_ERROR"]:
       return _objectSpread({}, state, {
         response: response
       });
@@ -102409,7 +102237,7 @@ function destroyTeamReducer() {
 /*!***********************************************!*\
   !*** ./resources/js/reducers/usersReducer.js ***!
   \***********************************************/
-/*! exports provided: indexUserReducer, storeUserReducer, showUserReducer, createUserReducer, updateUserReducer, editUserReducer, destroyUserReducer */
+/*! exports provided: indexUserReducer, storeUserReducer, showUserReducer, updateUserReducer, destroyUserReducer */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -102417,9 +102245,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "indexUserReducer", function() { return indexUserReducer; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "storeUserReducer", function() { return storeUserReducer; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "showUserReducer", function() { return showUserReducer; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createUserReducer", function() { return createUserReducer; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "updateUserReducer", function() { return updateUserReducer; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "editUserReducer", function() { return editUserReducer; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "destroyUserReducer", function() { return destroyUserReducer; });
 /* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions */ "./resources/js/actions/index.js");
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
@@ -102490,27 +102316,6 @@ function showUserReducer() {
   }
 }
 ;
-function createUserReducer() {
-  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
-  var action = arguments.length > 1 ? arguments[1] : undefined;
-  var response = action.response;
-
-  switch (action.type) {
-    case _actions__WEBPACK_IMPORTED_MODULE_0__["CREATE_USER_SUCCESS"]:
-      return _objectSpread({}, state, {
-        response: response
-      });
-
-    case _actions__WEBPACK_IMPORTED_MODULE_0__["CREATE_USER_ERROR"]:
-      return _objectSpread({}, state, {
-        response: response
-      });
-
-    default:
-      return state;
-  }
-}
-;
 function updateUserReducer() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
   var action = arguments.length > 1 ? arguments[1] : undefined;
@@ -102523,27 +102328,6 @@ function updateUserReducer() {
       });
 
     case _actions__WEBPACK_IMPORTED_MODULE_0__["UPDATE_USER_ERROR"]:
-      return _objectSpread({}, state, {
-        response: response
-      });
-
-    default:
-      return state;
-  }
-}
-;
-function editUserReducer() {
-  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
-  var action = arguments.length > 1 ? arguments[1] : undefined;
-  var response = action.response;
-
-  switch (action.type) {
-    case _actions__WEBPACK_IMPORTED_MODULE_0__["EDIT_USER_SUCCESS"]:
-      return _objectSpread({}, state, {
-        response: response
-      });
-
-    case _actions__WEBPACK_IMPORTED_MODULE_0__["EDIT_USER_ERROR"]:
       return _objectSpread({}, state, {
         response: response
       });
@@ -102937,18 +102721,16 @@ function watchUserAuthentication() {
 /*!************************************************!*\
   !*** ./resources/js/sagas/competitionsSaga.js ***!
   \************************************************/
-/*! exports provided: indexCompetitionsSaga, storeCompetitionsSaga, createCompetitionsSaga, destroyCompetitionsSaga, updateCompetitionsSaga, showCompetitionsSaga, editCompetitionsSaga */
+/*! exports provided: indexCompetitionsSaga, storeCompetitionsSaga, destroyCompetitionsSaga, updateCompetitionsSaga, showCompetitionsSaga */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "indexCompetitionsSaga", function() { return indexCompetitionsSaga; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "storeCompetitionsSaga", function() { return storeCompetitionsSaga; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createCompetitionsSaga", function() { return createCompetitionsSaga; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "destroyCompetitionsSaga", function() { return destroyCompetitionsSaga; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "updateCompetitionsSaga", function() { return updateCompetitionsSaga; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "showCompetitionsSaga", function() { return showCompetitionsSaga; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "editCompetitionsSaga", function() { return editCompetitionsSaga; });
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! redux-saga/effects */ "./node_modules/redux-saga/dist/redux-saga-effects-npm-proxy.esm.js");
@@ -102964,19 +102746,13 @@ _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(indexComp
 _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(storeCompetitionsSaga),
     _marked3 =
 /*#__PURE__*/
-_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(createCompetitionsSaga),
+_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(destroyCompetitionsSaga),
     _marked4 =
 /*#__PURE__*/
-_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(destroyCompetitionsSaga),
+_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(updateCompetitionsSaga),
     _marked5 =
 /*#__PURE__*/
-_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(updateCompetitionsSaga),
-    _marked6 =
-/*#__PURE__*/
-_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(showCompetitionsSaga),
-    _marked7 =
-/*#__PURE__*/
-_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(editCompetitionsSaga);
+_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(showCompetitionsSaga);
 
 
 
@@ -103057,21 +102833,21 @@ function storeCompetitionsSaga(payload) {
     }
   }, _marked2, null, [[0, 8]]);
 }
-function createCompetitionsSaga(payload) {
+function destroyCompetitionsSaga(payload) {
   var response;
-  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function createCompetitionsSaga$(_context3) {
+  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function destroyCompetitionsSaga$(_context3) {
     while (1) {
       switch (_context3.prev = _context3.next) {
         case 0:
           _context3.prev = 0;
           _context3.next = 3;
-          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["call"])(_services_competitionsService__WEBPACK_IMPORTED_MODULE_2__["createCompetitionsService"], payload);
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["call"])(_services_competitionsService__WEBPACK_IMPORTED_MODULE_2__["destroyCompetitionsService"], payload);
 
         case 3:
           response = _context3.sent;
           _context3.next = 6;
           return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["put"])({
-            type: _actions__WEBPACK_IMPORTED_MODULE_3__["CREATE_COMPETITION_SUCCESS"],
+            type: _actions__WEBPACK_IMPORTED_MODULE_3__["DESTROY_COMPETITION_SUCCESS"],
             response: response
           });
 
@@ -103084,7 +102860,7 @@ function createCompetitionsSaga(payload) {
           _context3.t0 = _context3["catch"](0);
           _context3.next = 12;
           return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["put"])({
-            type: _actions__WEBPACK_IMPORTED_MODULE_3__["CREATE_COMPETITION_ERROR"],
+            type: _actions__WEBPACK_IMPORTED_MODULE_3__["DESTROY_COMPETITION_ERROR"],
             error: _context3.t0
           });
 
@@ -103095,21 +102871,21 @@ function createCompetitionsSaga(payload) {
     }
   }, _marked3, null, [[0, 8]]);
 }
-function destroyCompetitionsSaga(payload) {
+function updateCompetitionsSaga(payload) {
   var response;
-  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function destroyCompetitionsSaga$(_context4) {
+  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function updateCompetitionsSaga$(_context4) {
     while (1) {
       switch (_context4.prev = _context4.next) {
         case 0:
           _context4.prev = 0;
           _context4.next = 3;
-          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["call"])(_services_competitionsService__WEBPACK_IMPORTED_MODULE_2__["destroyCompetitionsService"], payload);
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["call"])(_services_competitionsService__WEBPACK_IMPORTED_MODULE_2__["updateCompetitionsService"], payload);
 
         case 3:
           response = _context4.sent;
           _context4.next = 6;
           return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["put"])({
-            type: _actions__WEBPACK_IMPORTED_MODULE_3__["DESTROY_COMPETITION_SUCCESS"],
+            type: _actions__WEBPACK_IMPORTED_MODULE_3__["UPDATE_COMPETITION_SUCCESS"],
             response: response
           });
 
@@ -103122,7 +102898,7 @@ function destroyCompetitionsSaga(payload) {
           _context4.t0 = _context4["catch"](0);
           _context4.next = 12;
           return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["put"])({
-            type: _actions__WEBPACK_IMPORTED_MODULE_3__["DESTROY_COMPETITION_ERROR"],
+            type: _actions__WEBPACK_IMPORTED_MODULE_3__["UPDATE_COMPETITION_ERROR"],
             error: _context4.t0
           });
 
@@ -103133,21 +102909,21 @@ function destroyCompetitionsSaga(payload) {
     }
   }, _marked4, null, [[0, 8]]);
 }
-function updateCompetitionsSaga(payload) {
+function showCompetitionsSaga(payload) {
   var response;
-  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function updateCompetitionsSaga$(_context5) {
+  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function showCompetitionsSaga$(_context5) {
     while (1) {
       switch (_context5.prev = _context5.next) {
         case 0:
           _context5.prev = 0;
           _context5.next = 3;
-          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["call"])(_services_competitionsService__WEBPACK_IMPORTED_MODULE_2__["updateCompetitionsService"], payload);
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["call"])(_services_competitionsService__WEBPACK_IMPORTED_MODULE_2__["showCompetitionsService"], payload);
 
         case 3:
           response = _context5.sent;
           _context5.next = 6;
           return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["put"])({
-            type: _actions__WEBPACK_IMPORTED_MODULE_3__["UPDATE_COMPETITION_SUCCESS"],
+            type: _actions__WEBPACK_IMPORTED_MODULE_3__["SHOW_COMPETITION_SUCCESS"],
             response: response
           });
 
@@ -103160,7 +102936,7 @@ function updateCompetitionsSaga(payload) {
           _context5.t0 = _context5["catch"](0);
           _context5.next = 12;
           return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["put"])({
-            type: _actions__WEBPACK_IMPORTED_MODULE_3__["UPDATE_COMPETITION_ERROR"],
+            type: _actions__WEBPACK_IMPORTED_MODULE_3__["SHOW_COMPETITION_ERROR"],
             error: _context5.t0
           });
 
@@ -103170,82 +102946,6 @@ function updateCompetitionsSaga(payload) {
       }
     }
   }, _marked5, null, [[0, 8]]);
-}
-function showCompetitionsSaga(payload) {
-  var response;
-  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function showCompetitionsSaga$(_context6) {
-    while (1) {
-      switch (_context6.prev = _context6.next) {
-        case 0:
-          _context6.prev = 0;
-          _context6.next = 3;
-          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["call"])(_services_competitionsService__WEBPACK_IMPORTED_MODULE_2__["showCompetitionsService"], payload);
-
-        case 3:
-          response = _context6.sent;
-          _context6.next = 6;
-          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["put"])({
-            type: _actions__WEBPACK_IMPORTED_MODULE_3__["SHOW_COMPETITION_SUCCESS"],
-            response: response
-          });
-
-        case 6:
-          _context6.next = 12;
-          break;
-
-        case 8:
-          _context6.prev = 8;
-          _context6.t0 = _context6["catch"](0);
-          _context6.next = 12;
-          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["put"])({
-            type: _actions__WEBPACK_IMPORTED_MODULE_3__["SHOW_COMPETITION_ERROR"],
-            error: _context6.t0
-          });
-
-        case 12:
-        case "end":
-          return _context6.stop();
-      }
-    }
-  }, _marked6, null, [[0, 8]]);
-}
-function editCompetitionsSaga(payload) {
-  var response;
-  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function editCompetitionsSaga$(_context7) {
-    while (1) {
-      switch (_context7.prev = _context7.next) {
-        case 0:
-          _context7.prev = 0;
-          _context7.next = 3;
-          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["call"])(_services_competitionsService__WEBPACK_IMPORTED_MODULE_2__["editCompetitionsService"], payload);
-
-        case 3:
-          response = _context7.sent;
-          _context7.next = 6;
-          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["put"])({
-            type: _actions__WEBPACK_IMPORTED_MODULE_3__["EDIT_COMPETITION_SUCCESS"],
-            response: response
-          });
-
-        case 6:
-          _context7.next = 12;
-          break;
-
-        case 8:
-          _context7.prev = 8;
-          _context7.t0 = _context7["catch"](0);
-          _context7.next = 12;
-          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["put"])({
-            type: _actions__WEBPACK_IMPORTED_MODULE_3__["EDIT_COMPETITION_ERROR"],
-            error: _context7.t0
-          });
-
-        case 12:
-        case "end":
-          return _context7.stop();
-      }
-    }
-  }, _marked7, null, [[0, 8]]);
 }
 
 /***/ }),
@@ -103280,33 +102980,25 @@ function watchCompetitionCrud() {
       switch (_context.prev = _context.next) {
         case 0:
           _context.next = 2;
-          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["takeLatest"])(_actions__WEBPACK_IMPORTED_MODULE_3__["CREATE_COMPETITION"], _competitionsSaga__WEBPACK_IMPORTED_MODULE_2__["createCompetitionsSaga"]);
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["takeLatest"])(_actions__WEBPACK_IMPORTED_MODULE_3__["INDEX_COMPETITION"], _competitionsSaga__WEBPACK_IMPORTED_MODULE_2__["indexCompetitionsSaga"]);
 
         case 2:
           _context.next = 4;
-          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["takeLatest"])(_actions__WEBPACK_IMPORTED_MODULE_3__["INDEX_COMPETITION"], _competitionsSaga__WEBPACK_IMPORTED_MODULE_2__["indexCompetitionsSaga"]);
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["takeLatest"])(_actions__WEBPACK_IMPORTED_MODULE_3__["UPDATE_COMPETITION"], _competitionsSaga__WEBPACK_IMPORTED_MODULE_2__["updateCompetitionsSaga"]);
 
         case 4:
           _context.next = 6;
-          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["takeLatest"])(_actions__WEBPACK_IMPORTED_MODULE_3__["UPDATE_COMPETITION"], _competitionsSaga__WEBPACK_IMPORTED_MODULE_2__["updateCompetitionsSaga"]);
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["takeLatest"])(_actions__WEBPACK_IMPORTED_MODULE_3__["SHOW_COMPETITION"], _competitionsSaga__WEBPACK_IMPORTED_MODULE_2__["showCompetitionsSaga"]);
 
         case 6:
           _context.next = 8;
-          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["takeLatest"])(_actions__WEBPACK_IMPORTED_MODULE_3__["SHOW_COMPETITION"], _competitionsSaga__WEBPACK_IMPORTED_MODULE_2__["showCompetitionsSaga"]);
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["takeLatest"])(_actions__WEBPACK_IMPORTED_MODULE_3__["STORE_COMPETITION"], _competitionsSaga__WEBPACK_IMPORTED_MODULE_2__["storeCompetitionsSaga"]);
 
         case 8:
           _context.next = 10;
-          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["takeLatest"])(_actions__WEBPACK_IMPORTED_MODULE_3__["STORE_COMPETITION"], _competitionsSaga__WEBPACK_IMPORTED_MODULE_2__["storeCompetitionsSaga"]);
-
-        case 10:
-          _context.next = 12;
-          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["takeLatest"])(_actions__WEBPACK_IMPORTED_MODULE_3__["EDIT_COMPETITION"], _competitionsSaga__WEBPACK_IMPORTED_MODULE_2__["editCompetitionsSaga"]);
-
-        case 12:
-          _context.next = 14;
           return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["takeLatest"])(_actions__WEBPACK_IMPORTED_MODULE_3__["DESTROY_COMPETITION"], _competitionsSaga__WEBPACK_IMPORTED_MODULE_2__["destroyCompetitionsSaga"]);
 
-        case 14:
+        case 10:
         case "end":
           return _context.stop();
       }
@@ -103380,18 +103072,16 @@ function startSupervisor() {
 /*!*****************************************!*\
   !*** ./resources/js/sagas/teamsSaga.js ***!
   \*****************************************/
-/*! exports provided: indexTeamsSaga, storeTeamsSaga, createTeamsSaga, destroyTeamsSaga, updateTeamsSaga, showTeamsSaga, editTeamsSaga */
+/*! exports provided: indexTeamsSaga, storeTeamsSaga, destroyTeamsSaga, updateTeamsSaga, showTeamsSaga */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "indexTeamsSaga", function() { return indexTeamsSaga; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "storeTeamsSaga", function() { return storeTeamsSaga; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createTeamsSaga", function() { return createTeamsSaga; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "destroyTeamsSaga", function() { return destroyTeamsSaga; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "updateTeamsSaga", function() { return updateTeamsSaga; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "showTeamsSaga", function() { return showTeamsSaga; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "editTeamsSaga", function() { return editTeamsSaga; });
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! redux-saga/effects */ "./node_modules/redux-saga/dist/redux-saga-effects-npm-proxy.esm.js");
@@ -103407,19 +103097,13 @@ _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(indexTeam
 _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(storeTeamsSaga),
     _marked3 =
 /*#__PURE__*/
-_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(createTeamsSaga),
+_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(destroyTeamsSaga),
     _marked4 =
 /*#__PURE__*/
-_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(destroyTeamsSaga),
+_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(updateTeamsSaga),
     _marked5 =
 /*#__PURE__*/
-_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(updateTeamsSaga),
-    _marked6 =
-/*#__PURE__*/
-_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(showTeamsSaga),
-    _marked7 =
-/*#__PURE__*/
-_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(editTeamsSaga);
+_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(showTeamsSaga);
 
 
 
@@ -103500,21 +103184,21 @@ function storeTeamsSaga(payload) {
     }
   }, _marked2, null, [[0, 8]]);
 }
-function createTeamsSaga(payload) {
+function destroyTeamsSaga(payload) {
   var response;
-  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function createTeamsSaga$(_context3) {
+  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function destroyTeamsSaga$(_context3) {
     while (1) {
       switch (_context3.prev = _context3.next) {
         case 0:
           _context3.prev = 0;
           _context3.next = 3;
-          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["call"])(_services_teamsService__WEBPACK_IMPORTED_MODULE_2__["createTeamsService"], payload);
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["call"])(_services_teamsService__WEBPACK_IMPORTED_MODULE_2__["destroyTeamsService"], payload);
 
         case 3:
           response = _context3.sent;
           _context3.next = 6;
           return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["put"])({
-            type: _actions__WEBPACK_IMPORTED_MODULE_3__["CREATE_TEAM_SUCCESS"],
+            type: _actions__WEBPACK_IMPORTED_MODULE_3__["DESTROY_TEAM_SUCCESS"],
             response: response
           });
 
@@ -103527,7 +103211,7 @@ function createTeamsSaga(payload) {
           _context3.t0 = _context3["catch"](0);
           _context3.next = 12;
           return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["put"])({
-            type: _actions__WEBPACK_IMPORTED_MODULE_3__["CREATE_TEAM_ERROR"],
+            type: _actions__WEBPACK_IMPORTED_MODULE_3__["DESTROY_TEAM_ERROR"],
             error: _context3.t0
           });
 
@@ -103538,21 +103222,21 @@ function createTeamsSaga(payload) {
     }
   }, _marked3, null, [[0, 8]]);
 }
-function destroyTeamsSaga(payload) {
+function updateTeamsSaga(payload) {
   var response;
-  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function destroyTeamsSaga$(_context4) {
+  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function updateTeamsSaga$(_context4) {
     while (1) {
       switch (_context4.prev = _context4.next) {
         case 0:
           _context4.prev = 0;
           _context4.next = 3;
-          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["call"])(_services_teamsService__WEBPACK_IMPORTED_MODULE_2__["destroyTeamsService"], payload);
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["call"])(_services_teamsService__WEBPACK_IMPORTED_MODULE_2__["updateTeamsService"], payload);
 
         case 3:
           response = _context4.sent;
           _context4.next = 6;
           return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["put"])({
-            type: _actions__WEBPACK_IMPORTED_MODULE_3__["DESTROY_TEAM_SUCCESS"],
+            type: _actions__WEBPACK_IMPORTED_MODULE_3__["UPDATE_TEAM_SUCCESS"],
             response: response
           });
 
@@ -103565,7 +103249,7 @@ function destroyTeamsSaga(payload) {
           _context4.t0 = _context4["catch"](0);
           _context4.next = 12;
           return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["put"])({
-            type: _actions__WEBPACK_IMPORTED_MODULE_3__["DESTROY_TEAM_ERROR"],
+            type: _actions__WEBPACK_IMPORTED_MODULE_3__["UPDATE_TEAM_ERROR"],
             error: _context4.t0
           });
 
@@ -103576,21 +103260,21 @@ function destroyTeamsSaga(payload) {
     }
   }, _marked4, null, [[0, 8]]);
 }
-function updateTeamsSaga(payload) {
+function showTeamsSaga(payload) {
   var response;
-  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function updateTeamsSaga$(_context5) {
+  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function showTeamsSaga$(_context5) {
     while (1) {
       switch (_context5.prev = _context5.next) {
         case 0:
           _context5.prev = 0;
           _context5.next = 3;
-          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["call"])(_services_teamsService__WEBPACK_IMPORTED_MODULE_2__["updateTeamsService"], payload);
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["call"])(_services_teamsService__WEBPACK_IMPORTED_MODULE_2__["showTeamsService"], payload);
 
         case 3:
           response = _context5.sent;
           _context5.next = 6;
           return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["put"])({
-            type: _actions__WEBPACK_IMPORTED_MODULE_3__["UPDATE_TEAM_SUCCESS"],
+            type: _actions__WEBPACK_IMPORTED_MODULE_3__["SHOW_TEAM_SUCCESS"],
             response: response
           });
 
@@ -103603,7 +103287,7 @@ function updateTeamsSaga(payload) {
           _context5.t0 = _context5["catch"](0);
           _context5.next = 12;
           return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["put"])({
-            type: _actions__WEBPACK_IMPORTED_MODULE_3__["UPDATE_TEAM_ERROR"],
+            type: _actions__WEBPACK_IMPORTED_MODULE_3__["SHOW_TEAM_ERROR"],
             error: _context5.t0
           });
 
@@ -103613,82 +103297,6 @@ function updateTeamsSaga(payload) {
       }
     }
   }, _marked5, null, [[0, 8]]);
-}
-function showTeamsSaga(payload) {
-  var response;
-  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function showTeamsSaga$(_context6) {
-    while (1) {
-      switch (_context6.prev = _context6.next) {
-        case 0:
-          _context6.prev = 0;
-          _context6.next = 3;
-          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["call"])(_services_teamsService__WEBPACK_IMPORTED_MODULE_2__["showTeamsService"], payload);
-
-        case 3:
-          response = _context6.sent;
-          _context6.next = 6;
-          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["put"])({
-            type: _actions__WEBPACK_IMPORTED_MODULE_3__["SHOW_TEAM_SUCCESS"],
-            response: response
-          });
-
-        case 6:
-          _context6.next = 12;
-          break;
-
-        case 8:
-          _context6.prev = 8;
-          _context6.t0 = _context6["catch"](0);
-          _context6.next = 12;
-          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["put"])({
-            type: _actions__WEBPACK_IMPORTED_MODULE_3__["SHOW_TEAM_ERROR"],
-            error: _context6.t0
-          });
-
-        case 12:
-        case "end":
-          return _context6.stop();
-      }
-    }
-  }, _marked6, null, [[0, 8]]);
-}
-function editTeamsSaga(payload) {
-  var response;
-  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function editTeamsSaga$(_context7) {
-    while (1) {
-      switch (_context7.prev = _context7.next) {
-        case 0:
-          _context7.prev = 0;
-          _context7.next = 3;
-          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["call"])(_services_teamsService__WEBPACK_IMPORTED_MODULE_2__["editTeamsService"], payload);
-
-        case 3:
-          response = _context7.sent;
-          _context7.next = 6;
-          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["put"])({
-            type: _actions__WEBPACK_IMPORTED_MODULE_3__["EDIT_TEAM_SUCCESS"],
-            response: response
-          });
-
-        case 6:
-          _context7.next = 12;
-          break;
-
-        case 8:
-          _context7.prev = 8;
-          _context7.t0 = _context7["catch"](0);
-          _context7.next = 12;
-          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["put"])({
-            type: _actions__WEBPACK_IMPORTED_MODULE_3__["EDIT_TEAM_ERROR"],
-            error: _context7.t0
-          });
-
-        case 12:
-        case "end":
-          return _context7.stop();
-      }
-    }
-  }, _marked7, null, [[0, 8]]);
 }
 
 /***/ }),
@@ -103723,33 +103331,25 @@ function watchTeamCrud() {
       switch (_context.prev = _context.next) {
         case 0:
           _context.next = 2;
-          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["takeLatest"])(_actions__WEBPACK_IMPORTED_MODULE_3__["CREATE_TEAM"], _teamsSaga__WEBPACK_IMPORTED_MODULE_2__["createTeamsSaga"]);
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["takeLatest"])(_actions__WEBPACK_IMPORTED_MODULE_3__["INDEX_TEAM"], _teamsSaga__WEBPACK_IMPORTED_MODULE_2__["indexTeamsSaga"]);
 
         case 2:
           _context.next = 4;
-          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["takeLatest"])(_actions__WEBPACK_IMPORTED_MODULE_3__["INDEX_TEAM"], _teamsSaga__WEBPACK_IMPORTED_MODULE_2__["indexTeamsSaga"]);
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["takeLatest"])(_actions__WEBPACK_IMPORTED_MODULE_3__["UPDATE_TEAM"], _teamsSaga__WEBPACK_IMPORTED_MODULE_2__["updateTeamsSaga"]);
 
         case 4:
           _context.next = 6;
-          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["takeLatest"])(_actions__WEBPACK_IMPORTED_MODULE_3__["UPDATE_TEAM"], _teamsSaga__WEBPACK_IMPORTED_MODULE_2__["updateTeamsSaga"]);
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["takeLatest"])(_actions__WEBPACK_IMPORTED_MODULE_3__["SHOW_TEAM"], _teamsSaga__WEBPACK_IMPORTED_MODULE_2__["showTeamsSaga"]);
 
         case 6:
           _context.next = 8;
-          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["takeLatest"])(_actions__WEBPACK_IMPORTED_MODULE_3__["SHOW_TEAM"], _teamsSaga__WEBPACK_IMPORTED_MODULE_2__["showTeamsSaga"]);
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["takeLatest"])(_actions__WEBPACK_IMPORTED_MODULE_3__["STORE_TEAM"], _teamsSaga__WEBPACK_IMPORTED_MODULE_2__["storeTeamsSaga"]);
 
         case 8:
           _context.next = 10;
-          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["takeLatest"])(_actions__WEBPACK_IMPORTED_MODULE_3__["STORE_TEAM"], _teamsSaga__WEBPACK_IMPORTED_MODULE_2__["storeTeamsSaga"]);
-
-        case 10:
-          _context.next = 12;
-          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["takeLatest"])(_actions__WEBPACK_IMPORTED_MODULE_3__["EDIT_TEAM"], _teamsSaga__WEBPACK_IMPORTED_MODULE_2__["editTeamsSaga"]);
-
-        case 12:
-          _context.next = 14;
           return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["takeLatest"])(_actions__WEBPACK_IMPORTED_MODULE_3__["DESTROY_TEAM"], _teamsSaga__WEBPACK_IMPORTED_MODULE_2__["destroyTeamsSaga"]);
 
-        case 14:
+        case 10:
         case "end":
           return _context.stop();
       }
@@ -103763,18 +103363,16 @@ function watchTeamCrud() {
 /*!*****************************************!*\
   !*** ./resources/js/sagas/usersSaga.js ***!
   \*****************************************/
-/*! exports provided: indexUsersSaga, storeUsersSaga, createUsersSaga, destroyUsersSaga, updateUsersSaga, showUsersSaga, editUsersSaga */
+/*! exports provided: indexUsersSaga, storeUsersSaga, destroyUsersSaga, updateUsersSaga, showUsersSaga */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "indexUsersSaga", function() { return indexUsersSaga; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "storeUsersSaga", function() { return storeUsersSaga; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createUsersSaga", function() { return createUsersSaga; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "destroyUsersSaga", function() { return destroyUsersSaga; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "updateUsersSaga", function() { return updateUsersSaga; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "showUsersSaga", function() { return showUsersSaga; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "editUsersSaga", function() { return editUsersSaga; });
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! redux-saga/effects */ "./node_modules/redux-saga/dist/redux-saga-effects-npm-proxy.esm.js");
@@ -103790,19 +103388,13 @@ _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(indexUser
 _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(storeUsersSaga),
     _marked3 =
 /*#__PURE__*/
-_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(createUsersSaga),
+_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(destroyUsersSaga),
     _marked4 =
 /*#__PURE__*/
-_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(destroyUsersSaga),
+_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(updateUsersSaga),
     _marked5 =
 /*#__PURE__*/
-_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(updateUsersSaga),
-    _marked6 =
-/*#__PURE__*/
-_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(showUsersSaga),
-    _marked7 =
-/*#__PURE__*/
-_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(editUsersSaga);
+_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(showUsersSaga);
 
 
 
@@ -103883,21 +103475,21 @@ function storeUsersSaga(payload) {
     }
   }, _marked2, null, [[0, 8]]);
 }
-function createUsersSaga(payload) {
+function destroyUsersSaga(payload) {
   var response;
-  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function createUsersSaga$(_context3) {
+  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function destroyUsersSaga$(_context3) {
     while (1) {
       switch (_context3.prev = _context3.next) {
         case 0:
           _context3.prev = 0;
           _context3.next = 3;
-          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["call"])(_services_usersService__WEBPACK_IMPORTED_MODULE_2__["createUsersService"], payload);
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["call"])(_services_usersService__WEBPACK_IMPORTED_MODULE_2__["destroyUsersService"], payload);
 
         case 3:
           response = _context3.sent;
           _context3.next = 6;
           return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["put"])({
-            type: _actions__WEBPACK_IMPORTED_MODULE_3__["CREATE_USER_SUCCESS"],
+            type: _actions__WEBPACK_IMPORTED_MODULE_3__["DESTROY_USER_SUCCESS"],
             response: response
           });
 
@@ -103910,7 +103502,7 @@ function createUsersSaga(payload) {
           _context3.t0 = _context3["catch"](0);
           _context3.next = 12;
           return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["put"])({
-            type: _actions__WEBPACK_IMPORTED_MODULE_3__["CREATE_USER_ERROR"],
+            type: _actions__WEBPACK_IMPORTED_MODULE_3__["DESTROY_USER_ERROR"],
             error: _context3.t0
           });
 
@@ -103921,21 +103513,21 @@ function createUsersSaga(payload) {
     }
   }, _marked3, null, [[0, 8]]);
 }
-function destroyUsersSaga(payload) {
+function updateUsersSaga(payload) {
   var response;
-  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function destroyUsersSaga$(_context4) {
+  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function updateUsersSaga$(_context4) {
     while (1) {
       switch (_context4.prev = _context4.next) {
         case 0:
           _context4.prev = 0;
           _context4.next = 3;
-          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["call"])(_services_usersService__WEBPACK_IMPORTED_MODULE_2__["destroyUsersService"], payload);
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["call"])(_services_usersService__WEBPACK_IMPORTED_MODULE_2__["updateUsersService"], payload);
 
         case 3:
           response = _context4.sent;
           _context4.next = 6;
           return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["put"])({
-            type: _actions__WEBPACK_IMPORTED_MODULE_3__["DESTROY_USER_SUCCESS"],
+            type: _actions__WEBPACK_IMPORTED_MODULE_3__["UPDATE_USER_SUCCESS"],
             response: response
           });
 
@@ -103948,7 +103540,7 @@ function destroyUsersSaga(payload) {
           _context4.t0 = _context4["catch"](0);
           _context4.next = 12;
           return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["put"])({
-            type: _actions__WEBPACK_IMPORTED_MODULE_3__["DESTROY_USER_ERROR"],
+            type: _actions__WEBPACK_IMPORTED_MODULE_3__["UPDATE_USER_ERROR"],
             error: _context4.t0
           });
 
@@ -103959,21 +103551,21 @@ function destroyUsersSaga(payload) {
     }
   }, _marked4, null, [[0, 8]]);
 }
-function updateUsersSaga(payload) {
+function showUsersSaga(payload) {
   var response;
-  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function updateUsersSaga$(_context5) {
+  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function showUsersSaga$(_context5) {
     while (1) {
       switch (_context5.prev = _context5.next) {
         case 0:
           _context5.prev = 0;
           _context5.next = 3;
-          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["call"])(_services_usersService__WEBPACK_IMPORTED_MODULE_2__["updateUsersService"], payload);
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["call"])(_services_usersService__WEBPACK_IMPORTED_MODULE_2__["showUsersService"], payload);
 
         case 3:
           response = _context5.sent;
           _context5.next = 6;
           return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["put"])({
-            type: _actions__WEBPACK_IMPORTED_MODULE_3__["UPDATE_USER_SUCCESS"],
+            type: _actions__WEBPACK_IMPORTED_MODULE_3__["SHOW_USER_SUCCESS"],
             response: response
           });
 
@@ -103986,7 +103578,7 @@ function updateUsersSaga(payload) {
           _context5.t0 = _context5["catch"](0);
           _context5.next = 12;
           return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["put"])({
-            type: _actions__WEBPACK_IMPORTED_MODULE_3__["UPDATE_USER_ERROR"],
+            type: _actions__WEBPACK_IMPORTED_MODULE_3__["SHOW_USER_ERROR"],
             error: _context5.t0
           });
 
@@ -103996,82 +103588,6 @@ function updateUsersSaga(payload) {
       }
     }
   }, _marked5, null, [[0, 8]]);
-}
-function showUsersSaga(payload) {
-  var response;
-  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function showUsersSaga$(_context6) {
-    while (1) {
-      switch (_context6.prev = _context6.next) {
-        case 0:
-          _context6.prev = 0;
-          _context6.next = 3;
-          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["call"])(_services_usersService__WEBPACK_IMPORTED_MODULE_2__["showUsersService"], payload);
-
-        case 3:
-          response = _context6.sent;
-          _context6.next = 6;
-          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["put"])({
-            type: _actions__WEBPACK_IMPORTED_MODULE_3__["SHOW_USER_SUCCESS"],
-            response: response
-          });
-
-        case 6:
-          _context6.next = 12;
-          break;
-
-        case 8:
-          _context6.prev = 8;
-          _context6.t0 = _context6["catch"](0);
-          _context6.next = 12;
-          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["put"])({
-            type: _actions__WEBPACK_IMPORTED_MODULE_3__["SHOW_USER_ERROR"],
-            error: _context6.t0
-          });
-
-        case 12:
-        case "end":
-          return _context6.stop();
-      }
-    }
-  }, _marked6, null, [[0, 8]]);
-}
-function editUsersSaga(payload) {
-  var response;
-  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function editUsersSaga$(_context7) {
-    while (1) {
-      switch (_context7.prev = _context7.next) {
-        case 0:
-          _context7.prev = 0;
-          _context7.next = 3;
-          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["call"])(_services_usersService__WEBPACK_IMPORTED_MODULE_2__["editUsersService"], payload);
-
-        case 3:
-          response = _context7.sent;
-          _context7.next = 6;
-          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["put"])({
-            type: _actions__WEBPACK_IMPORTED_MODULE_3__["EDIT_USER_SUCCESS"],
-            response: response
-          });
-
-        case 6:
-          _context7.next = 12;
-          break;
-
-        case 8:
-          _context7.prev = 8;
-          _context7.t0 = _context7["catch"](0);
-          _context7.next = 12;
-          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["put"])({
-            type: _actions__WEBPACK_IMPORTED_MODULE_3__["EDIT_USER_ERROR"],
-            error: _context7.t0
-          });
-
-        case 12:
-        case "end":
-          return _context7.stop();
-      }
-    }
-  }, _marked7, null, [[0, 8]]);
 }
 
 /***/ }),
@@ -104106,33 +103622,25 @@ function watchUserCrud() {
       switch (_context.prev = _context.next) {
         case 0:
           _context.next = 2;
-          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["takeLatest"])(_actions__WEBPACK_IMPORTED_MODULE_3__["CREATE_USER"], _usersSaga__WEBPACK_IMPORTED_MODULE_2__["createUsersSaga"]);
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["takeLatest"])(_actions__WEBPACK_IMPORTED_MODULE_3__["INDEX_USER"], _usersSaga__WEBPACK_IMPORTED_MODULE_2__["indexUsersSaga"]);
 
         case 2:
           _context.next = 4;
-          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["takeLatest"])(_actions__WEBPACK_IMPORTED_MODULE_3__["INDEX_USER"], _usersSaga__WEBPACK_IMPORTED_MODULE_2__["indexUsersSaga"]);
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["takeLatest"])(_actions__WEBPACK_IMPORTED_MODULE_3__["UPDATE_USER"], _usersSaga__WEBPACK_IMPORTED_MODULE_2__["updateUsersSaga"]);
 
         case 4:
           _context.next = 6;
-          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["takeLatest"])(_actions__WEBPACK_IMPORTED_MODULE_3__["UPDATE_USER"], _usersSaga__WEBPACK_IMPORTED_MODULE_2__["updateUsersSaga"]);
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["takeLatest"])(_actions__WEBPACK_IMPORTED_MODULE_3__["SHOW_USER"], _usersSaga__WEBPACK_IMPORTED_MODULE_2__["showUsersSaga"]);
 
         case 6:
           _context.next = 8;
-          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["takeLatest"])(_actions__WEBPACK_IMPORTED_MODULE_3__["SHOW_USER"], _usersSaga__WEBPACK_IMPORTED_MODULE_2__["showUsersSaga"]);
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["takeLatest"])(_actions__WEBPACK_IMPORTED_MODULE_3__["STORE_USER"], _usersSaga__WEBPACK_IMPORTED_MODULE_2__["storeUsersSaga"]);
 
         case 8:
           _context.next = 10;
-          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["takeLatest"])(_actions__WEBPACK_IMPORTED_MODULE_3__["STORE_USER"], _usersSaga__WEBPACK_IMPORTED_MODULE_2__["storeUsersSaga"]);
-
-        case 10:
-          _context.next = 12;
-          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["takeLatest"])(_actions__WEBPACK_IMPORTED_MODULE_3__["EDIT_USER"], _usersSaga__WEBPACK_IMPORTED_MODULE_2__["editUsersSaga"]);
-
-        case 12:
-          _context.next = 14;
           return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["takeLatest"])(_actions__WEBPACK_IMPORTED_MODULE_3__["DESTROY_USER"], _usersSaga__WEBPACK_IMPORTED_MODULE_2__["destroyUsersSaga"]);
 
-        case 14:
+        case 10:
         case "end":
           return _context.stop();
       }
@@ -104409,16 +103917,14 @@ var logoutUserService = function logoutUserService(request) {
 /*!******************************************************!*\
   !*** ./resources/js/services/competitionsService.js ***!
   \******************************************************/
-/*! exports provided: indexCompetitionsService, createCompetitionsService, showCompetitionsService, storeCompetitionsService, editCompetitionsService, updateCompetitionsService, destroyCompetitionsService */
+/*! exports provided: indexCompetitionsService, showCompetitionsService, storeCompetitionsService, updateCompetitionsService, destroyCompetitionsService */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "indexCompetitionsService", function() { return indexCompetitionsService; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createCompetitionsService", function() { return createCompetitionsService; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "showCompetitionsService", function() { return showCompetitionsService; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "storeCompetitionsService", function() { return storeCompetitionsService; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "editCompetitionsService", function() { return editCompetitionsService; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "updateCompetitionsService", function() { return updateCompetitionsService; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "destroyCompetitionsService", function() { return destroyCompetitionsService; });
 /* harmony import */ var _envService__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./envService */ "./resources/js/services/envService.js");
@@ -104432,20 +103938,6 @@ var indexCompetitionsService = function indexCompetitionsService(request) {
     }
   };
   return fetch(INDEX_COMPETITION_API_ENDPOINT, parameters).then(function (response) {
-    return response.json();
-  }).then(function (json) {
-    return json;
-  });
-};
-var createCompetitionsService = function createCompetitionsService(request) {
-  var CREATE_COMPETITION_API_ENDPOINT = _envService__WEBPACK_IMPORTED_MODULE_0__["host"] + '/api/competitions/create';
-  var parameters = {
-    method: 'GET',
-    headers: {
-      'Authorization': 'Bearer ' + request.data.token
-    }
-  };
-  return fetch(CREATE_COMPETITION_API_ENDPOINT, parameters).then(function (response) {
     return response.json();
   }).then(function (json) {
     return json;
@@ -104476,20 +103968,6 @@ var storeCompetitionsService = function storeCompetitionsService(request) {
     body: JSON.stringify(request.data)
   };
   return fetch(STORE_COMPETITION_API_ENDPOINT, parameters).then(function (response) {
-    return response.json();
-  }).then(function (json) {
-    return json;
-  });
-};
-var editCompetitionsService = function editCompetitionsService(request) {
-  var EDIT_COMPETITION_API_ENDPOINT = _envService__WEBPACK_IMPORTED_MODULE_0__["host"] + '/api/competitions/{}/edit';
-  var parameters = {
-    method: 'GET',
-    headers: {
-      'Authorization': 'Bearer ' + request.data.token
-    }
-  };
-  return fetch(EDIT_COMPETITION_API_ENDPOINT, parameters).then(function (response) {
     return response.json();
   }).then(function (json) {
     return json;
@@ -104548,16 +104026,14 @@ var host = arr[0] + "//" + arr[2];
 /*!***********************************************!*\
   !*** ./resources/js/services/teamsService.js ***!
   \***********************************************/
-/*! exports provided: indexTeamsService, createTeamsService, showTeamsService, storeTeamsService, editTeamsService, updateTeamsService, destroyTeamsService */
+/*! exports provided: indexTeamsService, showTeamsService, storeTeamsService, updateTeamsService, destroyTeamsService */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "indexTeamsService", function() { return indexTeamsService; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createTeamsService", function() { return createTeamsService; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "showTeamsService", function() { return showTeamsService; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "storeTeamsService", function() { return storeTeamsService; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "editTeamsService", function() { return editTeamsService; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "updateTeamsService", function() { return updateTeamsService; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "destroyTeamsService", function() { return destroyTeamsService; });
 /* harmony import */ var _envService__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./envService */ "./resources/js/services/envService.js");
@@ -104571,20 +104047,6 @@ var indexTeamsService = function indexTeamsService(request) {
     }
   };
   return fetch(INDEX_TEAM_API_ENDPOINT, parameters).then(function (response) {
-    return response.json();
-  }).then(function (json) {
-    return json;
-  });
-};
-var createTeamsService = function createTeamsService(request) {
-  var CREATE_TEAM_API_ENDPOINT = _envService__WEBPACK_IMPORTED_MODULE_0__["host"] + '/api/teams/create';
-  var parameters = {
-    method: 'GET',
-    headers: {
-      'Authorization': 'Bearer ' + request.data.token
-    }
-  };
-  return fetch(CREATE_TEAM_API_ENDPOINT, parameters).then(function (response) {
     return response.json();
   }).then(function (json) {
     return json;
@@ -104615,20 +104077,6 @@ var storeTeamsService = function storeTeamsService(request) {
     body: JSON.stringify(request.data)
   };
   return fetch(STORE_TEAM_API_ENDPOINT, parameters).then(function (response) {
-    return response.json();
-  }).then(function (json) {
-    return json;
-  });
-};
-var editTeamsService = function editTeamsService(request) {
-  var EDIT_TEAM_API_ENDPOINT = _envService__WEBPACK_IMPORTED_MODULE_0__["host"] + '/api/teams/' + request.data.id + '/edit';
-  var parameters = {
-    method: 'GET',
-    headers: {
-      'Authorization': 'Bearer ' + request.data.token
-    }
-  };
-  return fetch(EDIT_TEAM_API_ENDPOINT, parameters).then(function (response) {
     return response.json();
   }).then(function (json) {
     return json;
@@ -104671,16 +104119,14 @@ var destroyTeamsService = function destroyTeamsService(request) {
 /*!***********************************************!*\
   !*** ./resources/js/services/usersService.js ***!
   \***********************************************/
-/*! exports provided: indexUsersService, createUsersService, showUsersService, storeUsersService, editUsersService, updateUsersService, destroyUsersService */
+/*! exports provided: indexUsersService, showUsersService, storeUsersService, updateUsersService, destroyUsersService */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "indexUsersService", function() { return indexUsersService; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createUsersService", function() { return createUsersService; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "showUsersService", function() { return showUsersService; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "storeUsersService", function() { return storeUsersService; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "editUsersService", function() { return editUsersService; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "updateUsersService", function() { return updateUsersService; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "destroyUsersService", function() { return destroyUsersService; });
 /* harmony import */ var _envService__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./envService */ "./resources/js/services/envService.js");
@@ -104694,20 +104140,6 @@ var indexUsersService = function indexUsersService(request) {
     }
   };
   return fetch(INDEX_USER_API_ENDPOINT, parameters).then(function (response) {
-    return response.json();
-  }).then(function (json) {
-    return json;
-  });
-};
-var createUsersService = function createUsersService(request) {
-  var CREATE_USER_API_ENDPOINT = _envService__WEBPACK_IMPORTED_MODULE_0__["host"] + '/api/users/create';
-  var parameters = {
-    method: 'GET',
-    headers: {
-      'Authorization': 'Bearer ' + request.data.token
-    }
-  };
-  return fetch(CREATE_USER_API_ENDPOINT, parameters).then(function (response) {
     return response.json();
   }).then(function (json) {
     return json;
@@ -104738,20 +104170,6 @@ var storeUsersService = function storeUsersService(request) {
     body: JSON.stringify(request.data)
   };
   return fetch(STORE_USER_API_ENDPOINT, parameters).then(function (response) {
-    return response.json();
-  }).then(function (json) {
-    return json;
-  });
-};
-var editUsersService = function editUsersService(request) {
-  var EDIT_USER_API_ENDPOINT = _envService__WEBPACK_IMPORTED_MODULE_0__["host"] + '/api/users/{}/edit';
-  var parameters = {
-    method: 'GET',
-    headers: {
-      'Authorization': 'Bearer ' + request.data.token
-    }
-  };
-  return fetch(EDIT_USER_API_ENDPOINT, parameters).then(function (response) {
     return response.json();
   }).then(function (json) {
     return json;

@@ -1,11 +1,9 @@
 import { put, call } from 'redux-saga/effects';
 import {
-     createTeamsService,
      indexTeamsService,
      updateTeamsService,
      showTeamsService,
      storeTeamsService,
-     editTeamsService,
      destroyTeamsService
     } from '../services/teamsService';
 
@@ -28,16 +26,6 @@ export function* storeTeamsSaga(payload) {
       yield put({ type: types.STORE_TEAM_ERROR, error });
     }
 }
-
-export function* createTeamsSaga(payload) {
-    try {
-      const response = yield call(createTeamsService, payload);
-      yield put({ type: types.CREATE_TEAM_SUCCESS, response });
-    } catch(error) {
-      yield put({ type: types.CREATE_TEAM_ERROR, error });
-    }
-}
-
 export function* destroyTeamsSaga(payload) {
     try {
       const response = yield call(destroyTeamsService, payload);
@@ -60,13 +48,5 @@ export function* showTeamsSaga(payload) {
       yield put({ type: types.SHOW_TEAM_SUCCESS, response });
     } catch(error) {
       yield put({ type: types.SHOW_TEAM_ERROR, error });
-    }
-}
-export function* editTeamsSaga(payload) {
-    try {
-      const response = yield call(editTeamsService, payload);
-      yield put({ type: types.EDIT_TEAM_SUCCESS, response });
-    } catch(error) {
-      yield put({ type: types.EDIT_TEAM_ERROR, error });
     }
 }

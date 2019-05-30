@@ -18,23 +18,6 @@ export const indexCompetitionsService = (request) => {
       })
   };
 
-  export const createCompetitionsService = (request) => {
-    const CREATE_COMPETITION_API_ENDPOINT = host+'/api/competitions/create';
-    const parameters = {
-      method: 'GET',
-      headers: {
-        'Authorization': 'Bearer '+request.data.token
-      }
-    };
-  
-    return fetch(CREATE_COMPETITION_API_ENDPOINT, parameters)
-      .then(response => {
-        return response.json();
-      })
-      .then(json => {
-        return json;
-      })
-  };
 
   export const showCompetitionsService = (request) => {
     const SHOW_COMPETITION_API_ENDPOINT = host+'/api/competitions/'+request.data.id;
@@ -66,24 +49,6 @@ export const indexCompetitionsService = (request) => {
     };
   
     return fetch(STORE_COMPETITION_API_ENDPOINT, parameters)
-      .then(response => {
-        return response.json();
-      })
-      .then(json => {
-        return json;
-      })
-  };
-
-  export const editCompetitionsService = (request) => {
-    const EDIT_COMPETITION_API_ENDPOINT = host+'/api/competitions/{}/edit';
-    const parameters = {
-      method: 'GET',
-      headers: {
-        'Authorization': 'Bearer '+request.data.token
-      }
-    };
-  
-    return fetch(EDIT_COMPETITION_API_ENDPOINT, parameters)
       .then(response => {
         return response.json();
       })

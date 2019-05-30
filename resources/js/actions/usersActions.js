@@ -14,13 +14,6 @@ export const storeUsersAction = (data) => {
     }
 };
 
-export const createUsersAction = (data) => {
-    return {
-        type: types.CREATE_USER,
-        data
-    }
-}
-
 export const showUsersAction = (data) => {
     return {
         type: types.SHOW_USER,
@@ -31,13 +24,6 @@ export const showUsersAction = (data) => {
 export const updateUsersAction = (data) => {
     return {
         type: types.UPDATE_USER,
-        data
-    }
-}
-
-export const editUsersAction = (data) => {
-    return {
-        type: types.EDIT_USER,
         data
     }
 }

@@ -36,36 +36,12 @@ export function showTeamReducer(state = [], action) {
     }
 };
 
-export function createTeamReducer(state = [], action) {
-    const response = action.response;
-    switch(action.type) {
-        case types.CREATE_TEAM_SUCCESS:
-        return { ...state, response };
-        case types.CREATE_TEAM_ERROR:
-        return { ...state, response };
-        default:
-        return state;
-    }
-};
-
 export function updateTeamReducer(state = [], action) {
     const response = action.response;
     switch(action.type) {
         case types.UPDATE_TEAM_SUCCESS:
         return { ...state, response };
         case types.UPDATE_TEAM_ERROR:
-        return { ...state, response };
-        default:
-        return state;
-    }
-};
-
-export function editTeamReducer(state = [], action) {
-    const response = action.response;
-    switch(action.type) {
-        case types.EDIT_TEAM_SUCCESS:
-        return { ...state, response };
-        case types.EDIT_TEAM_ERROR:
         return { ...state, response };
         default:
         return state;

@@ -1,11 +1,9 @@
 import { put, call } from 'redux-saga/effects';
 import {
-     createUsersService,
      indexUsersService,
      updateUsersService,
      showUsersService,
      storeUsersService,
-     editUsersService,
      destroyUsersService
     } from '../services/usersService';
 
@@ -29,14 +27,6 @@ export function* storeUsersSaga(payload) {
     }
 }
 
-export function* createUsersSaga(payload) {
-    try {
-      const response = yield call(createUsersService, payload);
-      yield put({ type: types.CREATE_USER_SUCCESS, response });
-    } catch(error) {
-      yield put({ type: types.CREATE_USER_ERROR, error });
-    }
-}
 
 export function* destroyUsersSaga(payload) {
     try {
@@ -62,11 +52,4 @@ export function* showUsersSaga(payload) {
       yield put({ type: types.SHOW_USER_ERROR, error });
     }
 }
-export function* editUsersSaga(payload) {
-    try {
-      const response = yield call(editUsersService, payload);
-      yield put({ type: types.EDIT_USER_SUCCESS, response });
-    } catch(error) {
-      yield put({ type: types.EDIT_USER_ERROR, error });
-    }
-}
+

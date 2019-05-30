@@ -36,36 +36,12 @@ export function showUserReducer(state = [], action) {
     }
 };
 
-export function createUserReducer(state = [], action) {
-    const response = action.response;
-    switch(action.type) {
-        case types.CREATE_USER_SUCCESS:
-        return { ...state, response };
-        case types.CREATE_USER_ERROR:
-        return { ...state, response };
-        default:
-        return state;
-    }
-};
-
 export function updateUserReducer(state = [], action) {
     const response = action.response;
     switch(action.type) {
         case types.UPDATE_USER_SUCCESS:
         return { ...state, response };
         case types.UPDATE_USER_ERROR:
-        return { ...state, response };
-        default:
-        return state;
-    }
-};
-
-export function editUserReducer(state = [], action) {
-    const response = action.response;
-    switch(action.type) {
-        case types.EDIT_USER_SUCCESS:
-        return { ...state, response };
-        case types.EDIT_USER_ERROR:
         return { ...state, response };
         default:
         return state;

@@ -36,36 +36,12 @@ export function showCompetitionReducer(state = [], action) {
     }
 };
 
-export function createCompetitionReducer(state = [], action) {
-    const response = action.response;
-    switch(action.type) {
-        case types.CREATE_COMPETITION_SUCCESS:
-        return { ...state, response };
-        case types.CREATE_COMPETITION_ERROR:
-        return { ...state, response };
-        default:
-        return state;
-    }
-};
-
 export function updateCompetitionReducer(state = [], action) {
     const response = action.response;
     switch(action.type) {
         case types.UPDATE_COMPETITION_SUCCESS:
         return { ...state, response };
         case types.UPDATE_COMPETITION_ERROR:
-        return { ...state, response };
-        default:
-        return state;
-    }
-};
-
-export function editCompetitionReducer(state = [], action) {
-    const response = action.response;
-    switch(action.type) {
-        case types.EDIT_COMPETITION_SUCCESS:
-        return { ...state, response };
-        case types.EDIT_COMPETITION_ERROR:
         return { ...state, response };
         default:
         return state;

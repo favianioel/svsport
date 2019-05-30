@@ -18,24 +18,6 @@ export const indexUsersService = (request) => {
       })
   };
 
-  export const createUsersService = (request) => {
-    const CREATE_USER_API_ENDPOINT = host+'/api/users/create';
-    const parameters = {
-      method: 'GET',
-      headers: {
-        'Authorization': 'Bearer ' + request.data.token
-      }
-    };
-  
-    return fetch(CREATE_USER_API_ENDPOINT, parameters)
-      .then(response => {
-        return response.json();
-      })
-      .then(json => {
-        return json;
-      })
-  };
-
   export const showUsersService = (request) => {
     const SHOW_USER_API_ENDPOINT = host+'/api/users/{}';
     const parameters = {
@@ -66,24 +48,6 @@ export const indexUsersService = (request) => {
     };
   
     return fetch(STORE_USER_API_ENDPOINT, parameters)
-      .then(response => {
-        return response.json();
-      })
-      .then(json => {
-        return json;
-      })
-  };
-
-  export const editUsersService = (request) => {
-    const EDIT_USER_API_ENDPOINT = host+'/api/users/{}/edit';
-    const parameters = {
-      method: 'GET',
-      headers: {
-        'Authorization': 'Bearer ' + request.data.token
-      }
-    };
-  
-    return fetch(EDIT_USER_API_ENDPOINT, parameters)
       .then(response => {
         return response.json();
       })

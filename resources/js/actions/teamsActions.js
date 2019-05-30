@@ -14,13 +14,6 @@ export const storeTeamsAction = (data) => {
     }
 };
 
-export const createTeamsAction = (data) => {
-    return {
-        type: types.CREATE_TEAM,
-        data
-    }
-}
-
 export const showTeamsAction = (data) => {
     return {
         type: types.SHOW_TEAM,
@@ -31,13 +24,6 @@ export const showTeamsAction = (data) => {
 export const updateTeamsAction = (data) => {
     return {
         type: types.UPDATE_TEAM,
-        data
-    }
-}
-
-export const editTeamsAction = (data) => {
-    return {
-        type: types.EDIT_TEAM,
         data
     }
 }

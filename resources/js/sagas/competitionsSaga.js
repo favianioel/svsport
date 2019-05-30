@@ -1,11 +1,9 @@
 import { put, call } from 'redux-saga/effects';
 import {
-     createCompetitionsService,
      indexCompetitionsService,
      updateCompetitionsService,
      showCompetitionsService,
      storeCompetitionsService,
-     editCompetitionsService,
      destroyCompetitionsService
     } from '../services/competitionsService';
 
@@ -26,15 +24,6 @@ export function* storeCompetitionsSaga(payload) {
       yield put({ type: types.STORE_COMPETITION_SUCCESS, response });
     } catch(error) {
       yield put({ type: types.STORE_COMPETITION_ERROR, error });
-    }
-}
-
-export function* createCompetitionsSaga(payload) {
-    try {
-      const response = yield call(createCompetitionsService, payload);
-      yield put({ type: types.CREATE_COMPETITION_SUCCESS, response });
-    } catch(error) {
-      yield put({ type: types.CREATE_COMPETITION_ERROR, error });
     }
 }
 
@@ -60,13 +49,5 @@ export function* showCompetitionsSaga(payload) {
       yield put({ type: types.SHOW_COMPETITION_SUCCESS, response });
     } catch(error) {
       yield put({ type: types.SHOW_COMPETITION_ERROR, error });
-    }
-}
-export function* editCompetitionsSaga(payload) {
-    try {
-      const response = yield call(editCompetitionsService, payload);
-      yield put({ type: types.EDIT_COMPETITION_SUCCESS, response });
-    } catch(error) {
-      yield put({ type: types.EDIT_COMPETITION_ERROR, error });
     }
 }

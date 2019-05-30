@@ -18,24 +18,6 @@ export const indexTeamsService = (request) => {
       })
   };
 
-  export const createTeamsService = (request) => {
-    const CREATE_TEAM_API_ENDPOINT = host+'/api/teams/create';
-    const parameters = {
-      method: 'GET',
-      headers: {
-        'Authorization': 'Bearer '+request.data.token
-      }
-    };
-  
-    return fetch(CREATE_TEAM_API_ENDPOINT, parameters)
-      .then(response => {
-        return response.json();
-      })
-      .then(json => {
-        return json;
-      })
-  };
-
   export const showTeamsService = (request) => {
     const SHOW_TEAM_API_ENDPOINT = host+'/api/teams/'+request.data.id;
     const parameters = {
@@ -66,24 +48,6 @@ export const indexTeamsService = (request) => {
     };
   
     return fetch(STORE_TEAM_API_ENDPOINT, parameters)
-      .then(response => {
-        return response.json();
-      })
-      .then(json => {
-        return json;
-      })
-  };
-
-  export const editTeamsService = (request) => {
-    const EDIT_TEAM_API_ENDPOINT = host+'/api/teams/'+request.data.id+'/edit';
-    const parameters = {
-      method: 'GET',
-      headers: {
-        'Authorization': 'Bearer '+request.data.token
-      }
-    };
-  
-    return fetch(EDIT_TEAM_API_ENDPOINT, parameters)
       .then(response => {
         return response.json();
       })

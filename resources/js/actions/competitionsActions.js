@@ -5,18 +5,11 @@ export const indexCompetitionsAction = (data) => {
         type: types.INDEX_COMPETITION,
         data
     }
-};
+}
 
 export const storeCompetitionsAction = (data) => {
     return {
         type: types.STORE_COMPETITION,
-        data
-    }
-};
-
-export const createCompetitionsAction = (data) => {
-    return {
-        type: types.CREATE_COMPETITION,
         data
     }
 }
@@ -31,13 +24,6 @@ export const showCompetitionsAction = (data) => {
 export const updateCompetitionsAction = (data) => {
     return {
         type: types.UPDATE_COMPETITION,
-        data
-    }
-}
-
-export const editCompetitionsAction = (data) => {
-    return {
-        type: types.EDIT_COMPETITION,
         data
     }
 }
