@@ -100812,7 +100812,7 @@ function (_React$Component) {
         open: this.state.visible
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_5__["DropdownItem"], {
         tag: react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"],
-        to: "user-profile"
+        to: "/user/profile"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         className: "material-icons"
       }, "\uE7FD"), " Profile"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_5__["DropdownItem"], {
@@ -102406,6 +102406,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _views_Competition_CompetitionsWrapper__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../views/Competition/CompetitionsWrapper */ "./resources/js/views/Competition/CompetitionsWrapper.js");
 /* harmony import */ var _views_Team_CreateTeams__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../views/Team/CreateTeams */ "./resources/js/views/Team/CreateTeams.js");
 /* harmony import */ var _views_Competition_CreateCompetitions__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../views/Competition/CreateCompetitions */ "./resources/js/views/Competition/CreateCompetitions.js");
+/* harmony import */ var _views_User_EditUsers__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../views/User/EditUsers */ "./resources/js/views/User/EditUsers.js");
+/* harmony import */ var _views_User_EditUsers__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_views_User_EditUsers__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _views_Team_EditTeams__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../views/Team/EditTeams */ "./resources/js/views/Team/EditTeams.js");
+/* harmony import */ var _views_Competition_EditCompetitions__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../views/Competition/EditCompetitions */ "./resources/js/views/Competition/EditCompetitions.js");
+/* harmony import */ var _views_Competition_EditCompetitions__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_views_Competition_EditCompetitions__WEBPACK_IMPORTED_MODULE_9__);
 // Layout Types
  // Route Views
 
@@ -102415,8 +102420,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+
 /* harmony default export */ __webpack_exports__["default"] = ([{
-  path: "/user-profile",
+  path: "/user/profile",
   layout: _layouts__WEBPACK_IMPORTED_MODULE_0__["DefaultLayout"],
   component: _views_UserProfile__WEBPACK_IMPORTED_MODULE_1__["default"]
 }, {
@@ -102424,21 +102432,33 @@ __webpack_require__.r(__webpack_exports__);
   layout: _layouts__WEBPACK_IMPORTED_MODULE_0__["DefaultLayout"],
   component: _views_User_UsersWrapper__WEBPACK_IMPORTED_MODULE_3__["default"]
 }, {
+  path: "/users/edit/:userId",
+  layout: _layouts__WEBPACK_IMPORTED_MODULE_0__["DefaultLayout"],
+  component: _views_User_EditUsers__WEBPACK_IMPORTED_MODULE_7___default.a
+}, {
   path: "/teams",
   layout: _layouts__WEBPACK_IMPORTED_MODULE_0__["DefaultLayout"],
   component: _views_Team_TeamsWrapper__WEBPACK_IMPORTED_MODULE_2__["default"]
 }, {
-  path: "/teams-create",
+  path: "/teams/create",
   layout: _layouts__WEBPACK_IMPORTED_MODULE_0__["DefaultLayout"],
   component: _views_Team_CreateTeams__WEBPACK_IMPORTED_MODULE_5__["default"]
+}, {
+  path: "/teams/edit",
+  layout: _layouts__WEBPACK_IMPORTED_MODULE_0__["DefaultLayout"],
+  component: _views_Team_EditTeams__WEBPACK_IMPORTED_MODULE_8__["default"]
 }, {
   path: "/competitions",
   layout: _layouts__WEBPACK_IMPORTED_MODULE_0__["DefaultLayout"],
   component: _views_Competition_CompetitionsWrapper__WEBPACK_IMPORTED_MODULE_4__["default"]
 }, {
-  path: "/competitions-create",
+  path: "/competitions/create",
   layout: _layouts__WEBPACK_IMPORTED_MODULE_0__["DefaultLayout"],
   component: _views_Competition_CreateCompetitions__WEBPACK_IMPORTED_MODULE_6__["default"]
+}, {
+  path: "/competitions/edit",
+  layout: _layouts__WEBPACK_IMPORTED_MODULE_0__["DefaultLayout"],
+  component: _views_Competition_EditCompetitions__WEBPACK_IMPORTED_MODULE_9___default.a
 }]);
 
 /***/ }),
@@ -104146,7 +104166,7 @@ var indexUsersService = function indexUsersService(request) {
   });
 };
 var showUsersService = function showUsersService(request) {
-  var SHOW_USER_API_ENDPOINT = _envService__WEBPACK_IMPORTED_MODULE_0__["host"] + '/api/users/{}';
+  var SHOW_USER_API_ENDPOINT = _envService__WEBPACK_IMPORTED_MODULE_0__["host"] + '/api/users/' + request.data.id;
   var parameters = {
     method: 'GET',
     headers: {
@@ -104176,7 +104196,7 @@ var storeUsersService = function storeUsersService(request) {
   });
 };
 var updateUsersService = function updateUsersService(request) {
-  var UPDATE_USER_API_ENDPOINT = _envService__WEBPACK_IMPORTED_MODULE_0__["host"] + '/api/users/{}';
+  var UPDATE_USER_API_ENDPOINT = _envService__WEBPACK_IMPORTED_MODULE_0__["host"] + '/api/users/' + request.data.id;
   var parameters = {
     method: 'PATCH',
     headers: {
@@ -104192,7 +104212,7 @@ var updateUsersService = function updateUsersService(request) {
   });
 };
 var destroyUsersService = function destroyUsersService(request) {
-  var DESTROY_USER_API_ENDPOINT = _envService__WEBPACK_IMPORTED_MODULE_0__["host"] + '/api/users/{}';
+  var DESTROY_USER_API_ENDPOINT = _envService__WEBPACK_IMPORTED_MODULE_0__["host"] + '/api/users/' + request.data.id;
   var parameters = {
     method: 'DELETE',
     headers: {
@@ -104443,7 +104463,7 @@ function (_Component) {
           offset: 2
         }
       }, !isSuccess ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, message) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Redirect"], {
-        to: "user-profile"
+        to: "/user/profile"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         onSubmit: this.onHandleLogin
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -104722,7 +104742,7 @@ function (_React$Component) {
         className: "py-3"
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_0__["Button"], {
         tag: react_router_dom__WEBPACK_IMPORTED_MODULE_6__["Link"],
-        to: "/competitions-create"
+        to: "/competitions/create"
       }, "add competition")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_0__["Row"], null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_0__["Col"], null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_0__["Card"], {
         small: true,
         className: "mb-4"
@@ -104882,6 +104902,17 @@ function (_Component) {
 }(react__WEBPACK_IMPORTED_MODULE_4__["Component"]);
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_5__["connect"])()(CreateCompetitions));
+
+/***/ }),
+
+/***/ "./resources/js/views/Competition/EditCompetitions.js":
+/*!************************************************************!*\
+  !*** ./resources/js/views/Competition/EditCompetitions.js ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
 
 /***/ }),
 
@@ -105135,6 +105166,95 @@ function (_Component) {
 
 /***/ }),
 
+/***/ "./resources/js/views/Team/EditTeams.js":
+/*!**********************************************!*\
+  !*** ./resources/js/views/Team/EditTeams.js ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
+var EditTeams =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(EditTeams, _Component);
+
+  function EditTeams() {
+    _classCallCheck(this, EditTeams);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(EditTeams).apply(this, arguments));
+  }
+
+  _createClass(EditTeams, [{
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Container, {
+        fluid: true,
+        className: "main-content-container px-4 pb-4"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Row, {
+        noGutters: true,
+        className: "page-header py-4"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(PageTitle, {
+        sm: "4",
+        title: "Edit Team",
+        subtitle: "Teams",
+        className: "text-sm-left"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Row, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Col, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Card, {
+        small: true,
+        className: "mb-4"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CardHeader, {
+        className: "border-bottom"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", {
+        className: "m-0"
+      }, "Team")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CardBody, {
+        className: "p-0 pb-3"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Col, {
+        sm: "12",
+        lg: "6"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Form, {
+        onSubmit: this.onHandleSubmit
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(FormGroup, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        htmlFor: "#name"
+      }, "Name the team"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(FormInput, {
+        id: "#name",
+        placeholder: "Name",
+        name: "name"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Button, null, "create")))))))));
+    }
+  }]);
+
+  return EditTeams;
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])()(EditTeams));
+
+/***/ }),
+
 /***/ "./resources/js/views/Team/IndexTeams.js":
 /*!***********************************************!*\
   !*** ./resources/js/views/Team/IndexTeams.js ***!
@@ -105170,6 +105290,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 
@@ -105242,7 +105363,9 @@ function (_Component) {
           style: {
             padding: '2 5 2 5',
             margin: 3
-          }
+          },
+          tag: react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"],
+          to: "/teams/create/${obj.id}"
         }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("i", {
           className: "fas fa-edit"
         })), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_5__["Button"], {
@@ -105349,7 +105472,7 @@ function (_Component) {
         className: "py-3"
       }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_0__["Button"], {
         tag: react_router_dom__WEBPACK_IMPORTED_MODULE_5__["Link"],
-        to: "/teams-create"
+        to: "/teams/create"
       }, "add team")), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_0__["Row"], null, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_0__["Col"], null, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_0__["Card"], {
         small: true,
         className: "mb-4"
@@ -105391,6 +105514,17 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 
 /***/ }),
 
+/***/ "./resources/js/views/User/EditUsers.js":
+/*!**********************************************!*\
+  !*** ./resources/js/views/User/EditUsers.js ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+
 /***/ "./resources/js/views/User/IndexUsers.js":
 /*!***********************************************!*\
   !*** ./resources/js/views/User/IndexUsers.js ***!
@@ -105400,10 +105534,13 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var shards_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! shards-react */ "./node_modules/shards-react/dist/shards-react.es.js");
+/* harmony import */ var _actions_usersActions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../actions/usersActions */ "./resources/js/actions/usersActions.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _utils_cookies__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../utils/cookies */ "./resources/js/utils/cookies.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var shards_react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! shards-react */ "./node_modules/shards-react/dist/shards-react.es.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -105414,13 +105551,18 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
 
 
 
@@ -105432,43 +105574,77 @@ function (_Component) {
   _inherits(IndexUsers, _Component);
 
   function IndexUsers() {
+    var _getPrototypeOf2;
+
+    var _this;
+
     _classCallCheck(this, IndexUsers);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(IndexUsers).apply(this, arguments));
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(IndexUsers)).call.apply(_getPrototypeOf2, [this].concat(args)));
+
+    _defineProperty(_assertThisInitialized(_this), "onHandleDelete", function (id, event) {
+      event.preventDefault();
+      var token = Object(_utils_cookies__WEBPACK_IMPORTED_MODULE_2__["getCookie"])('token');
+      var data = {
+        id: id,
+        token: token
+      };
+
+      _this.props.dispatch(Object(_actions_usersActions__WEBPACK_IMPORTED_MODULE_0__["destroyUsersAction"])(data));
+
+      return function () {
+        return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Redirect"], {
+          to: {
+            pathname: "/users"
+          }
+        });
+      };
+    });
+
+    return _this;
   }
 
   _createClass(IndexUsers, [{
     key: "render",
     value: function render() {
+      var _this2 = this;
+
       var isSuccess;
       if (_.size(this.props.users) > 0) if (this.props.users.hasOwnProperty('response')) {
         isSuccess = true;
       }
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, isSuccess && this.props.users.response.map(function (obj, index) {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
+      return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("tbody", null, isSuccess && this.props.users.response.map(function (obj, index) {
+        return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("tr", {
           key: index
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, obj.id), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, obj.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, obj.email), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, obj.roles), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_2__["Button"], {
+        }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("td", null, obj.id), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("td", null, obj.name), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("td", null, obj.email), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("td", null, obj.roles), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_5__["Button"], {
           theme: "info",
           style: {
             padding: '2 5 2 5',
             margin: 3
           }
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("i", {
           className: "fas fa-eye"
-        })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_2__["Button"], {
+        })), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_5__["Button"], {
           style: {
             padding: '2 5 2 5',
             margin: 3
           }
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("i", {
           className: "fas fa-edit"
-        })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_2__["Button"], {
+        })), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_5__["Button"], {
           theme: "danger",
           style: {
             padding: '2 5 2 5',
             margin: 3
+          },
+          onClick: function onClick(e) {
+            return _this2.onHandleDelete(obj.id, e);
           }
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("i", {
           className: "fas fa-trash-alt"
         }))));
       }));
@@ -105476,7 +105652,7 @@ function (_Component) {
   }]);
 
   return IndexUsers;
-}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+}(react__WEBPACK_IMPORTED_MODULE_3__["Component"]);
 
 var mapStateToProps = function mapStateToProps(state) {
   return {
@@ -105484,7 +105660,7 @@ var mapStateToProps = function mapStateToProps(state) {
   };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps)(IndexUsers));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_4__["connect"])(mapStateToProps)(IndexUsers));
 
 /***/ }),
 

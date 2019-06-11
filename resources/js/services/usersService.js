@@ -19,7 +19,7 @@ export const indexUsersService = (request) => {
   };
 
   export const showUsersService = (request) => {
-    const SHOW_USER_API_ENDPOINT = host+'/api/users/{}';
+    const SHOW_USER_API_ENDPOINT = host+'/api/users/'+ request.data.id;
     const parameters = {
       method: 'GET',
       headers: {
@@ -57,7 +57,7 @@ export const indexUsersService = (request) => {
   };
 
   export const updateUsersService = (request) => {
-    const UPDATE_USER_API_ENDPOINT = host+'/api/users/{}';
+    const UPDATE_USER_API_ENDPOINT = host+'/api/users/'+ request.data.id;
     const parameters = {
       method: 'PATCH',
       headers: {
@@ -77,7 +77,7 @@ export const indexUsersService = (request) => {
   };
 
   export const destroyUsersService = (request) => {
-    const DESTROY_USER_API_ENDPOINT = host+'/api/users/{}';
+    const DESTROY_USER_API_ENDPOINT = host+'/api/users/'+ request.data.id;
     const parameters = {
       method: 'DELETE',
       headers: {

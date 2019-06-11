@@ -61,7 +61,7 @@ class UserActions extends React.Component {
           </span>
         </DropdownToggle>
         <Collapse tag={DropdownMenu} right small open={this.state.visible}>
-          <DropdownItem tag={Link} to="user-profile">
+          <DropdownItem tag={Link} to="/user/profile">
             <i className="material-icons">&#xE7FD;</i> Profile
           </DropdownItem>
           <DropdownItem divider />

@@ -16,7 +16,7 @@ class Teams extends Component {
           <PageTitle sm="4" title="Teams" subtitle="Teams" className="text-sm-left" />
         </Row>
         <Row noGutters className="py-3">
-          <Button tag={Link} to="/teams-create" >add team</Button>
+          <Button tag={Link} to="/teams/create" >add team</Button>
         </Row>
         <Row>
           <Col>

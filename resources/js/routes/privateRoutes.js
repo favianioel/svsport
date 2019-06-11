@@ -8,11 +8,14 @@ import Users from "../views/User/UsersWrapper";
 import Competitions from "./../views/Competition/CompetitionsWrapper";
 import CreateTeams from "../views/Team/CreateTeams";
 import CreateCompetitions from "../views/Competition/CreateCompetitions";
+import EditUsers from "../views/User/EditUsers";
+import EditTeams from "../views/Team/EditTeams";
+import EditCompetitions from "../views/Competition/EditCompetitions";
 
 export default [
 
   {
-    path: "/user-profile",
+    path: "/user/profile",
     layout: DefaultLayout,
     component: UserProfile
   },
@@ -22,14 +25,24 @@ export default [
     component: Users
   },
   {
+    path: "/users/edit/:userId",
+    layout: DefaultLayout,
+    component: EditUsers
+  },
+  {
     path: "/teams",
     layout: DefaultLayout,
     component: Teams
   },
   {
-    path: "/teams-create",
+    path: "/teams/create",
     layout: DefaultLayout,
     component: CreateTeams
+  },
+  {
+    path: "/teams/edit",
+    layout: DefaultLayout,
+    component: EditTeams
   },
   {
     path: "/competitions",
@@ -37,8 +50,13 @@ export default [
     component: Competitions
   },
   {
-    path: "/competitions-create",
+    path: "/competitions/create",
     layout: DefaultLayout,
     component: CreateCompetitions
+  },
+  {
+    path: "/competitions/edit",
+    layout: DefaultLayout,
+    component: EditCompetitions
   }
 ];

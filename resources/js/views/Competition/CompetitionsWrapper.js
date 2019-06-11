@@ -21,7 +21,7 @@ class Competitions extends React.Component {
           <PageTitle sm="4" title="Competitions" subtitle="Competitions" className="text-sm-left" />
         </Row>
         <Row noGutters className="py-3">
-          <Button tag={Link} to="/competitions-create" >add competition</Button>
+          <Button tag={Link} to="/competitions/create" >add competition</Button>
         </Row>
         <Row>
           <Col>
