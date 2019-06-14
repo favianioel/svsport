@@ -100456,6 +100456,7 @@ function (_Component) {
           })
         });
       }), _routes_privateRoutes__WEBPACK_IMPORTED_MODULE_7__["default"].map(function (route, index) {
+        console.log(route, index);
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_services_PrivateRoute__WEBPACK_IMPORTED_MODULE_9__["default"], {
           key: index,
           path: route.path,
@@ -100803,7 +100804,7 @@ function (_React$Component) {
         className: "user-avatar rounded-circle mr-2",
         src: __webpack_require__(/*! ./../../../../images/avatars/3.jpg */ "./resources/js/images/avatars/3.jpg"),
         alt: "User Avatar"
-      }), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: "d-none d-md-inline-block"
       }, _.size(this.props.userSession) > 0 && this.props.userSession.response.name)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_5__["Collapse"], {
         tag: shards_react__WEBPACK_IMPORTED_MODULE_5__["DropdownMenu"],
@@ -102436,15 +102437,15 @@ __webpack_require__.r(__webpack_exports__);
   layout: _layouts__WEBPACK_IMPORTED_MODULE_0__["DefaultLayout"],
   component: _views_User_EditUsers__WEBPACK_IMPORTED_MODULE_7___default.a
 }, {
-  path: "/teams",
-  layout: _layouts__WEBPACK_IMPORTED_MODULE_0__["DefaultLayout"],
-  component: _views_Team_TeamsWrapper__WEBPACK_IMPORTED_MODULE_2__["default"]
-}, {
   path: "/teams/create",
   layout: _layouts__WEBPACK_IMPORTED_MODULE_0__["DefaultLayout"],
   component: _views_Team_CreateTeams__WEBPACK_IMPORTED_MODULE_5__["default"]
 }, {
-  path: "/teams/edit",
+  path: "/teams",
+  layout: _layouts__WEBPACK_IMPORTED_MODULE_0__["DefaultLayout"],
+  component: _views_Team_TeamsWrapper__WEBPACK_IMPORTED_MODULE_2__["default"]
+}, {
+  path: "/teams/edit/:userId",
   layout: _layouts__WEBPACK_IMPORTED_MODULE_0__["DefaultLayout"],
   component: _views_Team_EditTeams__WEBPACK_IMPORTED_MODULE_8__["default"]
 }, {
@@ -105211,6 +105212,12 @@ function (_Component) {
   }
 
   _createClass(EditTeams, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var params = this.props.match.params;
+      console.log(props);
+    }
+  }, {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Container, {
@@ -105326,14 +105333,6 @@ function (_Component) {
       };
 
       _this.props.dispatch(Object(_actions_teamsActions__WEBPACK_IMPORTED_MODULE_0__["destroyTeamsAction"])(data));
-
-      return function () {
-        return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Redirect"], {
-          to: {
-            pathname: "/teams"
-          }
-        });
-      };
     });
 
     return _this;
@@ -105365,7 +105364,7 @@ function (_Component) {
             margin: 3
           },
           tag: react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"],
-          to: "/teams/create/${obj.id}"
+          to: "/teams/edit/" + obj.id
         }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("i", {
           className: "fas fa-edit"
         })), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(shards_react__WEBPACK_IMPORTED_MODULE_5__["Button"], {

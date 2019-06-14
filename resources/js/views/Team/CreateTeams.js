@@ -54,4 +54,4 @@ class CreateTeams extends Component {
 
 
 
-export default connect()(CreateTeams)
+export default connect()(CreateTeams);

@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import { connect } from "react-redux";
 
 class EditTeams extends Component {
+    componentDidMount() {
+        const { match: { params } } = this.props;
+        console.log(props);
+    }
     render() {
         return (
             <Container fluid className="main-content-container px-4 pb-4">
@@ -36,4 +40,4 @@ class EditTeams extends Component {
     }
 }
 
-export default connect()(EditTeams)
+export default connect()(EditTeams);

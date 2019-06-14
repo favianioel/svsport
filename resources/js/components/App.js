@@ -52,6 +52,7 @@ export class App extends Component {
                             );
                         })}
                         {privateRoutes.map((route, index) => {
+                            console.log(route, index);
                             return (
                                 <PrivateRoute
                                     key={index}

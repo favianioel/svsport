@@ -53,7 +53,7 @@ class UserActions extends React.Component {
             className="user-avatar rounded-circle mr-2"
             src={require("./../../../../images/avatars/3.jpg")}
             alt="User Avatar"
-          />{" "}
+          />
           <span className="d-none d-md-inline-block">
           { _.size(this.props.userSession) > 0 &&
           this.props.userSession.response.name

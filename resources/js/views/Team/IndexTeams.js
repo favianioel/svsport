@@ -15,7 +15,7 @@ class IndexTeams extends Component {
             id, token
         };
         this.props.dispatch(destroyTeamsAction(data));
-        return () => <Redirect to={{ pathname: "/teams" }}/>
+        
     }
 
     render() {
@@ -37,7 +37,7 @@ class IndexTeams extends Component {
                                     <Button theme="info" style={{ padding: '2 5 2 5', margin: 3 }}>
                                         <i className="fas fa-eye"></i>
                                     </Button>
-                                    <Button style={{ padding: '2 5 2 5', margin: 3 }} tag={Link} to="/teams/create/${obj.id}">
+                                    <Button style={{ padding: '2 5 2 5', margin: 3 }} tag={Link} to={"/teams/edit/"+obj.id}>
                                         <i className="fas fa-edit"></i>
                                     </Button>
                                     <Button theme="danger" style={{ padding: '2 5 2 5', margin: 3 }} onClick={(e) => this.onHandleDelete(obj.id, e)}>

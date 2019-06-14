@@ -30,17 +30,18 @@ export default [
     component: EditUsers
   },
   {
-    path: "/teams",
-    layout: DefaultLayout,
-    component: Teams
-  },
-  {
     path: "/teams/create",
     layout: DefaultLayout,
     component: CreateTeams
   },
   {
-    path: "/teams/edit",
+    path: "/teams",
+    layout: DefaultLayout,
+    component: Teams
+  },
+
+  {
+    path: "/teams/edit/:userId",
     layout: DefaultLayout,
     component: EditTeams
   },
