@@ -100446,28 +100446,29 @@ function (_Component) {
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["BrowserRouter"], {
         basename: Object({"MIX_PUSHER_APP_KEY":"","MIX_PUSHER_APP_CLUSTER":"mt1","NODE_ENV":"development"}).REACT_APP_BASENAME || ""
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], null, _routes_routes__WEBPACK_IMPORTED_MODULE_6__["default"].map(function (route, index) {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], null, _routes_routes__WEBPACK_IMPORTED_MODULE_6__["default"].map(function (route) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
-          key: index,
+          key: route.path,
           path: route.path,
-          exact: route.exact,
+          exact: true,
           component: Object(_withTracker__WEBPACK_IMPORTED_MODULE_5__["default"])(function (props) {
             return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(route.layout, props, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(route.component, props));
           })
         });
-      }), _routes_privateRoutes__WEBPACK_IMPORTED_MODULE_7__["default"].map(function (route, index) {
-        console.log(route, index);
+      }), _routes_privateRoutes__WEBPACK_IMPORTED_MODULE_7__["default"].map(function (route) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_services_PrivateRoute__WEBPACK_IMPORTED_MODULE_9__["default"], {
-          key: index,
+          key: route.path,
           path: route.path,
+          exact: true,
           component: Object(_withTracker__WEBPACK_IMPORTED_MODULE_5__["default"])(function (props) {
             return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(route.layout, props, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(route.component, props));
           })
         });
-      }), _routes_guestRoutes__WEBPACK_IMPORTED_MODULE_8__["default"].map(function (route, index) {
+      }), _routes_guestRoutes__WEBPACK_IMPORTED_MODULE_8__["default"].map(function (route) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_services_GuestRoute__WEBPACK_IMPORTED_MODULE_10__["default"], {
-          key: index,
+          key: route.path,
           path: route.path,
+          exact: true,
           component: Object(_withTracker__WEBPACK_IMPORTED_MODULE_5__["default"])(function (props) {
             return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(route.layout, props, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(route.component, props));
           })
@@ -102425,7 +102426,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ __webpack_exports__["default"] = ([{
-  path: "/user/profile",
+  path: "/users/profile",
   layout: _layouts__WEBPACK_IMPORTED_MODULE_0__["DefaultLayout"],
   component: _views_UserProfile__WEBPACK_IMPORTED_MODULE_1__["default"]
 }, {
@@ -103783,30 +103784,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utils_cookies__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utils/cookies */ "./resources/js/utils/cookies.js");
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
-function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-
-function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 
 
 
-
-var GuestRoute = function GuestRoute(_ref) {
-  var Component = _ref.component,
-      rest = _objectWithoutProperties(_ref, ["component"]);
-
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], _extends({}, rest, {
+var GuestRoute = function GuestRoute(route) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+    path: route.path,
     render: function render(props) {
-      return Object(_utils_cookies__WEBPACK_IMPORTED_MODULE_2__["checkCookie"])() === null ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Component, props) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Redirect"], {
+      return Object(_utils_cookies__WEBPACK_IMPORTED_MODULE_2__["checkCookie"])() === null ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(route.component, _extends({}, props, {
+        routes: route.routes
+      })) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Redirect"], {
         to: {
-          pathname: '/user-profile',
+          pathname: '/users/profile',
           state: {
             from: props.location
           }
         }
       });
     }
-  }));
+  });
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (GuestRoute);
@@ -103828,21 +103825,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utils_cookies__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utils/cookies */ "./resources/js/utils/cookies.js");
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
-function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-
-function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 
 
 
-
-var PrivateRoute = function PrivateRoute(_ref) {
-  var Component = _ref.component,
-      rest = _objectWithoutProperties(_ref, ["component"]);
-
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], _extends({}, rest, {
+var PrivateRoute = function PrivateRoute(route) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+    path: route.path,
     render: function render(props) {
-      return Object(_utils_cookies__WEBPACK_IMPORTED_MODULE_2__["checkCookie"])() !== null ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Component, props) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Redirect"], {
+      return Object(_utils_cookies__WEBPACK_IMPORTED_MODULE_2__["checkCookie"])() !== null ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(route.component, _extends({}, props, {
+        routes: route.routes
+      })) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Redirect"], {
         to: {
           pathname: '/',
           state: {
@@ -103851,7 +103844,7 @@ var PrivateRoute = function PrivateRoute(_ref) {
         }
       });
     }
-  }));
+  });
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (PrivateRoute);
@@ -104464,7 +104457,7 @@ function (_Component) {
           offset: 2
         }
       }, !isSuccess ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, message) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Redirect"], {
-        to: "/user/profile"
+        to: "/users/profile"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         onSubmit: this.onHandleLogin
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {

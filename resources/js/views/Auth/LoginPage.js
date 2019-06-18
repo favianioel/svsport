@@ -46,7 +46,7 @@ class LoginPage extends Component {
 
                 <Row>
                     <Col sm={{ size: 8, order: 2, offset: 2 }}>
-                        {!isSuccess ? <div>{message}</div> : <Redirect to='/user/profile' />}
+                        {!isSuccess ? <div>{message}</div> : <Redirect to='/users/profile' />}
                         <form onSubmit={this.onHandleLogin}>
                             <div className="form-group">
                                 <label>email</label>

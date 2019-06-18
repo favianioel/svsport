@@ -15,7 +15,7 @@ import EditCompetitions from "../views/Competition/EditCompetitions";
 export default [
 
   {
-    path: "/user/profile",
+    path: "/users/profile",
     layout: DefaultLayout,
     component: UserProfile
   },

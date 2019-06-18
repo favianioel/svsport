@@ -2,10 +2,11 @@ import React from 'react';
 import { Redirect, Route } from 'react-router-dom';
 import { checkCookie } from '../utils/cookies';
 
-const PrivateRoute = ({ component: Component, ...rest }) => (  
-  <Route { ...rest } render={props => (
+const PrivateRoute = (route) => (  
+  <Route path={route.path} render={ props => (
+
     checkCookie() !== null ? (
-      <Component { ...props } />
+      <route.component {...props} routes={route.routes}/>
     ) : (
       <Redirect to={{
           pathname: '/',

@@ -2,18 +2,18 @@ import React from "react";
 import { Redirect, Route } from 'react-router-dom';
 import { checkCookie } from "../utils/cookies";
 
-const GuestRoute = ({ component: Component, ...rest}) => (
-    <Route { ...rest } render={props => (
+const GuestRoute = (route) => (
+    <Route path={route.path} render={(props) => (
         checkCookie() === null ? (
-            <Component { ...props } />
+            <route.component {...props} routes={route.routes}/>
         ) : (
             <Redirect to={{
-                pathname: '/user-profile',
+                pathname: '/users/profile',
                 state: { from: props.location }
             }}
             />
         )
-    )} />
+    )}/>
 );
 
 export default GuestRoute;

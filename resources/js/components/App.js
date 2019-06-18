@@ -35,12 +35,11 @@ export class App extends Component {
             <Router basename={process.env.REACT_APP_BASENAME || ""}>
                 <div>
                     <Switch>
-                        {routes.map((route, index) => {
-                            return (
+                        {routes.map((route) => (
                                 <Route
-                                    key={index}
+                                    key={route.path}
                                     path={route.path}
-                                    exact={route.exact}
+                                    exact
                                     component={withTracker(props => {
                                         return (
                                             <route.layout {...props}>
@@ -49,14 +48,13 @@ export class App extends Component {
                                         );
                                     })}
                                 />
-                            );
-                        })}
-                        {privateRoutes.map((route, index) => {
-                            console.log(route, index);
-                            return (
+                            )
+                        )}
+                        {privateRoutes.map((route) => (
                                 <PrivateRoute
-                                    key={index}
+                                    key={route.path}
                                     path={route.path}
+                                    exact
                                     component={withTracker(props => {
                                         return (
                                             <route.layout {...props}>
@@ -65,13 +63,13 @@ export class App extends Component {
                                         );
                                     })}
                                 />
-                            );
-                        })}
-                        {guestRoutes.map((route, index) => {
-                            return (
+                            )
+                        )}
+                        {guestRoutes.map((route) => (
                                 <GuestRoute
-                                    key={index}
+                                    key={route.path}
                                     path={route.path}
+                                    exact
                                     component={withTracker(props => {
                                         return (
                                             <route.layout {...props}>
@@ -80,8 +78,8 @@ export class App extends Component {
                                         );
                                     })}
                                 />
-                            );
-                        })}
+                            )
+                        )}
                     </Switch>
                 </div>
             </Router>
