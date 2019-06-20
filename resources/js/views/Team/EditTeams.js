@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
+import { Container, Row, Form, FormInput, FormGroup, Col, Card, CardHeader, CardBody, Button } from "shards-react";
+import PageTitle from "../../components/common/PageTitle";
 import { connect } from "react-redux";
+import Select from 'react-select';
 
 class EditTeams extends Component {
     componentDidMount() {
-        const { match: { params } } = this.props;
-        console.log(props);
+        console.log(this.props.match.params); 
     }
     render() {
         return (
